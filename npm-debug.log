@@ -1,0 +1,1760 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'i' ]
+2 info using npm@1.2.14
+3 info using node@v0.10.0
+4 verbose read json /home/codio/workspace/package.json
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/codio/workspace',
+6 verbose install   [ 'bcrypt',
+6 verbose install     'bcrypt-promise',
+6 verbose install     'handlebars',
+6 verbose install     'koa',
+6 verbose install     'koa-body',
+6 verbose install     'koa-router',
+6 verbose install     'koa-session',
+6 verbose install     'koa-static',
+6 verbose install     'koa-views',
+6 verbose install     'sqlite-async',
+6 verbose install     'ava',
+6 verbose install     'depcheck',
+6 verbose install     'dependency',
+6 verbose install     'dependency-check',
+6 verbose install     'eslint',
+6 verbose install     'esm',
+6 verbose install     'jscpd',
+6 verbose install     'jsdoc',
+6 verbose install     'jsdoc-route-plugin' ] ]
+7 verbose from cache /home/codio/workspace/package.json
+8 info preinstall LibraryLoans@1.1.3
+9 verbose read json /home/codio/workspace/node_modules/@babel/package.json
+10 verbose read json /home/codio/workspace/node_modules/@concordance/package.json
+11 verbose read json /home/codio/workspace/node_modules/@eslint/package.json
+12 verbose read json /home/codio/workspace/node_modules/@jscpd/package.json
+13 verbose read json /home/codio/workspace/node_modules/@nodelib/package.json
+14 verbose read json /home/codio/workspace/node_modules/@sindresorhus/package.json
+15 verbose read json /home/codio/workspace/node_modules/@szmarczak/package.json
+16 verbose read json /home/codio/workspace/node_modules/@types/package.json
+17 verbose read json /home/codio/workspace/node_modules/abbrev/package.json
+18 verbose read json /home/codio/workspace/node_modules/accepts/package.json
+19 verbose read json /home/codio/workspace/node_modules/acorn/package.json
+20 verbose read json /home/codio/workspace/node_modules/acorn-globals/package.json
+21 verbose read json /home/codio/workspace/node_modules/acorn-jsx/package.json
+22 verbose read json /home/codio/workspace/node_modules/acorn-node/package.json
+23 verbose read json /home/codio/workspace/node_modules/acorn-walk/package.json
+24 verbose read json /home/codio/workspace/node_modules/aggregate-error/package.json
+25 verbose read json /home/codio/workspace/node_modules/ajv/package.json
+26 verbose read json /home/codio/workspace/node_modules/align-text/package.json
+27 verbose read json /home/codio/workspace/node_modules/ansi-align/package.json
+28 verbose read json /home/codio/workspace/node_modules/ansi-colors/package.json
+29 verbose read json /home/codio/workspace/node_modules/ansi-regex/package.json
+30 verbose read json /home/codio/workspace/node_modules/ansi-styles/package.json
+31 verbose read json /home/codio/workspace/node_modules/any-promise/package.json
+32 verbose read json /home/codio/workspace/node_modules/aproba/package.json
+33 verbose read json /home/codio/workspace/node_modules/are-we-there-yet/package.json
+34 verbose read json /home/codio/workspace/node_modules/argparse/package.json
+35 verbose read json /home/codio/workspace/node_modules/array-differ/package.json
+36 verbose read json /home/codio/workspace/node_modules/array-find-index/package.json
+37 verbose read json /home/codio/workspace/node_modules/array-union/package.json
+38 verbose read json /home/codio/workspace/node_modules/arrgv/package.json
+39 verbose read json /home/codio/workspace/node_modules/arrify/package.json
+40 verbose read json /home/codio/workspace/node_modules/asap/package.json
+41 verbose read json /home/codio/workspace/node_modules/astral-regex/package.json
+42 verbose read json /home/codio/workspace/node_modules/async/package.json
+43 verbose read json /home/codio/workspace/node_modules/at-least-node/package.json
+44 verbose read json /home/codio/workspace/node_modules/ava/package.json
+45 verbose read json /home/codio/workspace/node_modules/babel-runtime/package.json
+46 verbose read json /home/codio/workspace/node_modules/babel-types/package.json
+47 verbose read json /home/codio/workspace/node_modules/babylon/package.json
+48 verbose read json /home/codio/workspace/node_modules/balanced-match/package.json
+49 verbose read json /home/codio/workspace/node_modules/base64-js/package.json
+50 verbose read json /home/codio/workspace/node_modules/bcrypt/package.json
+51 verbose read json /home/codio/workspace/node_modules/bcrypt-promise/package.json
+52 verbose read json /home/codio/workspace/node_modules/binary-extensions/package.json
+53 verbose read json /home/codio/workspace/node_modules/blamer/package.json
+54 verbose read json /home/codio/workspace/node_modules/bluebird/package.json
+55 verbose read json /home/codio/workspace/node_modules/blueimp-md5/package.json
+56 verbose read json /home/codio/workspace/node_modules/boxen/package.json
+57 verbose read json /home/codio/workspace/node_modules/brace-expansion/package.json
+58 verbose read json /home/codio/workspace/node_modules/braces/package.json
+59 verbose read json /home/codio/workspace/node_modules/buffer/package.json
+60 verbose read json /home/codio/workspace/node_modules/buffer-from/package.json
+61 verbose read json /home/codio/workspace/node_modules/builtin-modules/package.json
+62 verbose read json /home/codio/workspace/node_modules/bytes/package.json
+63 verbose read json /home/codio/workspace/node_modules/cache-content-type/package.json
+64 verbose read json /home/codio/workspace/node_modules/cacheable-request/package.json
+65 verbose read json /home/codio/workspace/node_modules/camelcase/package.json
+66 verbose read json /home/codio/workspace/node_modules/catharsis/package.json
+67 verbose read json /home/codio/workspace/node_modules/center-align/package.json
+68 verbose read json /home/codio/workspace/node_modules/chalk/package.json
+69 verbose read json /home/codio/workspace/node_modules/character-parser/package.json
+70 verbose read json /home/codio/workspace/node_modules/chokidar/package.json
+71 verbose read json /home/codio/workspace/node_modules/chownr/package.json
+72 verbose read json /home/codio/workspace/node_modules/chunkd/package.json
+73 verbose read json /home/codio/workspace/node_modules/ci-info/package.json
+74 verbose read json /home/codio/workspace/node_modules/ci-parallel-vars/package.json
+75 verbose read json /home/codio/workspace/node_modules/clean-css/package.json
+76 verbose read json /home/codio/workspace/node_modules/clean-stack/package.json
+77 verbose read json /home/codio/workspace/node_modules/clean-yaml-object/package.json
+78 verbose read json /home/codio/workspace/node_modules/cli-boxes/package.json
+79 verbose read json /home/codio/workspace/node_modules/cli-spinners/package.json
+80 verbose read json /home/codio/workspace/node_modules/cli-table3/package.json
+81 verbose read json /home/codio/workspace/node_modules/cli-truncate/package.json
+82 verbose read json /home/codio/workspace/node_modules/cliui/package.json
+83 verbose read json /home/codio/workspace/node_modules/clone/package.json
+84 verbose read json /home/codio/workspace/node_modules/clone-response/package.json
+85 verbose read json /home/codio/workspace/node_modules/co/package.json
+86 verbose read json /home/codio/workspace/node_modules/co-body/package.json
+87 verbose read json /home/codio/workspace/node_modules/code-excerpt/package.json
+88 verbose read json /home/codio/workspace/node_modules/code-point-at/package.json
+89 verbose read json /home/codio/workspace/node_modules/coffee-script/package.json
+90 verbose read json /home/codio/workspace/node_modules/color-convert/package.json
+91 verbose read json /home/codio/workspace/node_modules/color-name/package.json
+92 verbose read json /home/codio/workspace/node_modules/colors/package.json
+93 verbose read json /home/codio/workspace/node_modules/commander/package.json
+94 verbose read json /home/codio/workspace/node_modules/common-path-prefix/package.json
+95 verbose read json /home/codio/workspace/node_modules/concat-map/package.json
+96 verbose read json /home/codio/workspace/node_modules/concordance/package.json
+97 verbose read json /home/codio/workspace/node_modules/condense-newlines/package.json
+98 verbose read json /home/codio/workspace/node_modules/config-chain/package.json
+99 verbose read json /home/codio/workspace/node_modules/configstore/package.json
+100 verbose read json /home/codio/workspace/node_modules/console-control-strings/package.json
+101 verbose read json /home/codio/workspace/node_modules/consolidate/package.json
+102 verbose read json /home/codio/workspace/node_modules/constantinople/package.json
+103 verbose read json /home/codio/workspace/node_modules/content-disposition/package.json
+104 verbose read json /home/codio/workspace/node_modules/content-type/package.json
+105 verbose read json /home/codio/workspace/node_modules/convert-source-map/package.json
+106 verbose read json /home/codio/workspace/node_modules/convert-to-spaces/package.json
+107 verbose read json /home/codio/workspace/node_modules/cookies/package.json
+108 verbose read json /home/codio/workspace/node_modules/core-js/package.json
+109 verbose read json /home/codio/workspace/node_modules/core-util-is/package.json
+110 verbose read json /home/codio/workspace/node_modules/cosmiconfig/package.json
+111 verbose read json /home/codio/workspace/node_modules/crc/package.json
+112 verbose read json /home/codio/workspace/node_modules/cross-spawn/package.json
+113 verbose read json /home/codio/workspace/node_modules/crypto-random-string/package.json
+114 verbose read json /home/codio/workspace/node_modules/currently-unhandled/package.json
+115 verbose read json /home/codio/workspace/node_modules/date-time/package.json
+116 verbose read json /home/codio/workspace/node_modules/de-indent/package.json
+117 verbose read json /home/codio/workspace/node_modules/debug/package.json
+118 verbose read json /home/codio/workspace/node_modules/decamelize/package.json
+119 verbose read json /home/codio/workspace/node_modules/deep-equal/package.json
+120 verbose read json /home/codio/workspace/node_modules/deep-extend/package.json
+121 verbose read json /home/codio/workspace/node_modules/deep-is/package.json
+122 verbose read json /home/codio/workspace/node_modules/defaults/package.json
+123 verbose read json /home/codio/workspace/node_modules/defer-to-connect/package.json
+124 verbose read json /home/codio/workspace/node_modules/defined/package.json
+125 verbose read json /home/codio/workspace/node_modules/del/package.json
+126 verbose read json /home/codio/workspace/node_modules/delegates/package.json
+127 verbose read json /home/codio/workspace/node_modules/depcheck/package.json
+128 verbose read json /home/codio/workspace/node_modules/depd/package.json
+129 verbose read json /home/codio/workspace/node_modules/dependency/package.json
+130 verbose read json /home/codio/workspace/node_modules/dependency-check/package.json
+131 verbose read json /home/codio/workspace/node_modules/deps-regex/package.json
+132 verbose read json /home/codio/workspace/node_modules/destroy/package.json
+133 verbose read json /home/codio/workspace/node_modules/detect-libc/package.json
+134 verbose read json /home/codio/workspace/node_modules/detective/package.json
+135 verbose read json /home/codio/workspace/node_modules/dir-glob/package.json
+136 verbose read json /home/codio/workspace/node_modules/doctrine/package.json
+137 verbose read json /home/codio/workspace/node_modules/doctypes/package.json
+138 verbose read json /home/codio/workspace/node_modules/dot-prop/package.json
+139 verbose read json /home/codio/workspace/node_modules/duplexer3/package.json
+140 verbose read json /home/codio/workspace/node_modules/editorconfig/package.json
+141 verbose read json /home/codio/workspace/node_modules/ee-first/package.json
+142 verbose read json /home/codio/workspace/node_modules/emittery/package.json
+143 verbose read json /home/codio/workspace/node_modules/emoji-regex/package.json
+144 verbose read json /home/codio/workspace/node_modules/encodeurl/package.json
+145 verbose read json /home/codio/workspace/node_modules/end-of-stream/package.json
+146 verbose read json /home/codio/workspace/node_modules/enquirer/package.json
+147 verbose read json /home/codio/workspace/node_modules/entities/package.json
+148 verbose read json /home/codio/workspace/node_modules/equal-length/package.json
+149 verbose read json /home/codio/workspace/node_modules/error-ex/package.json
+150 verbose read json /home/codio/workspace/node_modules/escape-goat/package.json
+151 verbose read json /home/codio/workspace/node_modules/escape-html/package.json
+152 verbose read json /home/codio/workspace/node_modules/escape-string-regexp/package.json
+153 verbose read json /home/codio/workspace/node_modules/escodegen/package.json
+154 verbose read json /home/codio/workspace/node_modules/eslint/package.json
+155 verbose read json /home/codio/workspace/node_modules/eslint-scope/package.json
+156 verbose read json /home/codio/workspace/node_modules/eslint-utils/package.json
+157 verbose read json /home/codio/workspace/node_modules/eslint-visitor-keys/package.json
+158 verbose read json /home/codio/workspace/node_modules/esm/package.json
+159 verbose read json /home/codio/workspace/node_modules/espree/package.json
+160 verbose read json /home/codio/workspace/node_modules/esprima/package.json
+161 verbose read json /home/codio/workspace/node_modules/esquery/package.json
+162 verbose read json /home/codio/workspace/node_modules/esrecurse/package.json
+163 verbose read json /home/codio/workspace/node_modules/estraverse/package.json
+164 verbose read json /home/codio/workspace/node_modules/esutils/package.json
+165 verbose read json /home/codio/workspace/node_modules/eventemitter3/package.json
+166 verbose read json /home/codio/workspace/node_modules/execa/package.json
+167 verbose read json /home/codio/workspace/node_modules/extend-shallow/package.json
+168 verbose read json /home/codio/workspace/node_modules/fast-deep-equal/package.json
+169 verbose read json /home/codio/workspace/node_modules/fast-diff/package.json
+170 verbose read json /home/codio/workspace/node_modules/fast-glob/package.json
+171 verbose read json /home/codio/workspace/node_modules/fast-json-stable-stringify/package.json
+172 verbose read json /home/codio/workspace/node_modules/fast-levenshtein/package.json
+173 verbose read json /home/codio/workspace/node_modules/fastq/package.json
+174 verbose read json /home/codio/workspace/node_modules/file-entry-cache/package.json
+175 verbose read json /home/codio/workspace/node_modules/fill-range/package.json
+176 verbose read json /home/codio/workspace/node_modules/find-up/package.json
+177 verbose read json /home/codio/workspace/node_modules/flat-cache/package.json
+178 verbose read json /home/codio/workspace/node_modules/flatted/package.json
+179 verbose read json /home/codio/workspace/node_modules/formidable/package.json
+180 verbose read json /home/codio/workspace/node_modules/fresh/package.json
+181 verbose read json /home/codio/workspace/node_modules/fs-extra/package.json
+182 verbose read json /home/codio/workspace/node_modules/fs-minipass/package.json
+183 verbose read json /home/codio/workspace/node_modules/fs.realpath/package.json
+184 verbose read json /home/codio/workspace/node_modules/functional-red-black-tree/package.json
+185 verbose read json /home/codio/workspace/node_modules/gauge/package.json
+186 verbose read json /home/codio/workspace/node_modules/get-caller-file/package.json
+187 verbose read json /home/codio/workspace/node_modules/get-paths/package.json
+188 verbose read json /home/codio/workspace/node_modules/get-stream/package.json
+189 verbose read json /home/codio/workspace/node_modules/gitignore-to-glob/package.json
+190 verbose read json /home/codio/workspace/node_modules/glob/package.json
+191 verbose read json /home/codio/workspace/node_modules/glob-parent/package.json
+192 verbose read json /home/codio/workspace/node_modules/global-dirs/package.json
+193 verbose read json /home/codio/workspace/node_modules/globals/package.json
+194 verbose read json /home/codio/workspace/node_modules/globby/package.json
+195 verbose read json /home/codio/workspace/node_modules/got/package.json
+196 verbose read json /home/codio/workspace/node_modules/graceful-fs/package.json
+197 verbose read json /home/codio/workspace/node_modules/handlebars/package.json
+198 verbose read json /home/codio/workspace/node_modules/has-flag/package.json
+199 verbose read json /home/codio/workspace/node_modules/has-symbols/package.json
+200 verbose read json /home/codio/workspace/node_modules/has-unicode/package.json
+201 verbose read json /home/codio/workspace/node_modules/has-yarn/package.json
+202 verbose read json /home/codio/workspace/node_modules/he/package.json
+203 verbose read json /home/codio/workspace/node_modules/hosted-git-info/package.json
+204 verbose read json /home/codio/workspace/node_modules/http-assert/package.json
+205 verbose read json /home/codio/workspace/node_modules/http-cache-semantics/package.json
+206 verbose read json /home/codio/workspace/node_modules/http-errors/package.json
+207 verbose read json /home/codio/workspace/node_modules/human-signals/package.json
+208 verbose read json /home/codio/workspace/node_modules/iconv-lite/package.json
+209 verbose read json /home/codio/workspace/node_modules/ieee754/package.json
+210 verbose read json /home/codio/workspace/node_modules/ignore/package.json
+211 verbose read json /home/codio/workspace/node_modules/ignore-by-default/package.json
+212 verbose read json /home/codio/workspace/node_modules/ignore-walk/package.json
+213 verbose read json /home/codio/workspace/node_modules/import-fresh/package.json
+214 verbose read json /home/codio/workspace/node_modules/import-lazy/package.json
+215 verbose read json /home/codio/workspace/node_modules/imurmurhash/package.json
+216 verbose read json /home/codio/workspace/node_modules/indent-string/package.json
+217 verbose read json /home/codio/workspace/node_modules/inflation/package.json
+218 verbose read json /home/codio/workspace/node_modules/inflight/package.json
+219 verbose read json /home/codio/workspace/node_modules/inherits/package.json
+220 verbose read json /home/codio/workspace/node_modules/ini/package.json
+221 verbose read json /home/codio/workspace/node_modules/irregular-plurals/package.json
+222 verbose read json /home/codio/workspace/node_modules/is-binary-path/package.json
+223 verbose read json /home/codio/workspace/node_modules/is-buffer/package.json
+224 verbose read json /home/codio/workspace/node_modules/is-ci/package.json
+225 verbose read json /home/codio/workspace/node_modules/is-class-hotfix/package.json
+226 verbose read json /home/codio/workspace/node_modules/is-error/package.json
+227 verbose read json /home/codio/workspace/node_modules/is-expression/package.json
+228 verbose read json /home/codio/workspace/node_modules/is-extendable/package.json
+229 verbose read json /home/codio/workspace/node_modules/is-extglob/package.json
+230 verbose read json /home/codio/workspace/node_modules/is-fullwidth-code-point/package.json
+231 verbose read json /home/codio/workspace/node_modules/is-generator-function/package.json
+232 verbose read json /home/codio/workspace/node_modules/is-glob/package.json
+233 verbose read json /home/codio/workspace/node_modules/is-installed-globally/package.json
+234 verbose read json /home/codio/workspace/node_modules/is-interactive/package.json
+235 verbose read json /home/codio/workspace/node_modules/is-npm/package.json
+236 verbose read json /home/codio/workspace/node_modules/is-number/package.json
+237 verbose read json /home/codio/workspace/node_modules/is-obj/package.json
+238 verbose read json /home/codio/workspace/node_modules/is-path-cwd/package.json
+239 verbose read json /home/codio/workspace/node_modules/is-path-inside/package.json
+240 verbose read json /home/codio/workspace/node_modules/is-promise/package.json
+241 verbose read json /home/codio/workspace/node_modules/is-regex/package.json
+242 verbose read json /home/codio/workspace/node_modules/is-relative/package.json
+243 verbose read json /home/codio/workspace/node_modules/is-stream/package.json
+244 verbose read json /home/codio/workspace/node_modules/is-type-of/package.json
+245 verbose read json /home/codio/workspace/node_modules/is-typedarray/package.json
+246 verbose read json /home/codio/workspace/node_modules/is-unc-path/package.json
+247 verbose read json /home/codio/workspace/node_modules/is-whitespace/package.json
+248 verbose read json /home/codio/workspace/node_modules/is-yarn-global/package.json
+249 verbose read json /home/codio/workspace/node_modules/isarray/package.json
+250 verbose read json /home/codio/workspace/node_modules/isexe/package.json
+251 verbose read json /home/codio/workspace/node_modules/isstream/package.json
+252 verbose read json /home/codio/workspace/node_modules/js-beautify/package.json
+253 verbose read json /home/codio/workspace/node_modules/js-string-escape/package.json
+254 verbose read json /home/codio/workspace/node_modules/js-stringify/package.json
+255 verbose read json /home/codio/workspace/node_modules/js-tokens/package.json
+256 verbose read json /home/codio/workspace/node_modules/js-yaml/package.json
+257 verbose read json /home/codio/workspace/node_modules/js2coffee/package.json
+258 verbose read json /home/codio/workspace/node_modules/js2xmlparser/package.json
+259 verbose read json /home/codio/workspace/node_modules/jscpd/package.json
+260 verbose read json /home/codio/workspace/node_modules/jsdoc/package.json
+261 verbose read json /home/codio/workspace/node_modules/jsdoc-route-plugin/package.json
+262 verbose read json /home/codio/workspace/node_modules/jsesc/package.json
+263 verbose read json /home/codio/workspace/node_modules/json-buffer/package.json
+264 verbose read json /home/codio/workspace/node_modules/json-parse-better-errors/package.json
+265 verbose read json /home/codio/workspace/node_modules/json-parse-even-better-errors/package.json
+266 verbose read json /home/codio/workspace/node_modules/json-schema-traverse/package.json
+267 verbose read json /home/codio/workspace/node_modules/json-stable-stringify-without-jsonify/package.json
+268 verbose read json /home/codio/workspace/node_modules/json5/package.json
+269 verbose read json /home/codio/workspace/node_modules/jsonfile/package.json
+270 verbose read json /home/codio/workspace/node_modules/jstransformer/package.json
+271 verbose read json /home/codio/workspace/node_modules/keygrip/package.json
+272 verbose read json /home/codio/workspace/node_modules/keyv/package.json
+273 verbose read json /home/codio/workspace/node_modules/kind-of/package.json
+274 verbose read json /home/codio/workspace/node_modules/klaw/package.json
+275 verbose read json /home/codio/workspace/node_modules/koa/package.json
+276 verbose read json /home/codio/workspace/node_modules/koa-body/package.json
+277 verbose read json /home/codio/workspace/node_modules/koa-compose/package.json
+278 verbose read json /home/codio/workspace/node_modules/koa-convert/package.json
+279 verbose read json /home/codio/workspace/node_modules/koa-router/package.json
+280 verbose read json /home/codio/workspace/node_modules/koa-send/package.json
+281 verbose read json /home/codio/workspace/node_modules/koa-session/package.json
+282 verbose read json /home/codio/workspace/node_modules/koa-static/package.json
+283 verbose read json /home/codio/workspace/node_modules/koa-views/package.json
+284 verbose read json /home/codio/workspace/node_modules/latest-version/package.json
+285 verbose read json /home/codio/workspace/node_modules/lazy-cache/package.json
+286 verbose read json /home/codio/workspace/node_modules/levn/package.json
+287 verbose read json /home/codio/workspace/node_modules/lines-and-columns/package.json
+288 verbose read json /home/codio/workspace/node_modules/linkify-it/package.json
+289 verbose read json /home/codio/workspace/node_modules/locate-path/package.json
+290 verbose read json /home/codio/workspace/node_modules/lodash/package.json
+291 verbose read json /home/codio/workspace/node_modules/log-symbols/package.json
+292 verbose read json /home/codio/workspace/node_modules/longest/package.json
+293 verbose read json /home/codio/workspace/node_modules/lowercase-keys/package.json
+294 verbose read json /home/codio/workspace/node_modules/lru-cache/package.json
+295 verbose read json /home/codio/workspace/node_modules/map-age-cleaner/package.json
+296 verbose read json /home/codio/workspace/node_modules/markdown-it/package.json
+297 verbose read json /home/codio/workspace/node_modules/markdown-it-anchor/package.json
+298 verbose read json /home/codio/workspace/node_modules/markdown-table/package.json
+299 verbose read json /home/codio/workspace/node_modules/marked/package.json
+300 verbose read json /home/codio/workspace/node_modules/matcher/package.json
+301 verbose read json /home/codio/workspace/node_modules/md5-hex/package.json
+302 verbose read json /home/codio/workspace/node_modules/mdurl/package.json
+303 verbose read json /home/codio/workspace/node_modules/media-typer/package.json
+304 verbose read json /home/codio/workspace/node_modules/mem/package.json
+305 verbose read json /home/codio/workspace/node_modules/merge-stream/package.json
+306 verbose read json /home/codio/workspace/node_modules/merge2/package.json
+307 verbose read json /home/codio/workspace/node_modules/methods/package.json
+308 verbose read json /home/codio/workspace/node_modules/micromatch/package.json
+309 verbose read json /home/codio/workspace/node_modules/mime-db/package.json
+310 verbose read json /home/codio/workspace/node_modules/mime-types/package.json
+311 verbose read json /home/codio/workspace/node_modules/mimic-fn/package.json
+312 verbose read json /home/codio/workspace/node_modules/minimatch/package.json
+313 verbose read json /home/codio/workspace/node_modules/minimist/package.json
+314 verbose read json /home/codio/workspace/node_modules/minipass/package.json
+315 verbose read json /home/codio/workspace/node_modules/minizlib/package.json
+316 verbose read json /home/codio/workspace/node_modules/mkdirp/package.json
+317 verbose read json /home/codio/workspace/node_modules/ms/package.json
+318 verbose read json /home/codio/workspace/node_modules/multimatch/package.json
+319 verbose read json /home/codio/workspace/node_modules/mz/package.json
+320 verbose read json /home/codio/workspace/node_modules/natural-compare/package.json
+321 verbose read json /home/codio/workspace/node_modules/needle/package.json
+322 verbose read json /home/codio/workspace/node_modules/negotiator/package.json
+323 verbose read json /home/codio/workspace/node_modules/neo-async/package.json
+324 verbose read json /home/codio/workspace/node_modules/node-addon-api/package.json
+325 verbose read json /home/codio/workspace/node_modules/node-pre-gyp/package.json
+326 verbose read json /home/codio/workspace/node_modules/nopt/package.json
+327 verbose read json /home/codio/workspace/node_modules/normalize-package-data/package.json
+328 verbose read json /home/codio/workspace/node_modules/normalize-url/package.json
+329 verbose read json /home/codio/workspace/node_modules/npm-bundled/package.json
+330 verbose read json /home/codio/workspace/node_modules/npm-normalize-package-bin/package.json
+331 verbose read json /home/codio/workspace/node_modules/npm-packlist/package.json
+332 verbose read json /home/codio/workspace/node_modules/npm-run-path/package.json
+333 verbose read json /home/codio/workspace/node_modules/npmlog/package.json
+334 verbose read json /home/codio/workspace/node_modules/number-is-nan/package.json
+335 verbose read json /home/codio/workspace/node_modules/object-assign/package.json
+336 verbose read json /home/codio/workspace/node_modules/on-finished/package.json
+337 verbose read json /home/codio/workspace/node_modules/once/package.json
+338 verbose read json /home/codio/workspace/node_modules/onetime/package.json
+339 verbose read json /home/codio/workspace/node_modules/only/package.json
+340 verbose read json /home/codio/workspace/node_modules/optionator/package.json
+341 verbose read json /home/codio/workspace/node_modules/ora/package.json
+342 verbose read json /home/codio/workspace/node_modules/os-homedir/package.json
+343 verbose read json /home/codio/workspace/node_modules/os-tmpdir/package.json
+344 verbose read json /home/codio/workspace/node_modules/osenv/package.json
+345 verbose read json /home/codio/workspace/node_modules/p-cancelable/package.json
+346 verbose read json /home/codio/workspace/node_modules/p-defer/package.json
+347 verbose read json /home/codio/workspace/node_modules/p-limit/package.json
+348 verbose read json /home/codio/workspace/node_modules/p-locate/package.json
+349 verbose read json /home/codio/workspace/node_modules/p-map/package.json
+350 verbose read json /home/codio/workspace/node_modules/p-try/package.json
+351 verbose read json /home/codio/workspace/node_modules/package-json/package.json
+352 verbose read json /home/codio/workspace/node_modules/parent-module/package.json
+353 verbose read json /home/codio/workspace/node_modules/parse-json/package.json
+354 verbose read json /home/codio/workspace/node_modules/parse-ms/package.json
+355 verbose read json /home/codio/workspace/node_modules/parseurl/package.json
+356 verbose read json /home/codio/workspace/node_modules/path-exists/package.json
+357 verbose read json /home/codio/workspace/node_modules/path-is-absolute/package.json
+358 verbose read json /home/codio/workspace/node_modules/path-key/package.json
+359 verbose read json /home/codio/workspace/node_modules/path-parse/package.json
+360 verbose read json /home/codio/workspace/node_modules/path-to-regexp/package.json
+361 verbose read json /home/codio/workspace/node_modules/path-type/package.json
+362 verbose read json /home/codio/workspace/node_modules/picomatch/package.json
+363 verbose read json /home/codio/workspace/node_modules/pify/package.json
+364 verbose read json /home/codio/workspace/node_modules/pkg-conf/package.json
+365 verbose read json /home/codio/workspace/node_modules/pkg-up/package.json
+366 verbose read json /home/codio/workspace/node_modules/please-upgrade-node/package.json
+367 verbose read json /home/codio/workspace/node_modules/plur/package.json
+368 verbose read json /home/codio/workspace/node_modules/prelude-ls/package.json
+369 verbose read json /home/codio/workspace/node_modules/prepend-http/package.json
+370 verbose read json /home/codio/workspace/node_modules/pretty/package.json
+371 verbose read json /home/codio/workspace/node_modules/pretty-ms/package.json
+372 verbose read json /home/codio/workspace/node_modules/process-nextick-args/package.json
+373 verbose read json /home/codio/workspace/node_modules/progress/package.json
+374 verbose read json /home/codio/workspace/node_modules/promise/package.json
+375 verbose read json /home/codio/workspace/node_modules/proto-list/package.json
+376 verbose read json /home/codio/workspace/node_modules/pseudomap/package.json
+377 verbose read json /home/codio/workspace/node_modules/pug/package.json
+378 verbose read json /home/codio/workspace/node_modules/pug-attrs/package.json
+379 verbose read json /home/codio/workspace/node_modules/pug-code-gen/package.json
+380 verbose read json /home/codio/workspace/node_modules/pug-error/package.json
+381 verbose read json /home/codio/workspace/node_modules/pug-filters/package.json
+382 verbose read json /home/codio/workspace/node_modules/pug-lexer/package.json
+383 verbose read json /home/codio/workspace/node_modules/pug-linker/package.json
+384 verbose read json /home/codio/workspace/node_modules/pug-load/package.json
+385 verbose read json /home/codio/workspace/node_modules/pug-parser/package.json
+386 verbose read json /home/codio/workspace/node_modules/pug-runtime/package.json
+387 verbose read json /home/codio/workspace/node_modules/pug-strip-comments/package.json
+388 verbose read json /home/codio/workspace/node_modules/pug-walk/package.json
+389 verbose read json /home/codio/workspace/node_modules/pump/package.json
+390 verbose read json /home/codio/workspace/node_modules/punycode/package.json
+391 verbose read json /home/codio/workspace/node_modules/pupa/package.json
+392 verbose read json /home/codio/workspace/node_modules/qs/package.json
+393 verbose read json /home/codio/workspace/node_modules/raw-body/package.json
+394 verbose read json /home/codio/workspace/node_modules/rc/package.json
+395 verbose read json /home/codio/workspace/node_modules/read-input/package.json
+396 verbose read json /home/codio/workspace/node_modules/read-package-json/package.json
+397 verbose read json /home/codio/workspace/node_modules/readable-stream/package.json
+398 verbose read json /home/codio/workspace/node_modules/readdirp/package.json
+399 verbose read json /home/codio/workspace/node_modules/regenerator-runtime/package.json
+400 verbose read json /home/codio/workspace/node_modules/regexpp/package.json
+401 verbose read json /home/codio/workspace/node_modules/registry-auth-token/package.json
+402 verbose read json /home/codio/workspace/node_modules/registry-url/package.json
+403 verbose read json /home/codio/workspace/node_modules/repeat-string/package.json
+404 verbose read json /home/codio/workspace/node_modules/reprism/package.json
+405 verbose read json /home/codio/workspace/node_modules/require-directory/package.json
+406 verbose read json /home/codio/workspace/node_modules/require-main-filename/package.json
+407 verbose read json /home/codio/workspace/node_modules/require-package-name/package.json
+408 verbose read json /home/codio/workspace/node_modules/requizzle/package.json
+409 verbose read json /home/codio/workspace/node_modules/resolve/package.json
+410 verbose read json /home/codio/workspace/node_modules/resolve-from/package.json
+411 verbose read json /home/codio/workspace/node_modules/resolve-path/package.json
+412 verbose read json /home/codio/workspace/node_modules/responselike/package.json
+413 verbose read json /home/codio/workspace/node_modules/reusify/package.json
+414 verbose read json /home/codio/workspace/node_modules/right-align/package.json
+415 verbose read json /home/codio/workspace/node_modules/rimraf/package.json
+416 verbose read json /home/codio/workspace/node_modules/run-parallel/package.json
+417 verbose read json /home/codio/workspace/node_modules/safe-buffer/package.json
+418 verbose read json /home/codio/workspace/node_modules/safer-buffer/package.json
+419 verbose read json /home/codio/workspace/node_modules/sass/package.json
+420 verbose read json /home/codio/workspace/node_modules/sax/package.json
+421 verbose read json /home/codio/workspace/node_modules/semver/package.json
+422 verbose read json /home/codio/workspace/node_modules/semver-compare/package.json
+423 verbose read json /home/codio/workspace/node_modules/semver-diff/package.json
+424 verbose read json /home/codio/workspace/node_modules/serialize-error/package.json
+425 verbose read json /home/codio/workspace/node_modules/set-blocking/package.json
+426 verbose read json /home/codio/workspace/node_modules/setprototypeof/package.json
+427 verbose read json /home/codio/workspace/node_modules/shebang-command/package.json
+428 verbose read json /home/codio/workspace/node_modules/shebang-regex/package.json
+429 verbose read json /home/codio/workspace/node_modules/sigmund/package.json
+430 verbose read json /home/codio/workspace/node_modules/signal-exit/package.json
+431 verbose read json /home/codio/workspace/node_modules/slash/package.json
+432 verbose read json /home/codio/workspace/node_modules/slice-ansi/package.json
+433 verbose read json /home/codio/workspace/node_modules/source-map/package.json
+434 verbose read json /home/codio/workspace/node_modules/spark-md5/package.json
+435 verbose read json /home/codio/workspace/node_modules/spdx-correct/package.json
+436 verbose read json /home/codio/workspace/node_modules/spdx-exceptions/package.json
+437 verbose read json /home/codio/workspace/node_modules/spdx-expression-parse/package.json
+438 verbose read json /home/codio/workspace/node_modules/spdx-license-ids/package.json
+439 verbose read json /home/codio/workspace/node_modules/sprintf-js/package.json
+440 verbose read json /home/codio/workspace/node_modules/sqlite-async/package.json
+441 verbose read json /home/codio/workspace/node_modules/statuses/package.json
+442 verbose read json /home/codio/workspace/node_modules/string-width/package.json
+443 verbose read json /home/codio/workspace/node_modules/string_decoder/package.json
+444 verbose read json /home/codio/workspace/node_modules/strip-ansi/package.json
+445 verbose read json /home/codio/workspace/node_modules/strip-bom/package.json
+446 verbose read json /home/codio/workspace/node_modules/strip-final-newline/package.json
+447 verbose read json /home/codio/workspace/node_modules/strip-json-comments/package.json
+448 verbose read json /home/codio/workspace/node_modules/supertap/package.json
+449 verbose read json /home/codio/workspace/node_modules/supports-color/package.json
+450 verbose read json /home/codio/workspace/node_modules/table/package.json
+451 verbose read json /home/codio/workspace/node_modules/taffydb/package.json
+452 verbose read json /home/codio/workspace/node_modules/tar/package.json
+453 verbose read json /home/codio/workspace/node_modules/temp-dir/package.json
+454 verbose read json /home/codio/workspace/node_modules/term-size/package.json
+455 verbose read json /home/codio/workspace/node_modules/text-table/package.json
+456 verbose read json /home/codio/workspace/node_modules/thenify/package.json
+457 verbose read json /home/codio/workspace/node_modules/thenify-all/package.json
+458 verbose read json /home/codio/workspace/node_modules/time-zone/package.json
+459 verbose read json /home/codio/workspace/node_modules/to-fast-properties/package.json
+460 verbose read json /home/codio/workspace/node_modules/to-readable-stream/package.json
+461 verbose read json /home/codio/workspace/node_modules/to-regex-range/package.json
+462 verbose read json /home/codio/workspace/node_modules/toidentifier/package.json
+463 verbose read json /home/codio/workspace/node_modules/token-stream/package.json
+464 verbose read json /home/codio/workspace/node_modules/trim-off-newlines/package.json
+465 verbose read json /home/codio/workspace/node_modules/tsscmp/package.json
+466 verbose read json /home/codio/workspace/node_modules/type-check/package.json
+467 verbose read json /home/codio/workspace/node_modules/type-fest/package.json
+468 verbose read json /home/codio/workspace/node_modules/type-is/package.json
+469 verbose read json /home/codio/workspace/node_modules/typedarray-to-buffer/package.json
+470 verbose read json /home/codio/workspace/node_modules/uc.micro/package.json
+471 verbose read json /home/codio/workspace/node_modules/uglify-js/package.json
+472 verbose read json /home/codio/workspace/node_modules/uglify-to-browserify/package.json
+473 verbose read json /home/codio/workspace/node_modules/unc-path-regex/package.json
+474 verbose read json /home/codio/workspace/node_modules/underscore/package.json
+475 verbose read json /home/codio/workspace/node_modules/unique-string/package.json
+476 verbose read json /home/codio/workspace/node_modules/universalify/package.json
+477 verbose read json /home/codio/workspace/node_modules/unpipe/package.json
+478 verbose read json /home/codio/workspace/node_modules/update-notifier/package.json
+479 verbose read json /home/codio/workspace/node_modules/uri-js/package.json
+480 verbose read json /home/codio/workspace/node_modules/url-parse-lax/package.json
+481 verbose read json /home/codio/workspace/node_modules/util-deprecate/package.json
+482 verbose read json /home/codio/workspace/node_modules/uuid/package.json
+483 verbose read json /home/codio/workspace/node_modules/v8-compile-cache/package.json
+484 verbose read json /home/codio/workspace/node_modules/validate-npm-package-license/package.json
+485 verbose read json /home/codio/workspace/node_modules/vary/package.json
+486 verbose read json /home/codio/workspace/node_modules/void-elements/package.json
+487 verbose read json /home/codio/workspace/node_modules/vue-template-compiler/package.json
+488 verbose read json /home/codio/workspace/node_modules/wcwidth/package.json
+489 verbose read json /home/codio/workspace/node_modules/well-known-symbols/package.json
+490 verbose read json /home/codio/workspace/node_modules/which/package.json
+491 verbose read json /home/codio/workspace/node_modules/which-module/package.json
+492 verbose read json /home/codio/workspace/node_modules/wide-align/package.json
+493 verbose read json /home/codio/workspace/node_modules/widest-line/package.json
+494 verbose read json /home/codio/workspace/node_modules/window-size/package.json
+495 verbose read json /home/codio/workspace/node_modules/with/package.json
+496 verbose read json /home/codio/workspace/node_modules/word-wrap/package.json
+497 verbose read json /home/codio/workspace/node_modules/wordwrap/package.json
+498 verbose read json /home/codio/workspace/node_modules/wrap-ansi/package.json
+499 verbose read json /home/codio/workspace/node_modules/wrappy/package.json
+500 verbose read json /home/codio/workspace/node_modules/write/package.json
+501 verbose read json /home/codio/workspace/node_modules/xdg-basedir/package.json
+502 verbose read json /home/codio/workspace/node_modules/xml2js/package.json
+503 verbose read json /home/codio/workspace/node_modules/xmlbuilder/package.json
+504 verbose read json /home/codio/workspace/node_modules/xmlcreate/package.json
+505 verbose read json /home/codio/workspace/node_modules/xtend/package.json
+506 verbose read json /home/codio/workspace/node_modules/y18n/package.json
+507 verbose read json /home/codio/workspace/node_modules/yallist/package.json
+508 verbose read json /home/codio/workspace/node_modules/yaml/package.json
+509 verbose read json /home/codio/workspace/node_modules/yargs/package.json
+510 verbose read json /home/codio/workspace/node_modules/yargs-parser/package.json
+511 verbose read json /home/codio/workspace/node_modules/ylru/package.json
+512 warn package.json de-indent@1.0.2 No README.md file found!
+513 warn package.json taffydb@2.6.2 No README.md file found!
+514 verbose from cache /home/codio/workspace/package.json
+515 verbose readDependencies using package.json deps
+516 verbose read json /home/codio/workspace/node_modules/@babel/package.json
+517 verbose read json /home/codio/workspace/node_modules/@concordance/package.json
+518 verbose read json /home/codio/workspace/node_modules/@eslint/package.json
+519 verbose read json /home/codio/workspace/node_modules/@jscpd/package.json
+520 verbose read json /home/codio/workspace/node_modules/@nodelib/package.json
+521 verbose read json /home/codio/workspace/node_modules/@sindresorhus/package.json
+522 verbose read json /home/codio/workspace/node_modules/@szmarczak/package.json
+523 verbose read json /home/codio/workspace/node_modules/@types/package.json
+524 verbose from cache /home/codio/workspace/node_modules/abbrev/package.json
+525 verbose from cache /home/codio/workspace/node_modules/accepts/package.json
+526 verbose from cache /home/codio/workspace/node_modules/acorn/package.json
+527 verbose from cache /home/codio/workspace/node_modules/acorn-globals/package.json
+528 verbose from cache /home/codio/workspace/node_modules/acorn-jsx/package.json
+529 verbose from cache /home/codio/workspace/node_modules/acorn-node/package.json
+530 verbose from cache /home/codio/workspace/node_modules/acorn-walk/package.json
+531 verbose from cache /home/codio/workspace/node_modules/aggregate-error/package.json
+532 verbose from cache /home/codio/workspace/node_modules/ajv/package.json
+533 verbose from cache /home/codio/workspace/node_modules/align-text/package.json
+534 verbose from cache /home/codio/workspace/node_modules/ansi-align/package.json
+535 verbose from cache /home/codio/workspace/node_modules/ansi-colors/package.json
+536 verbose from cache /home/codio/workspace/node_modules/ansi-regex/package.json
+537 verbose from cache /home/codio/workspace/node_modules/ansi-styles/package.json
+538 verbose from cache /home/codio/workspace/node_modules/any-promise/package.json
+539 verbose from cache /home/codio/workspace/node_modules/aproba/package.json
+540 verbose from cache /home/codio/workspace/node_modules/are-we-there-yet/package.json
+541 verbose from cache /home/codio/workspace/node_modules/argparse/package.json
+542 verbose from cache /home/codio/workspace/node_modules/array-differ/package.json
+543 verbose from cache /home/codio/workspace/node_modules/array-find-index/package.json
+544 verbose from cache /home/codio/workspace/node_modules/array-union/package.json
+545 verbose from cache /home/codio/workspace/node_modules/arrgv/package.json
+546 verbose from cache /home/codio/workspace/node_modules/arrify/package.json
+547 verbose from cache /home/codio/workspace/node_modules/asap/package.json
+548 verbose from cache /home/codio/workspace/node_modules/astral-regex/package.json
+549 verbose from cache /home/codio/workspace/node_modules/async/package.json
+550 verbose from cache /home/codio/workspace/node_modules/at-least-node/package.json
+551 verbose from cache /home/codio/workspace/node_modules/ava/package.json
+552 verbose from cache /home/codio/workspace/node_modules/babel-runtime/package.json
+553 verbose from cache /home/codio/workspace/node_modules/babel-types/package.json
+554 verbose from cache /home/codio/workspace/node_modules/babylon/package.json
+555 verbose from cache /home/codio/workspace/node_modules/balanced-match/package.json
+556 verbose from cache /home/codio/workspace/node_modules/base64-js/package.json
+557 verbose from cache /home/codio/workspace/node_modules/bcrypt/package.json
+558 verbose from cache /home/codio/workspace/node_modules/bcrypt-promise/package.json
+559 verbose from cache /home/codio/workspace/node_modules/binary-extensions/package.json
+560 verbose from cache /home/codio/workspace/node_modules/blamer/package.json
+561 verbose from cache /home/codio/workspace/node_modules/bluebird/package.json
+562 verbose from cache /home/codio/workspace/node_modules/blueimp-md5/package.json
+563 verbose from cache /home/codio/workspace/node_modules/boxen/package.json
+564 verbose from cache /home/codio/workspace/node_modules/brace-expansion/package.json
+565 verbose from cache /home/codio/workspace/node_modules/braces/package.json
+566 verbose from cache /home/codio/workspace/node_modules/buffer/package.json
+567 verbose from cache /home/codio/workspace/node_modules/buffer-from/package.json
+568 verbose from cache /home/codio/workspace/node_modules/builtin-modules/package.json
+569 verbose from cache /home/codio/workspace/node_modules/bytes/package.json
+570 verbose from cache /home/codio/workspace/node_modules/cache-content-type/package.json
+571 verbose from cache /home/codio/workspace/node_modules/cacheable-request/package.json
+572 verbose from cache /home/codio/workspace/node_modules/camelcase/package.json
+573 verbose from cache /home/codio/workspace/node_modules/catharsis/package.json
+574 verbose from cache /home/codio/workspace/node_modules/center-align/package.json
+575 verbose from cache /home/codio/workspace/node_modules/chalk/package.json
+576 verbose from cache /home/codio/workspace/node_modules/character-parser/package.json
+577 verbose from cache /home/codio/workspace/node_modules/chokidar/package.json
+578 verbose from cache /home/codio/workspace/node_modules/chownr/package.json
+579 verbose from cache /home/codio/workspace/node_modules/chunkd/package.json
+580 verbose from cache /home/codio/workspace/node_modules/ci-info/package.json
+581 verbose from cache /home/codio/workspace/node_modules/ci-parallel-vars/package.json
+582 verbose from cache /home/codio/workspace/node_modules/clean-css/package.json
+583 verbose from cache /home/codio/workspace/node_modules/clean-stack/package.json
+584 verbose from cache /home/codio/workspace/node_modules/clean-yaml-object/package.json
+585 verbose from cache /home/codio/workspace/node_modules/cli-boxes/package.json
+586 verbose from cache /home/codio/workspace/node_modules/cli-spinners/package.json
+587 verbose from cache /home/codio/workspace/node_modules/cli-table3/package.json
+588 verbose from cache /home/codio/workspace/node_modules/cli-truncate/package.json
+589 verbose from cache /home/codio/workspace/node_modules/cliui/package.json
+590 verbose from cache /home/codio/workspace/node_modules/clone/package.json
+591 verbose from cache /home/codio/workspace/node_modules/clone-response/package.json
+592 verbose from cache /home/codio/workspace/node_modules/co/package.json
+593 verbose from cache /home/codio/workspace/node_modules/co-body/package.json
+594 verbose from cache /home/codio/workspace/node_modules/code-excerpt/package.json
+595 verbose from cache /home/codio/workspace/node_modules/code-point-at/package.json
+596 verbose from cache /home/codio/workspace/node_modules/coffee-script/package.json
+597 verbose from cache /home/codio/workspace/node_modules/color-convert/package.json
+598 verbose from cache /home/codio/workspace/node_modules/color-name/package.json
+599 verbose from cache /home/codio/workspace/node_modules/colors/package.json
+600 verbose from cache /home/codio/workspace/node_modules/commander/package.json
+601 verbose from cache /home/codio/workspace/node_modules/common-path-prefix/package.json
+602 verbose from cache /home/codio/workspace/node_modules/concat-map/package.json
+603 verbose from cache /home/codio/workspace/node_modules/concordance/package.json
+604 verbose from cache /home/codio/workspace/node_modules/condense-newlines/package.json
+605 verbose from cache /home/codio/workspace/node_modules/config-chain/package.json
+606 verbose from cache /home/codio/workspace/node_modules/configstore/package.json
+607 verbose from cache /home/codio/workspace/node_modules/console-control-strings/package.json
+608 verbose from cache /home/codio/workspace/node_modules/consolidate/package.json
+609 verbose from cache /home/codio/workspace/node_modules/constantinople/package.json
+610 verbose from cache /home/codio/workspace/node_modules/content-disposition/package.json
+611 verbose from cache /home/codio/workspace/node_modules/content-type/package.json
+612 verbose from cache /home/codio/workspace/node_modules/convert-source-map/package.json
+613 verbose from cache /home/codio/workspace/node_modules/convert-to-spaces/package.json
+614 verbose from cache /home/codio/workspace/node_modules/cookies/package.json
+615 verbose from cache /home/codio/workspace/node_modules/core-js/package.json
+616 verbose from cache /home/codio/workspace/node_modules/core-util-is/package.json
+617 verbose from cache /home/codio/workspace/node_modules/cosmiconfig/package.json
+618 verbose from cache /home/codio/workspace/node_modules/crc/package.json
+619 verbose from cache /home/codio/workspace/node_modules/cross-spawn/package.json
+620 verbose from cache /home/codio/workspace/node_modules/crypto-random-string/package.json
+621 verbose from cache /home/codio/workspace/node_modules/currently-unhandled/package.json
+622 verbose from cache /home/codio/workspace/node_modules/date-time/package.json
+623 verbose from cache /home/codio/workspace/node_modules/de-indent/package.json
+624 verbose from cache /home/codio/workspace/node_modules/debug/package.json
+625 verbose from cache /home/codio/workspace/node_modules/decamelize/package.json
+626 verbose from cache /home/codio/workspace/node_modules/deep-equal/package.json
+627 verbose from cache /home/codio/workspace/node_modules/deep-extend/package.json
+628 verbose from cache /home/codio/workspace/node_modules/deep-is/package.json
+629 verbose from cache /home/codio/workspace/node_modules/defaults/package.json
+630 verbose from cache /home/codio/workspace/node_modules/defer-to-connect/package.json
+631 verbose from cache /home/codio/workspace/node_modules/defined/package.json
+632 verbose from cache /home/codio/workspace/node_modules/del/package.json
+633 verbose from cache /home/codio/workspace/node_modules/delegates/package.json
+634 verbose from cache /home/codio/workspace/node_modules/depcheck/package.json
+635 verbose from cache /home/codio/workspace/node_modules/depd/package.json
+636 verbose from cache /home/codio/workspace/node_modules/dependency/package.json
+637 verbose from cache /home/codio/workspace/node_modules/dependency-check/package.json
+638 verbose from cache /home/codio/workspace/node_modules/deps-regex/package.json
+639 verbose from cache /home/codio/workspace/node_modules/destroy/package.json
+640 verbose from cache /home/codio/workspace/node_modules/detect-libc/package.json
+641 verbose from cache /home/codio/workspace/node_modules/detective/package.json
+642 verbose from cache /home/codio/workspace/node_modules/dir-glob/package.json
+643 verbose from cache /home/codio/workspace/node_modules/doctrine/package.json
+644 verbose from cache /home/codio/workspace/node_modules/doctypes/package.json
+645 verbose from cache /home/codio/workspace/node_modules/dot-prop/package.json
+646 verbose from cache /home/codio/workspace/node_modules/duplexer3/package.json
+647 verbose from cache /home/codio/workspace/node_modules/editorconfig/package.json
+648 verbose from cache /home/codio/workspace/node_modules/ee-first/package.json
+649 verbose from cache /home/codio/workspace/node_modules/emittery/package.json
+650 verbose from cache /home/codio/workspace/node_modules/emoji-regex/package.json
+651 verbose from cache /home/codio/workspace/node_modules/encodeurl/package.json
+652 verbose from cache /home/codio/workspace/node_modules/end-of-stream/package.json
+653 verbose from cache /home/codio/workspace/node_modules/enquirer/package.json
+654 verbose from cache /home/codio/workspace/node_modules/entities/package.json
+655 verbose from cache /home/codio/workspace/node_modules/equal-length/package.json
+656 verbose from cache /home/codio/workspace/node_modules/error-ex/package.json
+657 verbose from cache /home/codio/workspace/node_modules/escape-goat/package.json
+658 verbose from cache /home/codio/workspace/node_modules/escape-html/package.json
+659 verbose from cache /home/codio/workspace/node_modules/escape-string-regexp/package.json
+660 verbose from cache /home/codio/workspace/node_modules/escodegen/package.json
+661 verbose from cache /home/codio/workspace/node_modules/eslint/package.json
+662 verbose from cache /home/codio/workspace/node_modules/eslint-scope/package.json
+663 verbose from cache /home/codio/workspace/node_modules/eslint-utils/package.json
+664 verbose from cache /home/codio/workspace/node_modules/eslint-visitor-keys/package.json
+665 verbose from cache /home/codio/workspace/node_modules/esm/package.json
+666 verbose from cache /home/codio/workspace/node_modules/espree/package.json
+667 verbose from cache /home/codio/workspace/node_modules/esprima/package.json
+668 verbose from cache /home/codio/workspace/node_modules/esquery/package.json
+669 verbose from cache /home/codio/workspace/node_modules/esrecurse/package.json
+670 verbose from cache /home/codio/workspace/node_modules/estraverse/package.json
+671 verbose from cache /home/codio/workspace/node_modules/esutils/package.json
+672 verbose from cache /home/codio/workspace/node_modules/eventemitter3/package.json
+673 verbose from cache /home/codio/workspace/node_modules/execa/package.json
+674 verbose from cache /home/codio/workspace/node_modules/extend-shallow/package.json
+675 verbose from cache /home/codio/workspace/node_modules/fast-deep-equal/package.json
+676 verbose from cache /home/codio/workspace/node_modules/fast-diff/package.json
+677 verbose from cache /home/codio/workspace/node_modules/fast-glob/package.json
+678 verbose from cache /home/codio/workspace/node_modules/fast-json-stable-stringify/package.json
+679 verbose from cache /home/codio/workspace/node_modules/fast-levenshtein/package.json
+680 verbose from cache /home/codio/workspace/node_modules/fastq/package.json
+681 verbose from cache /home/codio/workspace/node_modules/file-entry-cache/package.json
+682 verbose from cache /home/codio/workspace/node_modules/fill-range/package.json
+683 verbose from cache /home/codio/workspace/node_modules/find-up/package.json
+684 verbose from cache /home/codio/workspace/node_modules/flat-cache/package.json
+685 verbose from cache /home/codio/workspace/node_modules/flatted/package.json
+686 verbose from cache /home/codio/workspace/node_modules/formidable/package.json
+687 verbose from cache /home/codio/workspace/node_modules/fresh/package.json
+688 verbose from cache /home/codio/workspace/node_modules/fs-extra/package.json
+689 verbose from cache /home/codio/workspace/node_modules/fs-minipass/package.json
+690 verbose from cache /home/codio/workspace/node_modules/fs.realpath/package.json
+691 verbose from cache /home/codio/workspace/node_modules/functional-red-black-tree/package.json
+692 verbose from cache /home/codio/workspace/node_modules/gauge/package.json
+693 verbose from cache /home/codio/workspace/node_modules/get-caller-file/package.json
+694 verbose from cache /home/codio/workspace/node_modules/get-paths/package.json
+695 verbose from cache /home/codio/workspace/node_modules/get-stream/package.json
+696 verbose from cache /home/codio/workspace/node_modules/gitignore-to-glob/package.json
+697 verbose from cache /home/codio/workspace/node_modules/glob/package.json
+698 verbose from cache /home/codio/workspace/node_modules/glob-parent/package.json
+699 verbose from cache /home/codio/workspace/node_modules/global-dirs/package.json
+700 verbose from cache /home/codio/workspace/node_modules/globals/package.json
+701 verbose from cache /home/codio/workspace/node_modules/globby/package.json
+702 verbose from cache /home/codio/workspace/node_modules/got/package.json
+703 verbose from cache /home/codio/workspace/node_modules/graceful-fs/package.json
+704 verbose from cache /home/codio/workspace/node_modules/handlebars/package.json
+705 verbose from cache /home/codio/workspace/node_modules/has-flag/package.json
+706 verbose from cache /home/codio/workspace/node_modules/has-symbols/package.json
+707 verbose from cache /home/codio/workspace/node_modules/has-unicode/package.json
+708 verbose from cache /home/codio/workspace/node_modules/has-yarn/package.json
+709 verbose from cache /home/codio/workspace/node_modules/he/package.json
+710 verbose from cache /home/codio/workspace/node_modules/hosted-git-info/package.json
+711 verbose from cache /home/codio/workspace/node_modules/http-assert/package.json
+712 verbose from cache /home/codio/workspace/node_modules/http-cache-semantics/package.json
+713 verbose from cache /home/codio/workspace/node_modules/http-errors/package.json
+714 verbose from cache /home/codio/workspace/node_modules/human-signals/package.json
+715 verbose from cache /home/codio/workspace/node_modules/iconv-lite/package.json
+716 verbose from cache /home/codio/workspace/node_modules/ieee754/package.json
+717 verbose from cache /home/codio/workspace/node_modules/ignore/package.json
+718 verbose from cache /home/codio/workspace/node_modules/ignore-by-default/package.json
+719 verbose from cache /home/codio/workspace/node_modules/ignore-walk/package.json
+720 verbose from cache /home/codio/workspace/node_modules/import-fresh/package.json
+721 verbose from cache /home/codio/workspace/node_modules/import-lazy/package.json
+722 verbose from cache /home/codio/workspace/node_modules/imurmurhash/package.json
+723 verbose from cache /home/codio/workspace/node_modules/indent-string/package.json
+724 verbose from cache /home/codio/workspace/node_modules/inflation/package.json
+725 verbose from cache /home/codio/workspace/node_modules/inflight/package.json
+726 verbose from cache /home/codio/workspace/node_modules/inherits/package.json
+727 verbose from cache /home/codio/workspace/node_modules/ini/package.json
+728 verbose from cache /home/codio/workspace/node_modules/irregular-plurals/package.json
+729 verbose from cache /home/codio/workspace/node_modules/is-binary-path/package.json
+730 verbose from cache /home/codio/workspace/node_modules/is-buffer/package.json
+731 verbose from cache /home/codio/workspace/node_modules/is-ci/package.json
+732 verbose from cache /home/codio/workspace/node_modules/is-class-hotfix/package.json
+733 verbose from cache /home/codio/workspace/node_modules/is-error/package.json
+734 verbose from cache /home/codio/workspace/node_modules/is-expression/package.json
+735 verbose from cache /home/codio/workspace/node_modules/is-extendable/package.json
+736 verbose from cache /home/codio/workspace/node_modules/is-extglob/package.json
+737 verbose from cache /home/codio/workspace/node_modules/is-fullwidth-code-point/package.json
+738 verbose from cache /home/codio/workspace/node_modules/is-generator-function/package.json
+739 verbose from cache /home/codio/workspace/node_modules/is-glob/package.json
+740 verbose from cache /home/codio/workspace/node_modules/is-installed-globally/package.json
+741 verbose from cache /home/codio/workspace/node_modules/is-interactive/package.json
+742 verbose from cache /home/codio/workspace/node_modules/is-npm/package.json
+743 verbose from cache /home/codio/workspace/node_modules/is-number/package.json
+744 verbose from cache /home/codio/workspace/node_modules/is-obj/package.json
+745 verbose from cache /home/codio/workspace/node_modules/is-path-cwd/package.json
+746 verbose from cache /home/codio/workspace/node_modules/is-path-inside/package.json
+747 verbose from cache /home/codio/workspace/node_modules/is-promise/package.json
+748 verbose from cache /home/codio/workspace/node_modules/is-regex/package.json
+749 verbose from cache /home/codio/workspace/node_modules/is-relative/package.json
+750 verbose from cache /home/codio/workspace/node_modules/is-stream/package.json
+751 verbose from cache /home/codio/workspace/node_modules/is-type-of/package.json
+752 verbose from cache /home/codio/workspace/node_modules/is-typedarray/package.json
+753 verbose from cache /home/codio/workspace/node_modules/is-unc-path/package.json
+754 verbose from cache /home/codio/workspace/node_modules/is-whitespace/package.json
+755 verbose from cache /home/codio/workspace/node_modules/is-yarn-global/package.json
+756 verbose from cache /home/codio/workspace/node_modules/isarray/package.json
+757 verbose from cache /home/codio/workspace/node_modules/isexe/package.json
+758 verbose from cache /home/codio/workspace/node_modules/isstream/package.json
+759 verbose from cache /home/codio/workspace/node_modules/js-beautify/package.json
+760 verbose from cache /home/codio/workspace/node_modules/js-string-escape/package.json
+761 verbose from cache /home/codio/workspace/node_modules/js-stringify/package.json
+762 verbose from cache /home/codio/workspace/node_modules/js-tokens/package.json
+763 verbose from cache /home/codio/workspace/node_modules/js-yaml/package.json
+764 verbose from cache /home/codio/workspace/node_modules/js2coffee/package.json
+765 verbose from cache /home/codio/workspace/node_modules/js2xmlparser/package.json
+766 verbose from cache /home/codio/workspace/node_modules/jscpd/package.json
+767 verbose from cache /home/codio/workspace/node_modules/jsdoc/package.json
+768 verbose from cache /home/codio/workspace/node_modules/jsdoc-route-plugin/package.json
+769 verbose from cache /home/codio/workspace/node_modules/jsesc/package.json
+770 verbose from cache /home/codio/workspace/node_modules/json-buffer/package.json
+771 verbose from cache /home/codio/workspace/node_modules/json-parse-better-errors/package.json
+772 verbose from cache /home/codio/workspace/node_modules/json-parse-even-better-errors/package.json
+773 verbose from cache /home/codio/workspace/node_modules/json-schema-traverse/package.json
+774 verbose from cache /home/codio/workspace/node_modules/json-stable-stringify-without-jsonify/package.json
+775 verbose from cache /home/codio/workspace/node_modules/json5/package.json
+776 verbose from cache /home/codio/workspace/node_modules/jsonfile/package.json
+777 verbose from cache /home/codio/workspace/node_modules/jstransformer/package.json
+778 verbose from cache /home/codio/workspace/node_modules/keygrip/package.json
+779 verbose from cache /home/codio/workspace/node_modules/keyv/package.json
+780 verbose from cache /home/codio/workspace/node_modules/kind-of/package.json
+781 verbose from cache /home/codio/workspace/node_modules/klaw/package.json
+782 verbose from cache /home/codio/workspace/node_modules/koa/package.json
+783 verbose from cache /home/codio/workspace/node_modules/koa-body/package.json
+784 verbose from cache /home/codio/workspace/node_modules/koa-compose/package.json
+785 verbose from cache /home/codio/workspace/node_modules/koa-convert/package.json
+786 verbose from cache /home/codio/workspace/node_modules/koa-router/package.json
+787 verbose from cache /home/codio/workspace/node_modules/koa-send/package.json
+788 verbose from cache /home/codio/workspace/node_modules/koa-session/package.json
+789 verbose from cache /home/codio/workspace/node_modules/koa-static/package.json
+790 verbose from cache /home/codio/workspace/node_modules/koa-views/package.json
+791 verbose from cache /home/codio/workspace/node_modules/latest-version/package.json
+792 verbose from cache /home/codio/workspace/node_modules/lazy-cache/package.json
+793 verbose from cache /home/codio/workspace/node_modules/levn/package.json
+794 verbose from cache /home/codio/workspace/node_modules/lines-and-columns/package.json
+795 verbose from cache /home/codio/workspace/node_modules/linkify-it/package.json
+796 verbose from cache /home/codio/workspace/node_modules/locate-path/package.json
+797 verbose from cache /home/codio/workspace/node_modules/lodash/package.json
+798 verbose from cache /home/codio/workspace/node_modules/log-symbols/package.json
+799 verbose from cache /home/codio/workspace/node_modules/longest/package.json
+800 verbose from cache /home/codio/workspace/node_modules/lowercase-keys/package.json
+801 verbose from cache /home/codio/workspace/node_modules/lru-cache/package.json
+802 verbose from cache /home/codio/workspace/node_modules/map-age-cleaner/package.json
+803 verbose from cache /home/codio/workspace/node_modules/markdown-it/package.json
+804 verbose from cache /home/codio/workspace/node_modules/markdown-it-anchor/package.json
+805 verbose from cache /home/codio/workspace/node_modules/markdown-table/package.json
+806 verbose from cache /home/codio/workspace/node_modules/marked/package.json
+807 verbose from cache /home/codio/workspace/node_modules/matcher/package.json
+808 verbose from cache /home/codio/workspace/node_modules/md5-hex/package.json
+809 verbose from cache /home/codio/workspace/node_modules/mdurl/package.json
+810 verbose from cache /home/codio/workspace/node_modules/media-typer/package.json
+811 verbose from cache /home/codio/workspace/node_modules/mem/package.json
+812 verbose from cache /home/codio/workspace/node_modules/merge-stream/package.json
+813 verbose from cache /home/codio/workspace/node_modules/merge2/package.json
+814 verbose from cache /home/codio/workspace/node_modules/methods/package.json
+815 verbose from cache /home/codio/workspace/node_modules/micromatch/package.json
+816 verbose from cache /home/codio/workspace/node_modules/mime-db/package.json
+817 verbose from cache /home/codio/workspace/node_modules/mime-types/package.json
+818 verbose from cache /home/codio/workspace/node_modules/mimic-fn/package.json
+819 verbose from cache /home/codio/workspace/node_modules/minimatch/package.json
+820 verbose from cache /home/codio/workspace/node_modules/minimist/package.json
+821 verbose from cache /home/codio/workspace/node_modules/minipass/package.json
+822 verbose from cache /home/codio/workspace/node_modules/minizlib/package.json
+823 verbose from cache /home/codio/workspace/node_modules/mkdirp/package.json
+824 verbose from cache /home/codio/workspace/node_modules/ms/package.json
+825 verbose from cache /home/codio/workspace/node_modules/multimatch/package.json
+826 verbose from cache /home/codio/workspace/node_modules/mz/package.json
+827 verbose from cache /home/codio/workspace/node_modules/natural-compare/package.json
+828 verbose from cache /home/codio/workspace/node_modules/needle/package.json
+829 verbose from cache /home/codio/workspace/node_modules/negotiator/package.json
+830 verbose from cache /home/codio/workspace/node_modules/neo-async/package.json
+831 verbose from cache /home/codio/workspace/node_modules/node-addon-api/package.json
+832 verbose from cache /home/codio/workspace/node_modules/node-pre-gyp/package.json
+833 verbose from cache /home/codio/workspace/node_modules/nopt/package.json
+834 verbose from cache /home/codio/workspace/node_modules/normalize-package-data/package.json
+835 verbose from cache /home/codio/workspace/node_modules/normalize-url/package.json
+836 verbose from cache /home/codio/workspace/node_modules/npm-bundled/package.json
+837 verbose from cache /home/codio/workspace/node_modules/npm-normalize-package-bin/package.json
+838 verbose from cache /home/codio/workspace/node_modules/npm-packlist/package.json
+839 verbose from cache /home/codio/workspace/node_modules/npm-run-path/package.json
+840 verbose from cache /home/codio/workspace/node_modules/npmlog/package.json
+841 verbose from cache /home/codio/workspace/node_modules/number-is-nan/package.json
+842 verbose from cache /home/codio/workspace/node_modules/object-assign/package.json
+843 verbose from cache /home/codio/workspace/node_modules/on-finished/package.json
+844 verbose from cache /home/codio/workspace/node_modules/once/package.json
+845 verbose from cache /home/codio/workspace/node_modules/onetime/package.json
+846 verbose from cache /home/codio/workspace/node_modules/only/package.json
+847 verbose from cache /home/codio/workspace/node_modules/optionator/package.json
+848 verbose from cache /home/codio/workspace/node_modules/ora/package.json
+849 verbose from cache /home/codio/workspace/node_modules/os-homedir/package.json
+850 verbose from cache /home/codio/workspace/node_modules/os-tmpdir/package.json
+851 verbose from cache /home/codio/workspace/node_modules/osenv/package.json
+852 verbose from cache /home/codio/workspace/node_modules/p-cancelable/package.json
+853 verbose from cache /home/codio/workspace/node_modules/p-defer/package.json
+854 verbose from cache /home/codio/workspace/node_modules/p-limit/package.json
+855 verbose from cache /home/codio/workspace/node_modules/p-locate/package.json
+856 verbose from cache /home/codio/workspace/node_modules/p-map/package.json
+857 verbose from cache /home/codio/workspace/node_modules/p-try/package.json
+858 verbose from cache /home/codio/workspace/node_modules/package-json/package.json
+859 verbose from cache /home/codio/workspace/node_modules/parent-module/package.json
+860 verbose from cache /home/codio/workspace/node_modules/parse-json/package.json
+861 verbose from cache /home/codio/workspace/node_modules/parse-ms/package.json
+862 verbose from cache /home/codio/workspace/node_modules/parseurl/package.json
+863 verbose from cache /home/codio/workspace/node_modules/path-exists/package.json
+864 verbose from cache /home/codio/workspace/node_modules/path-is-absolute/package.json
+865 verbose from cache /home/codio/workspace/node_modules/path-key/package.json
+866 verbose from cache /home/codio/workspace/node_modules/path-parse/package.json
+867 verbose from cache /home/codio/workspace/node_modules/path-to-regexp/package.json
+868 verbose from cache /home/codio/workspace/node_modules/path-type/package.json
+869 verbose from cache /home/codio/workspace/node_modules/picomatch/package.json
+870 verbose from cache /home/codio/workspace/node_modules/pify/package.json
+871 verbose from cache /home/codio/workspace/node_modules/pkg-conf/package.json
+872 verbose from cache /home/codio/workspace/node_modules/pkg-up/package.json
+873 verbose from cache /home/codio/workspace/node_modules/please-upgrade-node/package.json
+874 verbose from cache /home/codio/workspace/node_modules/plur/package.json
+875 verbose from cache /home/codio/workspace/node_modules/prelude-ls/package.json
+876 verbose from cache /home/codio/workspace/node_modules/prepend-http/package.json
+877 verbose from cache /home/codio/workspace/node_modules/pretty/package.json
+878 verbose from cache /home/codio/workspace/node_modules/pretty-ms/package.json
+879 verbose from cache /home/codio/workspace/node_modules/process-nextick-args/package.json
+880 verbose from cache /home/codio/workspace/node_modules/progress/package.json
+881 verbose from cache /home/codio/workspace/node_modules/promise/package.json
+882 verbose from cache /home/codio/workspace/node_modules/proto-list/package.json
+883 verbose from cache /home/codio/workspace/node_modules/pseudomap/package.json
+884 verbose from cache /home/codio/workspace/node_modules/pug/package.json
+885 verbose from cache /home/codio/workspace/node_modules/pug-attrs/package.json
+886 verbose from cache /home/codio/workspace/node_modules/pug-code-gen/package.json
+887 verbose from cache /home/codio/workspace/node_modules/pug-error/package.json
+888 verbose from cache /home/codio/workspace/node_modules/pug-filters/package.json
+889 verbose from cache /home/codio/workspace/node_modules/pug-lexer/package.json
+890 verbose from cache /home/codio/workspace/node_modules/pug-linker/package.json
+891 verbose from cache /home/codio/workspace/node_modules/pug-load/package.json
+892 verbose from cache /home/codio/workspace/node_modules/pug-parser/package.json
+893 verbose from cache /home/codio/workspace/node_modules/pug-runtime/package.json
+894 verbose from cache /home/codio/workspace/node_modules/pug-strip-comments/package.json
+895 verbose from cache /home/codio/workspace/node_modules/pug-walk/package.json
+896 verbose from cache /home/codio/workspace/node_modules/pump/package.json
+897 verbose from cache /home/codio/workspace/node_modules/punycode/package.json
+898 verbose from cache /home/codio/workspace/node_modules/pupa/package.json
+899 verbose from cache /home/codio/workspace/node_modules/qs/package.json
+900 verbose from cache /home/codio/workspace/node_modules/raw-body/package.json
+901 verbose from cache /home/codio/workspace/node_modules/rc/package.json
+902 verbose from cache /home/codio/workspace/node_modules/read-input/package.json
+903 verbose from cache /home/codio/workspace/node_modules/read-package-json/package.json
+904 verbose from cache /home/codio/workspace/node_modules/readable-stream/package.json
+905 verbose from cache /home/codio/workspace/node_modules/readdirp/package.json
+906 verbose from cache /home/codio/workspace/node_modules/regenerator-runtime/package.json
+907 verbose from cache /home/codio/workspace/node_modules/regexpp/package.json
+908 verbose from cache /home/codio/workspace/node_modules/registry-auth-token/package.json
+909 verbose from cache /home/codio/workspace/node_modules/registry-url/package.json
+910 verbose from cache /home/codio/workspace/node_modules/repeat-string/package.json
+911 verbose from cache /home/codio/workspace/node_modules/reprism/package.json
+912 verbose from cache /home/codio/workspace/node_modules/require-directory/package.json
+913 verbose from cache /home/codio/workspace/node_modules/require-main-filename/package.json
+914 verbose from cache /home/codio/workspace/node_modules/require-package-name/package.json
+915 verbose from cache /home/codio/workspace/node_modules/requizzle/package.json
+916 verbose from cache /home/codio/workspace/node_modules/resolve/package.json
+917 verbose from cache /home/codio/workspace/node_modules/resolve-from/package.json
+918 verbose from cache /home/codio/workspace/node_modules/resolve-path/package.json
+919 verbose from cache /home/codio/workspace/node_modules/responselike/package.json
+920 verbose from cache /home/codio/workspace/node_modules/reusify/package.json
+921 verbose from cache /home/codio/workspace/node_modules/right-align/package.json
+922 verbose from cache /home/codio/workspace/node_modules/rimraf/package.json
+923 verbose from cache /home/codio/workspace/node_modules/run-parallel/package.json
+924 verbose from cache /home/codio/workspace/node_modules/safe-buffer/package.json
+925 verbose from cache /home/codio/workspace/node_modules/safer-buffer/package.json
+926 verbose from cache /home/codio/workspace/node_modules/sass/package.json
+927 verbose from cache /home/codio/workspace/node_modules/sax/package.json
+928 verbose from cache /home/codio/workspace/node_modules/semver/package.json
+929 verbose from cache /home/codio/workspace/node_modules/semver-compare/package.json
+930 verbose from cache /home/codio/workspace/node_modules/semver-diff/package.json
+931 verbose from cache /home/codio/workspace/node_modules/serialize-error/package.json
+932 verbose from cache /home/codio/workspace/node_modules/set-blocking/package.json
+933 verbose from cache /home/codio/workspace/node_modules/setprototypeof/package.json
+934 verbose from cache /home/codio/workspace/node_modules/shebang-command/package.json
+935 verbose from cache /home/codio/workspace/node_modules/shebang-regex/package.json
+936 verbose from cache /home/codio/workspace/node_modules/sigmund/package.json
+937 verbose from cache /home/codio/workspace/node_modules/signal-exit/package.json
+938 verbose from cache /home/codio/workspace/node_modules/slash/package.json
+939 verbose from cache /home/codio/workspace/node_modules/slice-ansi/package.json
+940 verbose from cache /home/codio/workspace/node_modules/source-map/package.json
+941 verbose from cache /home/codio/workspace/node_modules/spark-md5/package.json
+942 verbose from cache /home/codio/workspace/node_modules/spdx-correct/package.json
+943 verbose from cache /home/codio/workspace/node_modules/spdx-exceptions/package.json
+944 verbose from cache /home/codio/workspace/node_modules/spdx-expression-parse/package.json
+945 verbose from cache /home/codio/workspace/node_modules/spdx-license-ids/package.json
+946 verbose from cache /home/codio/workspace/node_modules/sprintf-js/package.json
+947 verbose from cache /home/codio/workspace/node_modules/sqlite-async/package.json
+948 verbose from cache /home/codio/workspace/node_modules/statuses/package.json
+949 verbose from cache /home/codio/workspace/node_modules/string-width/package.json
+950 verbose from cache /home/codio/workspace/node_modules/string_decoder/package.json
+951 verbose from cache /home/codio/workspace/node_modules/strip-ansi/package.json
+952 verbose from cache /home/codio/workspace/node_modules/strip-bom/package.json
+953 verbose from cache /home/codio/workspace/node_modules/strip-final-newline/package.json
+954 verbose from cache /home/codio/workspace/node_modules/strip-json-comments/package.json
+955 verbose from cache /home/codio/workspace/node_modules/supertap/package.json
+956 verbose from cache /home/codio/workspace/node_modules/supports-color/package.json
+957 verbose from cache /home/codio/workspace/node_modules/table/package.json
+958 verbose from cache /home/codio/workspace/node_modules/taffydb/package.json
+959 verbose from cache /home/codio/workspace/node_modules/tar/package.json
+960 verbose from cache /home/codio/workspace/node_modules/temp-dir/package.json
+961 verbose from cache /home/codio/workspace/node_modules/term-size/package.json
+962 verbose from cache /home/codio/workspace/node_modules/text-table/package.json
+963 verbose from cache /home/codio/workspace/node_modules/thenify/package.json
+964 verbose from cache /home/codio/workspace/node_modules/thenify-all/package.json
+965 verbose from cache /home/codio/workspace/node_modules/time-zone/package.json
+966 verbose from cache /home/codio/workspace/node_modules/to-fast-properties/package.json
+967 verbose from cache /home/codio/workspace/node_modules/to-readable-stream/package.json
+968 verbose from cache /home/codio/workspace/node_modules/to-regex-range/package.json
+969 verbose from cache /home/codio/workspace/node_modules/toidentifier/package.json
+970 verbose from cache /home/codio/workspace/node_modules/token-stream/package.json
+971 verbose from cache /home/codio/workspace/node_modules/trim-off-newlines/package.json
+972 verbose from cache /home/codio/workspace/node_modules/tsscmp/package.json
+973 verbose from cache /home/codio/workspace/node_modules/type-check/package.json
+974 verbose from cache /home/codio/workspace/node_modules/type-fest/package.json
+975 verbose from cache /home/codio/workspace/node_modules/type-is/package.json
+976 verbose from cache /home/codio/workspace/node_modules/typedarray-to-buffer/package.json
+977 verbose from cache /home/codio/workspace/node_modules/uc.micro/package.json
+978 verbose from cache /home/codio/workspace/node_modules/uglify-js/package.json
+979 verbose from cache /home/codio/workspace/node_modules/uglify-to-browserify/package.json
+980 verbose from cache /home/codio/workspace/node_modules/unc-path-regex/package.json
+981 verbose from cache /home/codio/workspace/node_modules/underscore/package.json
+982 verbose from cache /home/codio/workspace/node_modules/unique-string/package.json
+983 verbose from cache /home/codio/workspace/node_modules/universalify/package.json
+984 verbose from cache /home/codio/workspace/node_modules/unpipe/package.json
+985 verbose from cache /home/codio/workspace/node_modules/update-notifier/package.json
+986 verbose from cache /home/codio/workspace/node_modules/uri-js/package.json
+987 verbose from cache /home/codio/workspace/node_modules/url-parse-lax/package.json
+988 verbose from cache /home/codio/workspace/node_modules/util-deprecate/package.json
+989 verbose from cache /home/codio/workspace/node_modules/uuid/package.json
+990 verbose from cache /home/codio/workspace/node_modules/v8-compile-cache/package.json
+991 verbose from cache /home/codio/workspace/node_modules/validate-npm-package-license/package.json
+992 verbose from cache /home/codio/workspace/node_modules/vary/package.json
+993 verbose from cache /home/codio/workspace/node_modules/void-elements/package.json
+994 verbose from cache /home/codio/workspace/node_modules/vue-template-compiler/package.json
+995 verbose from cache /home/codio/workspace/node_modules/wcwidth/package.json
+996 verbose from cache /home/codio/workspace/node_modules/well-known-symbols/package.json
+997 verbose from cache /home/codio/workspace/node_modules/which/package.json
+998 verbose from cache /home/codio/workspace/node_modules/which-module/package.json
+999 verbose from cache /home/codio/workspace/node_modules/wide-align/package.json
+1000 verbose from cache /home/codio/workspace/node_modules/widest-line/package.json
+1001 verbose from cache /home/codio/workspace/node_modules/window-size/package.json
+1002 verbose from cache /home/codio/workspace/node_modules/with/package.json
+1003 verbose from cache /home/codio/workspace/node_modules/word-wrap/package.json
+1004 verbose from cache /home/codio/workspace/node_modules/wordwrap/package.json
+1005 verbose from cache /home/codio/workspace/node_modules/wrap-ansi/package.json
+1006 verbose from cache /home/codio/workspace/node_modules/wrappy/package.json
+1007 verbose from cache /home/codio/workspace/node_modules/write/package.json
+1008 verbose from cache /home/codio/workspace/node_modules/xdg-basedir/package.json
+1009 verbose from cache /home/codio/workspace/node_modules/xml2js/package.json
+1010 verbose from cache /home/codio/workspace/node_modules/xmlbuilder/package.json
+1011 verbose from cache /home/codio/workspace/node_modules/xmlcreate/package.json
+1012 verbose from cache /home/codio/workspace/node_modules/xtend/package.json
+1013 verbose from cache /home/codio/workspace/node_modules/y18n/package.json
+1014 verbose from cache /home/codio/workspace/node_modules/yallist/package.json
+1015 verbose from cache /home/codio/workspace/node_modules/yaml/package.json
+1016 verbose from cache /home/codio/workspace/node_modules/yargs/package.json
+1017 verbose from cache /home/codio/workspace/node_modules/yargs-parser/package.json
+1018 verbose from cache /home/codio/workspace/node_modules/ylru/package.json
+1019 verbose cache add [ 'esm@^3.2.25', null ]
+1020 verbose cache add name=undefined spec="esm@^3.2.25" args=["esm@^3.2.25",null]
+1021 verbose parsed url { protocol: null,
+1021 verbose parsed url   slashes: null,
+1021 verbose parsed url   auth: null,
+1021 verbose parsed url   host: null,
+1021 verbose parsed url   port: null,
+1021 verbose parsed url   hostname: null,
+1021 verbose parsed url   hash: null,
+1021 verbose parsed url   search: null,
+1021 verbose parsed url   query: null,
+1021 verbose parsed url   pathname: 'esm@^3.2.25',
+1021 verbose parsed url   path: 'esm@^3.2.25',
+1021 verbose parsed url   href: 'esm@^3.2.25' }
+1022 verbose cache add name="esm" spec="^3.2.25" args=["esm","^3.2.25"]
+1023 verbose parsed url { protocol: null,
+1023 verbose parsed url   slashes: null,
+1023 verbose parsed url   auth: null,
+1023 verbose parsed url   host: null,
+1023 verbose parsed url   port: null,
+1023 verbose parsed url   hostname: null,
+1023 verbose parsed url   hash: null,
+1023 verbose parsed url   search: null,
+1023 verbose parsed url   query: null,
+1023 verbose parsed url   pathname: '^3.2.25',
+1023 verbose parsed url   path: '^3.2.25',
+1023 verbose parsed url   href: '^3.2.25' }
+1024 verbose addNamed [ 'esm', '^3.2.25' ]
+1025 verbose addNamed [ null, null ]
+1026 verbose cache add [ 'jscpd@^3.3.19', null ]
+1027 verbose cache add name=undefined spec="jscpd@^3.3.19" args=["jscpd@^3.3.19",null]
+1028 verbose parsed url { protocol: null,
+1028 verbose parsed url   slashes: null,
+1028 verbose parsed url   auth: null,
+1028 verbose parsed url   host: null,
+1028 verbose parsed url   port: null,
+1028 verbose parsed url   hostname: null,
+1028 verbose parsed url   hash: null,
+1028 verbose parsed url   search: null,
+1028 verbose parsed url   query: null,
+1028 verbose parsed url   pathname: 'jscpd@^3.3.19',
+1028 verbose parsed url   path: 'jscpd@^3.3.19',
+1028 verbose parsed url   href: 'jscpd@^3.3.19' }
+1029 verbose cache add name="jscpd" spec="^3.3.19" args=["jscpd","^3.3.19"]
+1030 verbose parsed url { protocol: null,
+1030 verbose parsed url   slashes: null,
+1030 verbose parsed url   auth: null,
+1030 verbose parsed url   host: null,
+1030 verbose parsed url   port: null,
+1030 verbose parsed url   hostname: null,
+1030 verbose parsed url   hash: null,
+1030 verbose parsed url   search: null,
+1030 verbose parsed url   query: null,
+1030 verbose parsed url   pathname: '^3.3.19',
+1030 verbose parsed url   path: '^3.3.19',
+1030 verbose parsed url   href: '^3.3.19' }
+1031 verbose addNamed [ 'jscpd', '^3.3.19' ]
+1032 verbose addNamed [ null, null ]
+1033 verbose cache add [ 'eslint@^7.8.1', null ]
+1034 verbose cache add name=undefined spec="eslint@^7.8.1" args=["eslint@^7.8.1",null]
+1035 verbose parsed url { protocol: null,
+1035 verbose parsed url   slashes: null,
+1035 verbose parsed url   auth: null,
+1035 verbose parsed url   host: null,
+1035 verbose parsed url   port: null,
+1035 verbose parsed url   hostname: null,
+1035 verbose parsed url   hash: null,
+1035 verbose parsed url   search: null,
+1035 verbose parsed url   query: null,
+1035 verbose parsed url   pathname: 'eslint@^7.8.1',
+1035 verbose parsed url   path: 'eslint@^7.8.1',
+1035 verbose parsed url   href: 'eslint@^7.8.1' }
+1036 verbose cache add name="eslint" spec="^7.8.1" args=["eslint","^7.8.1"]
+1037 verbose parsed url { protocol: null,
+1037 verbose parsed url   slashes: null,
+1037 verbose parsed url   auth: null,
+1037 verbose parsed url   host: null,
+1037 verbose parsed url   port: null,
+1037 verbose parsed url   hostname: null,
+1037 verbose parsed url   hash: null,
+1037 verbose parsed url   search: null,
+1037 verbose parsed url   query: null,
+1037 verbose parsed url   pathname: '^7.8.1',
+1037 verbose parsed url   path: '^7.8.1',
+1037 verbose parsed url   href: '^7.8.1' }
+1038 verbose addNamed [ 'eslint', '^7.8.1' ]
+1039 verbose addNamed [ null, null ]
+1040 silly lockFile 353c425b-esm-3-2-25 esm@^3.2.25
+1041 verbose lock esm@^3.2.25 /home/codio/.npm/353c425b-esm-3-2-25.lock
+1042 silly lockFile fd02db75-jscpd-3-3-19 jscpd@^3.3.19
+1043 verbose lock jscpd@^3.3.19 /home/codio/.npm/fd02db75-jscpd-3-3-19.lock
+1044 verbose cache add [ 'jsdoc-route-plugin@^0.1.0', null ]
+1045 verbose cache add name=undefined spec="jsdoc-route-plugin@^0.1.0" args=["jsdoc-route-plugin@^0.1.0",null]
+1046 verbose parsed url { protocol: null,
+1046 verbose parsed url   slashes: null,
+1046 verbose parsed url   auth: null,
+1046 verbose parsed url   host: null,
+1046 verbose parsed url   port: null,
+1046 verbose parsed url   hostname: null,
+1046 verbose parsed url   hash: null,
+1046 verbose parsed url   search: null,
+1046 verbose parsed url   query: null,
+1046 verbose parsed url   pathname: 'jsdoc-route-plugin@^0.1.0',
+1046 verbose parsed url   path: 'jsdoc-route-plugin@^0.1.0',
+1046 verbose parsed url   href: 'jsdoc-route-plugin@^0.1.0' }
+1047 verbose cache add name="jsdoc-route-plugin" spec="^0.1.0" args=["jsdoc-route-plugin","^0.1.0"]
+1048 verbose parsed url { protocol: null,
+1048 verbose parsed url   slashes: null,
+1048 verbose parsed url   auth: null,
+1048 verbose parsed url   host: null,
+1048 verbose parsed url   port: null,
+1048 verbose parsed url   hostname: null,
+1048 verbose parsed url   hash: null,
+1048 verbose parsed url   search: null,
+1048 verbose parsed url   query: null,
+1048 verbose parsed url   pathname: '^0.1.0',
+1048 verbose parsed url   path: '^0.1.0',
+1048 verbose parsed url   href: '^0.1.0' }
+1049 verbose addNamed [ 'jsdoc-route-plugin', '^0.1.0' ]
+1050 verbose addNamed [ null, null ]
+1051 silly lockFile 0fe3528f-jsdoc-route-plugin-0-1-0 jsdoc-route-plugin@^0.1.0
+1052 verbose lock jsdoc-route-plugin@^0.1.0 /home/codio/.npm/0fe3528f-jsdoc-route-plugin-0-1-0.lock
+1053 silly lockFile c102a609-eslint-7-8-1 eslint@^7.8.1
+1054 verbose lock eslint@^7.8.1 /home/codio/.npm/c102a609-eslint-7-8-1.lock
+1055 info addNameTag [ 'esm', '^3.2.25' ]
+1056 info addNameTag [ 'jscpd', '^3.3.19' ]
+1057 verbose cache add [ 'jsdoc@^3.6.5', null ]
+1058 verbose cache add name=undefined spec="jsdoc@^3.6.5" args=["jsdoc@^3.6.5",null]
+1059 verbose parsed url { protocol: null,
+1059 verbose parsed url   slashes: null,
+1059 verbose parsed url   auth: null,
+1059 verbose parsed url   host: null,
+1059 verbose parsed url   port: null,
+1059 verbose parsed url   hostname: null,
+1059 verbose parsed url   hash: null,
+1059 verbose parsed url   search: null,
+1059 verbose parsed url   query: null,
+1059 verbose parsed url   pathname: 'jsdoc@^3.6.5',
+1059 verbose parsed url   path: 'jsdoc@^3.6.5',
+1059 verbose parsed url   href: 'jsdoc@^3.6.5' }
+1060 verbose cache add name="jsdoc" spec="^3.6.5" args=["jsdoc","^3.6.5"]
+1061 verbose parsed url { protocol: null,
+1061 verbose parsed url   slashes: null,
+1061 verbose parsed url   auth: null,
+1061 verbose parsed url   host: null,
+1061 verbose parsed url   port: null,
+1061 verbose parsed url   hostname: null,
+1061 verbose parsed url   hash: null,
+1061 verbose parsed url   search: null,
+1061 verbose parsed url   query: null,
+1061 verbose parsed url   pathname: '^3.6.5',
+1061 verbose parsed url   path: '^3.6.5',
+1061 verbose parsed url   href: '^3.6.5' }
+1062 verbose addNamed [ 'jsdoc', '^3.6.5' ]
+1063 verbose addNamed [ null, null ]
+1064 silly lockFile b06fe7c1-jsdoc-3-6-5 jsdoc@^3.6.5
+1065 verbose lock jsdoc@^3.6.5 /home/codio/.npm/b06fe7c1-jsdoc-3-6-5.lock
+1066 info addNameTag [ 'jsdoc-route-plugin', '^0.1.0' ]
+1067 info addNameTag [ 'eslint', '^7.8.1' ]
+1068 verbose cache add [ 'bcrypt@^5.0.0', null ]
+1069 verbose cache add name=undefined spec="bcrypt@^5.0.0" args=["bcrypt@^5.0.0",null]
+1070 verbose parsed url { protocol: null,
+1070 verbose parsed url   slashes: null,
+1070 verbose parsed url   auth: null,
+1070 verbose parsed url   host: null,
+1070 verbose parsed url   port: null,
+1070 verbose parsed url   hostname: null,
+1070 verbose parsed url   hash: null,
+1070 verbose parsed url   search: null,
+1070 verbose parsed url   query: null,
+1070 verbose parsed url   pathname: 'bcrypt@^5.0.0',
+1070 verbose parsed url   path: 'bcrypt@^5.0.0',
+1070 verbose parsed url   href: 'bcrypt@^5.0.0' }
+1071 verbose cache add name="bcrypt" spec="^5.0.0" args=["bcrypt","^5.0.0"]
+1072 verbose parsed url { protocol: null,
+1072 verbose parsed url   slashes: null,
+1072 verbose parsed url   auth: null,
+1072 verbose parsed url   host: null,
+1072 verbose parsed url   port: null,
+1072 verbose parsed url   hostname: null,
+1072 verbose parsed url   hash: null,
+1072 verbose parsed url   search: null,
+1072 verbose parsed url   query: null,
+1072 verbose parsed url   pathname: '^5.0.0',
+1072 verbose parsed url   path: '^5.0.0',
+1072 verbose parsed url   href: '^5.0.0' }
+1073 verbose addNamed [ 'bcrypt', '^5.0.0' ]
+1074 verbose addNamed [ null, null ]
+1075 silly lockFile 496c85ca-bcrypt-5-0-0 bcrypt@^5.0.0
+1076 verbose lock bcrypt@^5.0.0 /home/codio/.npm/496c85ca-bcrypt-5-0-0.lock
+1077 info addNameTag [ 'jsdoc', '^3.6.5' ]
+1078 info addNameTag [ 'bcrypt', '^5.0.0' ]
+1079 verbose cache add [ 'bcrypt-promise@^2.0.0', null ]
+1080 verbose cache add name=undefined spec="bcrypt-promise@^2.0.0" args=["bcrypt-promise@^2.0.0",null]
+1081 verbose parsed url { protocol: null,
+1081 verbose parsed url   slashes: null,
+1081 verbose parsed url   auth: null,
+1081 verbose parsed url   host: null,
+1081 verbose parsed url   port: null,
+1081 verbose parsed url   hostname: null,
+1081 verbose parsed url   hash: null,
+1081 verbose parsed url   search: null,
+1081 verbose parsed url   query: null,
+1081 verbose parsed url   pathname: 'bcrypt-promise@^2.0.0',
+1081 verbose parsed url   path: 'bcrypt-promise@^2.0.0',
+1081 verbose parsed url   href: 'bcrypt-promise@^2.0.0' }
+1082 verbose cache add name="bcrypt-promise" spec="^2.0.0" args=["bcrypt-promise","^2.0.0"]
+1083 verbose parsed url { protocol: null,
+1083 verbose parsed url   slashes: null,
+1083 verbose parsed url   auth: null,
+1083 verbose parsed url   host: null,
+1083 verbose parsed url   port: null,
+1083 verbose parsed url   hostname: null,
+1083 verbose parsed url   hash: null,
+1083 verbose parsed url   search: null,
+1083 verbose parsed url   query: null,
+1083 verbose parsed url   pathname: '^2.0.0',
+1083 verbose parsed url   path: '^2.0.0',
+1083 verbose parsed url   href: '^2.0.0' }
+1084 verbose addNamed [ 'bcrypt-promise', '^2.0.0' ]
+1085 verbose addNamed [ null, null ]
+1086 silly lockFile 28563ef9-bcrypt-promise-2-0-0 bcrypt-promise@^2.0.0
+1087 verbose lock bcrypt-promise@^2.0.0 /home/codio/.npm/28563ef9-bcrypt-promise-2-0-0.lock
+1088 info addNameTag [ 'bcrypt-promise', '^2.0.0' ]
+1089 verbose url raw esm
+1090 verbose url resolving [ 'https://registry.npm.taobao.org/', './esm' ]
+1091 verbose url resolved https://registry.npm.taobao.org/esm
+1092 info trying registry request attempt 1 at 11:44:44
+1093 verbose etag W/"023ab5cf324ce4ab489c515818de595e"
+1094 http GET https://registry.npm.taobao.org/esm
+1095 verbose url raw jsdoc-route-plugin
+1096 verbose url resolving [ 'https://registry.npm.taobao.org/', './jsdoc-route-plugin' ]
+1097 verbose url resolved https://registry.npm.taobao.org/jsdoc-route-plugin
+1098 info trying registry request attempt 1 at 11:44:44
+1099 verbose etag W/"96b5cf0c3ab5c20a50fcbabfaf6ac30f"
+1100 http GET https://registry.npm.taobao.org/jsdoc-route-plugin
+1101 verbose url raw jscpd
+1102 verbose url resolving [ 'https://registry.npm.taobao.org/', './jscpd' ]
+1103 verbose url resolved https://registry.npm.taobao.org/jscpd
+1104 info trying registry request attempt 1 at 11:44:44
+1105 verbose etag W/"185af6f30963ce00b250c800ed4d516a"
+1106 http GET https://registry.npm.taobao.org/jscpd
+1107 verbose cache add [ 'handlebars@^4.7.6', null ]
+1108 verbose cache add name=undefined spec="handlebars@^4.7.6" args=["handlebars@^4.7.6",null]
+1109 verbose parsed url { protocol: null,
+1109 verbose parsed url   slashes: null,
+1109 verbose parsed url   auth: null,
+1109 verbose parsed url   host: null,
+1109 verbose parsed url   port: null,
+1109 verbose parsed url   hostname: null,
+1109 verbose parsed url   hash: null,
+1109 verbose parsed url   search: null,
+1109 verbose parsed url   query: null,
+1109 verbose parsed url   pathname: 'handlebars@^4.7.6',
+1109 verbose parsed url   path: 'handlebars@^4.7.6',
+1109 verbose parsed url   href: 'handlebars@^4.7.6' }
+1110 verbose cache add name="handlebars" spec="^4.7.6" args=["handlebars","^4.7.6"]
+1111 verbose parsed url { protocol: null,
+1111 verbose parsed url   slashes: null,
+1111 verbose parsed url   auth: null,
+1111 verbose parsed url   host: null,
+1111 verbose parsed url   port: null,
+1111 verbose parsed url   hostname: null,
+1111 verbose parsed url   hash: null,
+1111 verbose parsed url   search: null,
+1111 verbose parsed url   query: null,
+1111 verbose parsed url   pathname: '^4.7.6',
+1111 verbose parsed url   path: '^4.7.6',
+1111 verbose parsed url   href: '^4.7.6' }
+1112 verbose addNamed [ 'handlebars', '^4.7.6' ]
+1113 verbose addNamed [ null, null ]
+1114 silly lockFile bb0d37a0-handlebars-4-7-6 handlebars@^4.7.6
+1115 verbose lock handlebars@^4.7.6 /home/codio/.npm/bb0d37a0-handlebars-4-7-6.lock
+1116 verbose cache add [ 'koa@^2.13.0', null ]
+1117 verbose cache add name=undefined spec="koa@^2.13.0" args=["koa@^2.13.0",null]
+1118 verbose parsed url { protocol: null,
+1118 verbose parsed url   slashes: null,
+1118 verbose parsed url   auth: null,
+1118 verbose parsed url   host: null,
+1118 verbose parsed url   port: null,
+1118 verbose parsed url   hostname: null,
+1118 verbose parsed url   hash: null,
+1118 verbose parsed url   search: null,
+1118 verbose parsed url   query: null,
+1118 verbose parsed url   pathname: 'koa@^2.13.0',
+1118 verbose parsed url   path: 'koa@^2.13.0',
+1118 verbose parsed url   href: 'koa@^2.13.0' }
+1119 verbose cache add name="koa" spec="^2.13.0" args=["koa","^2.13.0"]
+1120 verbose parsed url { protocol: null,
+1120 verbose parsed url   slashes: null,
+1120 verbose parsed url   auth: null,
+1120 verbose parsed url   host: null,
+1120 verbose parsed url   port: null,
+1120 verbose parsed url   hostname: null,
+1120 verbose parsed url   hash: null,
+1120 verbose parsed url   search: null,
+1120 verbose parsed url   query: null,
+1120 verbose parsed url   pathname: '^2.13.0',
+1120 verbose parsed url   path: '^2.13.0',
+1120 verbose parsed url   href: '^2.13.0' }
+1121 verbose addNamed [ 'koa', '^2.13.0' ]
+1122 verbose addNamed [ null, null ]
+1123 silly lockFile e2020b54-koa-2-13-0 koa@^2.13.0
+1124 verbose lock koa@^2.13.0 /home/codio/.npm/e2020b54-koa-2-13-0.lock
+1125 verbose cache add [ 'koa-body@^4.2.0', null ]
+1126 verbose cache add name=undefined spec="koa-body@^4.2.0" args=["koa-body@^4.2.0",null]
+1127 verbose parsed url { protocol: null,
+1127 verbose parsed url   slashes: null,
+1127 verbose parsed url   auth: null,
+1127 verbose parsed url   host: null,
+1127 verbose parsed url   port: null,
+1127 verbose parsed url   hostname: null,
+1127 verbose parsed url   hash: null,
+1127 verbose parsed url   search: null,
+1127 verbose parsed url   query: null,
+1127 verbose parsed url   pathname: 'koa-body@^4.2.0',
+1127 verbose parsed url   path: 'koa-body@^4.2.0',
+1127 verbose parsed url   href: 'koa-body@^4.2.0' }
+1128 verbose cache add name="koa-body" spec="^4.2.0" args=["koa-body","^4.2.0"]
+1129 verbose parsed url { protocol: null,
+1129 verbose parsed url   slashes: null,
+1129 verbose parsed url   auth: null,
+1129 verbose parsed url   host: null,
+1129 verbose parsed url   port: null,
+1129 verbose parsed url   hostname: null,
+1129 verbose parsed url   hash: null,
+1129 verbose parsed url   search: null,
+1129 verbose parsed url   query: null,
+1129 verbose parsed url   pathname: '^4.2.0',
+1129 verbose parsed url   path: '^4.2.0',
+1129 verbose parsed url   href: '^4.2.0' }
+1130 verbose addNamed [ 'koa-body', '^4.2.0' ]
+1131 verbose addNamed [ null, null ]
+1132 silly lockFile 9d8e4e60-koa-body-4-2-0 koa-body@^4.2.0
+1133 verbose lock koa-body@^4.2.0 /home/codio/.npm/9d8e4e60-koa-body-4-2-0.lock
+1134 verbose cache add [ 'koa-router@^9.4.0', null ]
+1135 verbose cache add name=undefined spec="koa-router@^9.4.0" args=["koa-router@^9.4.0",null]
+1136 verbose parsed url { protocol: null,
+1136 verbose parsed url   slashes: null,
+1136 verbose parsed url   auth: null,
+1136 verbose parsed url   host: null,
+1136 verbose parsed url   port: null,
+1136 verbose parsed url   hostname: null,
+1136 verbose parsed url   hash: null,
+1136 verbose parsed url   search: null,
+1136 verbose parsed url   query: null,
+1136 verbose parsed url   pathname: 'koa-router@^9.4.0',
+1136 verbose parsed url   path: 'koa-router@^9.4.0',
+1136 verbose parsed url   href: 'koa-router@^9.4.0' }
+1137 verbose cache add name="koa-router" spec="^9.4.0" args=["koa-router","^9.4.0"]
+1138 verbose parsed url { protocol: null,
+1138 verbose parsed url   slashes: null,
+1138 verbose parsed url   auth: null,
+1138 verbose parsed url   host: null,
+1138 verbose parsed url   port: null,
+1138 verbose parsed url   hostname: null,
+1138 verbose parsed url   hash: null,
+1138 verbose parsed url   search: null,
+1138 verbose parsed url   query: null,
+1138 verbose parsed url   pathname: '^9.4.0',
+1138 verbose parsed url   path: '^9.4.0',
+1138 verbose parsed url   href: '^9.4.0' }
+1139 verbose addNamed [ 'koa-router', '^9.4.0' ]
+1140 verbose addNamed [ null, null ]
+1141 silly lockFile 34897df1-koa-router-9-4-0 koa-router@^9.4.0
+1142 verbose lock koa-router@^9.4.0 /home/codio/.npm/34897df1-koa-router-9-4-0.lock
+1143 verbose cache add [ 'koa-session@^6.0.0', null ]
+1144 verbose cache add name=undefined spec="koa-session@^6.0.0" args=["koa-session@^6.0.0",null]
+1145 verbose parsed url { protocol: null,
+1145 verbose parsed url   slashes: null,
+1145 verbose parsed url   auth: null,
+1145 verbose parsed url   host: null,
+1145 verbose parsed url   port: null,
+1145 verbose parsed url   hostname: null,
+1145 verbose parsed url   hash: null,
+1145 verbose parsed url   search: null,
+1145 verbose parsed url   query: null,
+1145 verbose parsed url   pathname: 'koa-session@^6.0.0',
+1145 verbose parsed url   path: 'koa-session@^6.0.0',
+1145 verbose parsed url   href: 'koa-session@^6.0.0' }
+1146 verbose cache add name="koa-session" spec="^6.0.0" args=["koa-session","^6.0.0"]
+1147 verbose parsed url { protocol: null,
+1147 verbose parsed url   slashes: null,
+1147 verbose parsed url   auth: null,
+1147 verbose parsed url   host: null,
+1147 verbose parsed url   port: null,
+1147 verbose parsed url   hostname: null,
+1147 verbose parsed url   hash: null,
+1147 verbose parsed url   search: null,
+1147 verbose parsed url   query: null,
+1147 verbose parsed url   pathname: '^6.0.0',
+1147 verbose parsed url   path: '^6.0.0',
+1147 verbose parsed url   href: '^6.0.0' }
+1148 verbose addNamed [ 'koa-session', '^6.0.0' ]
+1149 verbose addNamed [ null, null ]
+1150 silly lockFile 7d2ee625-koa-session-6-0-0 koa-session@^6.0.0
+1151 verbose lock koa-session@^6.0.0 /home/codio/.npm/7d2ee625-koa-session-6-0-0.lock
+1152 verbose cache add [ 'koa-static@^5.0.0', null ]
+1153 verbose cache add name=undefined spec="koa-static@^5.0.0" args=["koa-static@^5.0.0",null]
+1154 verbose parsed url { protocol: null,
+1154 verbose parsed url   slashes: null,
+1154 verbose parsed url   auth: null,
+1154 verbose parsed url   host: null,
+1154 verbose parsed url   port: null,
+1154 verbose parsed url   hostname: null,
+1154 verbose parsed url   hash: null,
+1154 verbose parsed url   search: null,
+1154 verbose parsed url   query: null,
+1154 verbose parsed url   pathname: 'koa-static@^5.0.0',
+1154 verbose parsed url   path: 'koa-static@^5.0.0',
+1154 verbose parsed url   href: 'koa-static@^5.0.0' }
+1155 verbose cache add name="koa-static" spec="^5.0.0" args=["koa-static","^5.0.0"]
+1156 verbose parsed url { protocol: null,
+1156 verbose parsed url   slashes: null,
+1156 verbose parsed url   auth: null,
+1156 verbose parsed url   host: null,
+1156 verbose parsed url   port: null,
+1156 verbose parsed url   hostname: null,
+1156 verbose parsed url   hash: null,
+1156 verbose parsed url   search: null,
+1156 verbose parsed url   query: null,
+1156 verbose parsed url   pathname: '^5.0.0',
+1156 verbose parsed url   path: '^5.0.0',
+1156 verbose parsed url   href: '^5.0.0' }
+1157 verbose addNamed [ 'koa-static', '^5.0.0' ]
+1158 verbose addNamed [ null, null ]
+1159 silly lockFile 57f3019c-koa-static-5-0-0 koa-static@^5.0.0
+1160 verbose lock koa-static@^5.0.0 /home/codio/.npm/57f3019c-koa-static-5-0-0.lock
+1161 verbose cache add [ 'koa-views@^6.3.0', null ]
+1162 verbose cache add name=undefined spec="koa-views@^6.3.0" args=["koa-views@^6.3.0",null]
+1163 verbose parsed url { protocol: null,
+1163 verbose parsed url   slashes: null,
+1163 verbose parsed url   auth: null,
+1163 verbose parsed url   host: null,
+1163 verbose parsed url   port: null,
+1163 verbose parsed url   hostname: null,
+1163 verbose parsed url   hash: null,
+1163 verbose parsed url   search: null,
+1163 verbose parsed url   query: null,
+1163 verbose parsed url   pathname: 'koa-views@^6.3.0',
+1163 verbose parsed url   path: 'koa-views@^6.3.0',
+1163 verbose parsed url   href: 'koa-views@^6.3.0' }
+1164 verbose cache add name="koa-views" spec="^6.3.0" args=["koa-views","^6.3.0"]
+1165 verbose parsed url { protocol: null,
+1165 verbose parsed url   slashes: null,
+1165 verbose parsed url   auth: null,
+1165 verbose parsed url   host: null,
+1165 verbose parsed url   port: null,
+1165 verbose parsed url   hostname: null,
+1165 verbose parsed url   hash: null,
+1165 verbose parsed url   search: null,
+1165 verbose parsed url   query: null,
+1165 verbose parsed url   pathname: '^6.3.0',
+1165 verbose parsed url   path: '^6.3.0',
+1165 verbose parsed url   href: '^6.3.0' }
+1166 verbose addNamed [ 'koa-views', '^6.3.0' ]
+1167 verbose addNamed [ null, null ]
+1168 silly lockFile 0d261d81-koa-views-6-3-0 koa-views@^6.3.0
+1169 verbose lock koa-views@^6.3.0 /home/codio/.npm/0d261d81-koa-views-6-3-0.lock
+1170 verbose cache add [ 'sqlite-async@^1.1.0', null ]
+1171 verbose cache add name=undefined spec="sqlite-async@^1.1.0" args=["sqlite-async@^1.1.0",null]
+1172 verbose parsed url { protocol: null,
+1172 verbose parsed url   slashes: null,
+1172 verbose parsed url   auth: null,
+1172 verbose parsed url   host: null,
+1172 verbose parsed url   port: null,
+1172 verbose parsed url   hostname: null,
+1172 verbose parsed url   hash: null,
+1172 verbose parsed url   search: null,
+1172 verbose parsed url   query: null,
+1172 verbose parsed url   pathname: 'sqlite-async@^1.1.0',
+1172 verbose parsed url   path: 'sqlite-async@^1.1.0',
+1172 verbose parsed url   href: 'sqlite-async@^1.1.0' }
+1173 verbose cache add name="sqlite-async" spec="^1.1.0" args=["sqlite-async","^1.1.0"]
+1174 verbose parsed url { protocol: null,
+1174 verbose parsed url   slashes: null,
+1174 verbose parsed url   auth: null,
+1174 verbose parsed url   host: null,
+1174 verbose parsed url   port: null,
+1174 verbose parsed url   hostname: null,
+1174 verbose parsed url   hash: null,
+1174 verbose parsed url   search: null,
+1174 verbose parsed url   query: null,
+1174 verbose parsed url   pathname: '^1.1.0',
+1174 verbose parsed url   path: '^1.1.0',
+1174 verbose parsed url   href: '^1.1.0' }
+1175 verbose addNamed [ 'sqlite-async', '^1.1.0' ]
+1176 verbose addNamed [ null, null ]
+1177 silly lockFile d761386d-sqlite-async-1-1-0 sqlite-async@^1.1.0
+1178 verbose lock sqlite-async@^1.1.0 /home/codio/.npm/d761386d-sqlite-async-1-1-0.lock
+1179 verbose cache add [ 'ava@^3.12.1', null ]
+1180 verbose cache add name=undefined spec="ava@^3.12.1" args=["ava@^3.12.1",null]
+1181 verbose parsed url { protocol: null,
+1181 verbose parsed url   slashes: null,
+1181 verbose parsed url   auth: null,
+1181 verbose parsed url   host: null,
+1181 verbose parsed url   port: null,
+1181 verbose parsed url   hostname: null,
+1181 verbose parsed url   hash: null,
+1181 verbose parsed url   search: null,
+1181 verbose parsed url   query: null,
+1181 verbose parsed url   pathname: 'ava@^3.12.1',
+1181 verbose parsed url   path: 'ava@^3.12.1',
+1181 verbose parsed url   href: 'ava@^3.12.1' }
+1182 verbose cache add name="ava" spec="^3.12.1" args=["ava","^3.12.1"]
+1183 verbose parsed url { protocol: null,
+1183 verbose parsed url   slashes: null,
+1183 verbose parsed url   auth: null,
+1183 verbose parsed url   host: null,
+1183 verbose parsed url   port: null,
+1183 verbose parsed url   hostname: null,
+1183 verbose parsed url   hash: null,
+1183 verbose parsed url   search: null,
+1183 verbose parsed url   query: null,
+1183 verbose parsed url   pathname: '^3.12.1',
+1183 verbose parsed url   path: '^3.12.1',
+1183 verbose parsed url   href: '^3.12.1' }
+1184 verbose addNamed [ 'ava', '^3.12.1' ]
+1185 verbose addNamed [ null, null ]
+1186 silly lockFile ec447e3f-ava-3-12-1 ava@^3.12.1
+1187 verbose lock ava@^3.12.1 /home/codio/.npm/ec447e3f-ava-3-12-1.lock
+1188 verbose cache add [ 'depcheck@^1.2.0', null ]
+1189 verbose cache add name=undefined spec="depcheck@^1.2.0" args=["depcheck@^1.2.0",null]
+1190 verbose parsed url { protocol: null,
+1190 verbose parsed url   slashes: null,
+1190 verbose parsed url   auth: null,
+1190 verbose parsed url   host: null,
+1190 verbose parsed url   port: null,
+1190 verbose parsed url   hostname: null,
+1190 verbose parsed url   hash: null,
+1190 verbose parsed url   search: null,
+1190 verbose parsed url   query: null,
+1190 verbose parsed url   pathname: 'depcheck@^1.2.0',
+1190 verbose parsed url   path: 'depcheck@^1.2.0',
+1190 verbose parsed url   href: 'depcheck@^1.2.0' }
+1191 verbose cache add name="depcheck" spec="^1.2.0" args=["depcheck","^1.2.0"]
+1192 verbose parsed url { protocol: null,
+1192 verbose parsed url   slashes: null,
+1192 verbose parsed url   auth: null,
+1192 verbose parsed url   host: null,
+1192 verbose parsed url   port: null,
+1192 verbose parsed url   hostname: null,
+1192 verbose parsed url   hash: null,
+1192 verbose parsed url   search: null,
+1192 verbose parsed url   query: null,
+1192 verbose parsed url   pathname: '^1.2.0',
+1192 verbose parsed url   path: '^1.2.0',
+1192 verbose parsed url   href: '^1.2.0' }
+1193 verbose addNamed [ 'depcheck', '^1.2.0' ]
+1194 verbose addNamed [ null, null ]
+1195 silly lockFile a3ffa04b-depcheck-1-2-0 depcheck@^1.2.0
+1196 verbose lock depcheck@^1.2.0 /home/codio/.npm/a3ffa04b-depcheck-1-2-0.lock
+1197 verbose already installed skipping dependency@0.0.1 /home/codio/workspace
+1198 verbose cache add [ 'dependency-check@^4.1.0', null ]
+1199 verbose cache add name=undefined spec="dependency-check@^4.1.0" args=["dependency-check@^4.1.0",null]
+1200 verbose parsed url { protocol: null,
+1200 verbose parsed url   slashes: null,
+1200 verbose parsed url   auth: null,
+1200 verbose parsed url   host: null,
+1200 verbose parsed url   port: null,
+1200 verbose parsed url   hostname: null,
+1200 verbose parsed url   hash: null,
+1200 verbose parsed url   search: null,
+1200 verbose parsed url   query: null,
+1200 verbose parsed url   pathname: 'dependency-check@^4.1.0',
+1200 verbose parsed url   path: 'dependency-check@^4.1.0',
+1200 verbose parsed url   href: 'dependency-check@^4.1.0' }
+1201 verbose cache add name="dependency-check" spec="^4.1.0" args=["dependency-check","^4.1.0"]
+1202 verbose parsed url { protocol: null,
+1202 verbose parsed url   slashes: null,
+1202 verbose parsed url   auth: null,
+1202 verbose parsed url   host: null,
+1202 verbose parsed url   port: null,
+1202 verbose parsed url   hostname: null,
+1202 verbose parsed url   hash: null,
+1202 verbose parsed url   search: null,
+1202 verbose parsed url   query: null,
+1202 verbose parsed url   pathname: '^4.1.0',
+1202 verbose parsed url   path: '^4.1.0',
+1202 verbose parsed url   href: '^4.1.0' }
+1203 verbose addNamed [ 'dependency-check', '^4.1.0' ]
+1204 verbose addNamed [ null, null ]
+1205 silly lockFile bb0263c8-dependency-check-4-1-0 dependency-check@^4.1.0
+1206 verbose lock dependency-check@^4.1.0 /home/codio/.npm/bb0263c8-dependency-check-4-1-0.lock
+1207 info addNameTag [ 'handlebars', '^4.7.6' ]
+1208 info addNameTag [ 'koa', '^2.13.0' ]
+1209 info addNameTag [ 'koa-body', '^4.2.0' ]
+1210 info addNameTag [ 'koa-router', '^9.4.0' ]
+1211 info addNameTag [ 'koa-session', '^6.0.0' ]
+1212 info addNameTag [ 'koa-static', '^5.0.0' ]
+1213 info addNameTag [ 'koa-views', '^6.3.0' ]
+1214 info addNameTag [ 'sqlite-async', '^1.1.0' ]
+1215 info addNameTag [ 'ava', '^3.12.1' ]
+1216 info addNameTag [ 'depcheck', '^1.2.0' ]
+1217 info addNameTag [ 'dependency-check', '^4.1.0' ]
+1218 verbose url raw jsdoc
+1219 verbose url resolving [ 'https://registry.npm.taobao.org/', './jsdoc' ]
+1220 verbose url resolved https://registry.npm.taobao.org/jsdoc
+1221 info trying registry request attempt 1 at 11:44:44
+1222 verbose etag W/"680647f01d55579ed9a605f036b55e77"
+1223 http GET https://registry.npm.taobao.org/jsdoc
+1224 verbose url raw eslint
+1225 verbose url resolving [ 'https://registry.npm.taobao.org/', './eslint' ]
+1226 verbose url resolved https://registry.npm.taobao.org/eslint
+1227 info trying registry request attempt 1 at 11:44:44
+1228 verbose etag W/"c1f0aa4636747d907d396af311bd9c0e"
+1229 http GET https://registry.npm.taobao.org/eslint
+1230 verbose url raw bcrypt
+1231 verbose url resolving [ 'https://registry.npm.taobao.org/', './bcrypt' ]
+1232 verbose url resolved https://registry.npm.taobao.org/bcrypt
+1233 info trying registry request attempt 1 at 11:44:44
+1234 verbose etag W/"bfc03cf6ab9b9e2ff2703c10c2bc79b1"
+1235 http GET https://registry.npm.taobao.org/bcrypt
+1236 verbose url raw bcrypt-promise
+1237 verbose url resolving [ 'https://registry.npm.taobao.org/', './bcrypt-promise' ]
+1238 verbose url resolved https://registry.npm.taobao.org/bcrypt-promise
+1239 info trying registry request attempt 1 at 11:44:44
+1240 verbose etag W/"3a7f1153f3ccb5f35a2f717522f29cff"
+1241 http GET https://registry.npm.taobao.org/bcrypt-promise
+1242 verbose url raw handlebars
+1243 verbose url resolving [ 'https://registry.npm.taobao.org/', './handlebars' ]
+1244 verbose url resolved https://registry.npm.taobao.org/handlebars
+1245 info trying registry request attempt 1 at 11:44:44
+1246 verbose etag W/"6274679e1645118236469ea6f6e95d3a"
+1247 http GET https://registry.npm.taobao.org/handlebars
+1248 verbose url raw koa-body
+1249 verbose url resolving [ 'https://registry.npm.taobao.org/', './koa-body' ]
+1250 verbose url resolved https://registry.npm.taobao.org/koa-body
+1251 info trying registry request attempt 1 at 11:44:44
+1252 verbose etag W/"591277b61735ec1efc74243261d690d3"
+1253 http GET https://registry.npm.taobao.org/koa-body
+1254 verbose url raw koa-router
+1255 verbose url resolving [ 'https://registry.npm.taobao.org/', './koa-router' ]
+1256 verbose url resolved https://registry.npm.taobao.org/koa-router
+1257 info trying registry request attempt 1 at 11:44:44
+1258 verbose etag W/"086b98f1a7ba0c4ee50965b6a12a851b"
+1259 http GET https://registry.npm.taobao.org/koa-router
+1260 verbose url raw koa-static
+1261 verbose url resolving [ 'https://registry.npm.taobao.org/', './koa-static' ]
+1262 verbose url resolved https://registry.npm.taobao.org/koa-static
+1263 info trying registry request attempt 1 at 11:44:44
+1264 verbose etag W/"db524be0ed9484fbc48c03531f809fa4"
+1265 http GET https://registry.npm.taobao.org/koa-static
+1266 verbose url raw koa-session
+1267 verbose url resolving [ 'https://registry.npm.taobao.org/', './koa-session' ]
+1268 verbose url resolved https://registry.npm.taobao.org/koa-session
+1269 info trying registry request attempt 1 at 11:44:44
+1270 verbose etag W/"e94f0034c641bb4ee5e83de32f758aac"
+1271 http GET https://registry.npm.taobao.org/koa-session
+1272 verbose url raw sqlite-async
+1273 verbose url resolving [ 'https://registry.npm.taobao.org/', './sqlite-async' ]
+1274 verbose url resolved https://registry.npm.taobao.org/sqlite-async
+1275 info trying registry request attempt 1 at 11:44:44
+1276 verbose etag W/"fa2466fc6d43989e4e1c9dd06b77f037"
+1277 http GET https://registry.npm.taobao.org/sqlite-async
+1278 verbose url raw koa-views
+1279 verbose url resolving [ 'https://registry.npm.taobao.org/', './koa-views' ]
+1280 verbose url resolved https://registry.npm.taobao.org/koa-views
+1281 info trying registry request attempt 1 at 11:44:44
+1282 verbose etag W/"2b5472b747f0063951543ff48a16e9b2"
+1283 http GET https://registry.npm.taobao.org/koa-views
+1284 verbose url raw koa
+1285 verbose url resolving [ 'https://registry.npm.taobao.org/', './koa' ]
+1286 verbose url resolved https://registry.npm.taobao.org/koa
+1287 info trying registry request attempt 1 at 11:44:44
+1288 verbose etag W/"05e25ec12fd6703427df79d75c9ab179"
+1289 http GET https://registry.npm.taobao.org/koa
+1290 verbose url raw depcheck
+1291 verbose url resolving [ 'https://registry.npm.taobao.org/', './depcheck' ]
+1292 verbose url resolved https://registry.npm.taobao.org/depcheck
+1293 info trying registry request attempt 1 at 11:44:44
+1294 verbose etag W/"369b09bf23ab4eab6a86939481c13158"
+1295 http GET https://registry.npm.taobao.org/depcheck
+1296 verbose url raw dependency-check
+1297 verbose url resolving [ 'https://registry.npm.taobao.org/', './dependency-check' ]
+1298 verbose url resolved https://registry.npm.taobao.org/dependency-check
+1299 info trying registry request attempt 1 at 11:44:44
+1300 verbose etag W/"5aa96af993b4c0c63c3718a21157e656"
+1301 http GET https://registry.npm.taobao.org/dependency-check
+1302 verbose url raw ava
+1303 verbose url resolving [ 'https://registry.npm.taobao.org/', './ava' ]
+1304 verbose url resolved https://registry.npm.taobao.org/ava
+1305 info trying registry request attempt 1 at 11:44:45
+1306 verbose etag W/"999b630fedbd05ba0b540877654e788b"
+1307 http GET https://registry.npm.taobao.org/ava
+1308 http 304 https://registry.npm.taobao.org/jsdoc-route-plugin
+1309 silly registry.get cb [ 304,
+1309 silly registry.get   { server: 'Tengine',
+1309 silly registry.get     'content-type': 'application/json; charset=utf-8',
+1309 silly registry.get     connection: 'keep-alive',
+1309 silly registry.get     date: 'Tue, 18 May 2021 11:44:45 GMT',
+1309 silly registry.get     'x-current-requests': '1',
+1309 silly registry.get     vary: 'accept, accept-encoding',
+1309 silly registry.get     etag: 'W/"96b5cf0c3ab5c20a50fcbabfaf6ac30f"',
+1309 silly registry.get     'cache-control': 'max-age=0, s-maxage=120, must-revalidate',
+1309 silly registry.get     'x-readtime': '14',
+1309 silly registry.get     via: 'se1.l1, cache8.se1, l2ot7-1.l2, cache8.l2ot7-1, izbp17djxs02ot6ppjbt2jz, cache8.l2ot7-1[206,206,304-0,M], cache20.l2ot7-1[207,0], cache8.se1[374,374,304-0,M], cache2.se1[375,0]',
+1309 silly registry.get     'ali-swift-global-savetime': '1621337573',
+1309 silly registry.get     age: '0',
+1309 silly registry.get     'x-cache': 'MISS TCP_IMS_HIT dirn:-2:-2',
+1309 silly registry.get     'timing-allow-origin': '*',
+1309 silly registry.get     eagleid: '2ff62c9616213382851014970e' } ]
+1310 verbose etag jsdoc-route-plugin from cache
+1311 silly lockFile 0fe3528f-jsdoc-route-plugin-0-1-0 jsdoc-route-plugin@^0.1.0
+1312 silly lockFile 0fe3528f-jsdoc-route-plugin-0-1-0 jsdoc-route-plugin@^0.1.0
+1313 error Error: No compatible version found: jsdoc-route-plugin@'^0.1.0'
+1313 error Valid install targets:
+1313 error ["0.1.0"]
+1313 error     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache.js:682:10)
+1313 error     at /usr/local/lib/node_modules/npm/lib/cache.js:597:10
+1313 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:138:7)
+1313 error     at Object.oncomplete (fs.js:93:15)
+1314 error If you need help, you may report this log at:
+1314 error     <http://github.com/isaacs/npm/issues>
+1314 error or email it to:
+1314 error     <npm-@googlegroups.com>
+1315 error System Linux 5.4.0-1035-aws
+1316 error command "/usr/local/bin/node" "/usr/local/bin/npm" "i"
+1317 error cwd /home/codio/workspace
+1318 error node -v v0.10.0
+1319 error npm -v 1.2.14
+1320 verbose exit [ 1, true ]
