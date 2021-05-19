@@ -22,7 +22,6 @@ publicRouter.get('/', async ctx => {
 	}
 })
 
-
 /**
  * The user registration page.
  *
@@ -85,8 +84,9 @@ publicRouter.post('/login', async ctx => {
 		const body = ctx.request.body
 		await account.login(body.user, body.pass)
 		ctx.session.authorised = true
-		const referrer = body.referrer || '/secure'
-		return ctx.redirect(`${referrer}?msg=you are now logged in...`)
+		const referrer = body.referrer || '/bookstocks'
+		return ctx.redirect(`${referrer}`)
+	//	return ctx.redirect(`${referrer}?msg=you are now logged in...`)
 	} catch(err) {
 		ctx.hbs.msg = err.message
 		await ctx.render('login', ctx.hbs)
