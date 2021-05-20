@@ -4,7 +4,7 @@ import bodyParser from 'koa-body'
 const bookRouter = new Router()
 bookRouter.use(bodyParser({multipart:true}))
 
-// import {Books} from '../modules/books.js'
+import {Books} from '../modules/books.js'
 const dbName = 'websit.db'
 
 /**
@@ -15,11 +15,21 @@ const dbName = 'websit.db'
  */
 
 bookRouter.get('/bookstocks', async ctx =>{
+	const books = await new Books(dbName)
 	try{
-		//let booklistSQL = `SELECT * FROM`
-		await ctx.render('bookstocks', ctx.hbs)
+		let bookstocks = await books.bookstockslist()
+		await ctx.render('bookstocks', bookstocks)
 	}catch(err){
-		await ctx.render('error',ctx.hbs);
+		throw err
+		await ctx.render('error',ctx.hbs)
+	}
+})
+
+bookRouter.get('/addstocks', async ctx =>{
+	try{
+		await ctx.render('addbookstock',ctx.hbs)
+	}catch(err){
+		throw err
 	}
 })
 

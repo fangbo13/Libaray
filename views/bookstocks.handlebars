@@ -28,9 +28,11 @@
 						<a class="nav-link inactive" href="#">User Manage</a>
 					</li>
 				</ul>
+				<a href="/addstocks">
 				<button type="button" class="btn btn-success" style=margin-top:10px>
 					Add
 				</button>
+					</a>
 				<table class="table">
 					<thead>
 						<tr>
@@ -49,7 +51,15 @@
 						</tr>
 					</thead>
 					<tbody>
+						{{#each this}}
 						<tr>
+							<td>{{title}}</td>
+							<td>{{author}}</td>
+							<td>{{stocks}}</td>
+						</tr>	
+						{{/each}}
+						
+						<!---<tr>
 							<td>
 							  0
 							</td>
@@ -63,6 +73,7 @@
 								0
 							</td>
 						</tr>
+ --->
 					</tbody>
 				</table>
 			</div>
