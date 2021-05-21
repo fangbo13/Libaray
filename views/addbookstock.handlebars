@@ -16,22 +16,26 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-				<form role="form">
+				<form action="/submitstock" method="post">
 					<div class="form-group">
-						<label for="Name">Name</label>
-						<input type="text" class="form-control" id="PrimaryAuthor">
+						<label for="Title">Title</label>
+						<input type="text" class="form-control" id="Title" value="{{body.title}}">
+					</div>
+					<div class="form-group">
+						<label for="PrimaryAuthor">PrimaryAuthor</label>
+						<input type="text" class="form-control" id="PrimaryAuthor" value="{{body.author}}">
 					</div>
 					<div class="form-group">
 						<label for="ISBN-13 Number">ISBN-13 Number</label>
-						<input type="text" class="form-control" id="ISBN13Number">
+						<input type="text" class="form-control" id="ISBN-13 Number" value="{{body.isbn_num}}">
 					</div>
 					<div class="form-group">
 						<label for="The Dewey Classification number">The Dewey Classification number</label>
-						<input type="text" class="form-control" id="Dewey">
+						<input type="text" class="form-control" id="Dewey" value="{{body.classification_num}}">
 					</div>
 					<div class="form-group">
 						<label for="Quantity">Quantity</label>
-						<input type="text" class="form-control" id="Quantity">
+						<input type="text" class="form-control" id="Quantity" value="{{body.quantity}}">
 					</div>
 					<button type="submit" class="btn btn-primary">
 						Submit

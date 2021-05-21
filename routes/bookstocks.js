@@ -5,7 +5,7 @@ const bookRouter = new Router()
 bookRouter.use(bodyParser({multipart:true}))
 
 import {Books} from '../modules/books.js'
-const dbName = 'websit.db'
+const dbName = 'website.db'
 
 /**
  * The book list page.
@@ -28,6 +28,22 @@ bookRouter.get('/bookstocks', async ctx =>{
 bookRouter.get('/addstocks', async ctx =>{
 	try{
 		await ctx.render('addbookstock',ctx.hbs)
+	}catch(err){
+		throw err
+	}
+})
+
+bookRouter.post('/submitstock', async ctx =>{
+	let books = await new Books(dbName)
+	try{
+		await books.createstock(
+			ctx.body.title,
+			ctx.body.author,
+			ctx.body.isbn_num,
+			ctx.body.classification_num,
+			ctx.body.quantity,
+		  create_user)
+		await ctx.redirect('/bookstocks')
 	}catch(err){
 		throw err
 	}
