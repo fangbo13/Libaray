@@ -16,28 +16,28 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-				<form action="/submitstock" method="post">
-					<div class="form-group">
-						<label for="Title">Title</label>
-						<input type="text" class="form-control" id="Title" value="{{body.title}}">
-					</div>
-					<div class="form-group">
-						<label for="PrimaryAuthor">PrimaryAuthor</label>
-						<input type="text" class="form-control" id="PrimaryAuthor" value="{{body.author}}">
-					</div>
-					<div class="form-group">
-						<label for="ISBN-13 Number">ISBN-13 Number</label>
-						<input type="text" class="form-control" id="ISBN-13 Number" value="{{body.isbn_num}}">
-					</div>
-					<div class="form-group">
-						<label for="The Dewey Classification number">The Dewey Classification number</label>
-						<input type="text" class="form-control" id="Dewey" value="{{body.classification_num}}">
-					</div>
-					<div class="form-group">
-						<label for="Quantity">Quantity</label>
-						<input type="text" class="form-control" id="Quantity" value="{{body.quantity}}">
-					</div>
-					<button type="submit" class="btn btn-primary">
+				<form action="/submitstock" enctype='multipart/form-data' method="post">
+<!-- 					<div class="form-group"> -->
+						<label for="title">Title</label>
+						<input type="text" class="form-control" name="title">
+<!-- 					</div>
+					<div class="form-group"> -->
+						<label for="author">PrimaryAuthor</label>
+						<input type="text" class="form-control" name="author">
+<!-- 					</div>
+					<div class="form-group"> -->
+						<label for="isbn_num">ISBN-13 Number</label>
+						<input type="text" class="form-control" name="isbnnum">
+<!-- 					</div>
+					<div class="form-group"> -->
+						<label for="classification_num">The Dewey Classification number</label>
+						<input type="text" class="form-control" name="classificationnum">
+<!-- 					</div>
+					<div class="form-group"> -->
+						<label for="quantity">Quantity</label>
+						<input type="text" class="form-control" name="quantity">
+<!-- 					</div> -->
+					<button type="submit" class="btn btn-primary" value="Create">
 						Submit
 					</button>
 				</form>

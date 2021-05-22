@@ -6,6 +6,8 @@ const publicRouter = new Router()
 publicRouter.use(bodyParser({multipart:true}))
 
 import { Accounts } from '../modules/accounts.js'
+import { LibrarianAccounts } from '../modules/librarianaccounts.js'
+import { Books } from '../modules/books.js'
 const dbName = 'website.db'
 
 /**
@@ -84,7 +86,9 @@ publicRouter.post('/login', async ctx => {
 		const body = ctx.request.body
 		await account.login(body.user, body.pass)
 		ctx.session.authorised = true
-		const referrer = body.referrer || '/bookstocks'
+		ctx.session.usertype = 'student'
+		ctx.session.user = body.user
+		const referrer = body.referrer || '/borrowrecord'
 		return ctx.redirect(`${referrer}`)
 	//	return ctx.redirect(`${referrer}?msg=you are now logged in...`)
 	} catch(err) {
@@ -99,5 +103,48 @@ publicRouter.get('/logout', async ctx => {
 	ctx.session.authorised = null
 	ctx.redirect('/?msg=you are now logged out')
 })
+
+
+publicRouter.post('/submitstock', async ctx =>{
+console.log(ctx.request.body.title)
+console.log(ctx.request.body.author)
+console.log(ctx.request.body.isbnnum)
+console.log(ctx.request.body.classificationnum)
+console.log(ctx.request.body.quantity)	
+	let books = await new Books(dbName)
+ 	console.log(ctx.request.body)
+	try{
+		await books.createbookstock(
+			ctx.request.body.title,
+			ctx.request.body.author,
+			ctx.request.body.isbnnum,
+			ctx.request.body.classificationnum,
+			ctx.request.body.quantity,
+		  "create_user")
+		await ctx.redirect('/bookstocks')
+	}catch(err){
+		throw err
+	}
+})
+
+publicRouter.post('/librarianlogin', async ctx => {
+	const account = await new LibrarianAccounts(dbName)
+	ctx.hbs.body = ctx.request.body
+	try {
+		const body = ctx.request.body
+		await account.login(body.user, body.pass)
+		ctx.session.authorised = true
+		ctx.session.usertype = 'librarian'
+		const referrer = body.referrer || '/bookstocks'
+		return ctx.redirect(`${referrer}`)
+	//	return ctx.redirect(`${referrer}?msg=you are now logged in...`)
+	} catch(err) {
+		ctx.hbs.msg = err.message
+		await ctx.render('login', ctx.hbs)
+	} finally {
+		account.close()
+	}
+})
+
 
 export { publicRouter }

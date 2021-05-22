@@ -1,48 +1,36 @@
 import sqlite from 'sqlite-async'
 
-class Books{
+class BorrowRecords{
 	constructor(dbName = ':memory:'){
 		return (async() => {
 			this.db = await sqlite.open(dbName)
-			const sql = 'CREATE TABLE IF NOT EXISTS book_stocks\
+			const sql = 'CREATE TABLE IF NOT EXISTS borrow_records\
 						(`id` Integer Primary KEY AUTOINCREMENT,\
-						 `title` VARCHAR(256) NOT NULL,\
-							`author` VARCHAR(128) NOT NULL,\
-							`uuid` VARCHAR(128) NOT NULL,\
-							`isbn_num` VARCHAR(128) NOT NULL,\
-							`classification_num` VARCHAR(128) NOT NULL,\
-							`create_user` VARCHAR(128) NULL,\
-							`create_time` DATE NULL);'
+						 `book_uuid` VARCHAR(256) NOT NULL,\
+							`borrower` VARCHAR(128) NOT NULL,\
+							`start_time` DATE NOT NULL,\
+							`deadline` DATE NOT NULL);'
 			const dbbuild = await this.db.run(sql)
-// 			console.log(dbbuild)
-						
+// 			console.log(sql + dbbuild)
 			return this
 		})()
 	}
 	
-	/**
-	 * query the book stock list
-	 * group by ISBN-13 number
-	 * 
-	 * @returns {JsonObject}
-	 * {
-	 *	  "title":"title0",
-	 *		"author":"author1",
-	 *		"stocks":"2"
-	 *	}
-	 */
-	async bookstockslist(){
-		//test
-// 		let book = [{
-// 			"title":"0",
-// 			"author":"1",
-// 			"stocks":"2"
-// 		}]
-// 		return book;
-		
-		let sql = `SELECT * FROM book_stocks`;
+	async recordlist(){
+				//test
+		let book = [{
+			"title":"0",
+			"deadline":"1",
+			"stocks":"2"
+		}]
+		return book
+		let sql = `SELECT s.title,r.deadline FROM brrow_records r, book_stocks s \
+							where r.borrower = "${user}" \
+							and   r.book_uuid = s.uuid;`
+		console.log(sql)
+
 		const data = await this.db.all(sql)
-// 		console.log(data)
+		console.log(data)
 		return data
 	}
 	
@@ -72,18 +60,6 @@ class Books{
 		await this.db.close()
 	}
 	
-		async recordlist(){
-				//test
-		let book = [{
-			"title":"0",
-			"deadline":"1",
-			"stocks":"2"
-		}]
-		return book
-	}
-	
 }
 
-
-
-export {Books}
+export { BorrowRecords }

@@ -4,25 +4,25 @@ import sqlite from 'sqlite-async'
 
 const saltRounds = 10
 
-class Accounts {
+class LibrarianAccounts {
 
 	constructor(dbName = ':memory:') {
 		return (async() => {
 			this.db = await sqlite.open(dbName)
 			// we need this table to store the user accounts
-			const sql = 'CREATE TABLE IF NOT EXISTS users\
+			const sql = 'CREATE TABLE IF NOT EXISTS librarians\
 				(id INTEGER PRIMARY KEY AUTOINCREMENT, user TEXT, pass TEXT, email TEXT);'
 			await this.db.run(sql)
 			
 			try{
-				  const pass = bcrypt.hash('p455w0rd', saltRounds)
-					const sql2 = `DELETE FROM users where user in ("student1","student2");\
-											INSERT INTO users (user,pass,email) VALUES\
-											 ("student1","${pass}","fangh13@coventry.ac.uk")\
-											,("student2","${pass}","fangh13@coventry.ac.uk")`;
+				const pass = await bcrypt.hash('p455w0rd', saltRounds)
+				const sql2 = `DELETE FROM librarians where user in ("librarian1","librarian2");\
+											INSERT INTO librarians (user,pass,email) VALUES \
+											 ("librarian1","${pass}","fangh13@coventry.ac.uk") \
+											,("librarian2","${pass}","fangh13@coventry.ac.uk");`
 				await this.db.run(sql2)
 			}catch(err){
-				console.log(`add init student error,${err}`)
+				console.log(`add init data error, ${err}`)
 			}
 			
 			return this
@@ -58,10 +58,10 @@ class Accounts {
 	 * @returns {Boolean} returns true if credentials are valid
 	 */
 	async login(username, password) {
-		let sql = `SELECT count(id) AS count FROM users WHERE user="${username}";`
+		let sql = `SELECT count(id) AS count FROM librarians WHERE user="${username}";`
 		const records = await this.db.get(sql)
 		if(!records.count) throw new Error(`username "${username}" not found`)
-		sql = `SELECT pass FROM users WHERE user = "${username}";`
+		sql = `SELECT pass FROM librarians WHERE user = "${username}";`
 		const record = await this.db.get(sql)
 		const valid = await bcrypt.compare(password, record.pass)
 		if(valid === false) throw new Error(`invalid password for account "${username}"`)
@@ -73,4 +73,4 @@ class Accounts {
 	}
 }
 
-export { Accounts }
+export { LibrarianAccounts }

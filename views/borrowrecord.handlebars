@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X_UA_Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Book borrow record for student</title>
+		
+		<meta name="author" content="Fangh13">
+		
+		<link href="{{host}}/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container-fluid" style=margin-top:20px>
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-left">
+					Library Loans System
+				</h3>
+				<div style=margin-left:5px;margin-top:20px>
+						<form class="form-inline">
+							<input class="form-control mr-sm-2" type="text">
+							<button class="btn btn-primary my-2 my-sm-0" type="submit">
+								Search
+							</button>
+					</form>
+					</div>
+				<table class="table" style=margin-top:20px>
+					<thead>
+						<tr>
+							<th>
+								#
+							</th>
+							<th>
+								Book Title
+							</th>
+							<th>
+								DeadLine
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each this}}
+						<tr>
+							<td>{{title}}</td>
+							<td>{{deadline}}</td>
+						</tr>	
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

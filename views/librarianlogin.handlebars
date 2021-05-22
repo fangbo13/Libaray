@@ -4,7 +4,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Student Log In</title>
+		<title>Librarian Log In</title>
 		<meta name="description" content="form to add new books">
 		<meta name="author" content="Mark Tyers">
 		<link href="{{host}}/style.css" type="text/css" rel="stylesheet" />
@@ -12,15 +12,13 @@
 	<body>
 		<header>
 		<h1>Log In</h1>
-		<a href="/register">Register</a>
-					<a href="/librarianlogin">Librarian log in</a>
-
+		<a href="/login">Student log in</a>
 		</header>
 		{{#if msg}}
  			<p class="msg">{{msg}}</p>
 		{{/if}}
 		<main>
-		<form action="/login" method="post">
+		<form action="/librarianlogin" method="post">
 			<p>
 				<label for="user">Username</label><br />
 				<input type="text" name="user" placeholder="your username" value="{{body.user}}" autofocus>
