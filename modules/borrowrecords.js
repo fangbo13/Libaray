@@ -35,22 +35,20 @@ class BorrowRecords{
 	}
 	
 	/*
-	 * Create book stocks by submited information
-	 * this will generate mutiple records according to parameter:Quantity
+	 * Create book borrow record by submited information
 	 * 
-	 * @param {Book} basic information of book
+	 * @param {uuid} uuid of book
 	 * @returns {Boolean} returns true if the new bookstocks has been added
 	 * 
 	 */ 
-	async createbookstock(title,author,isbn_num,classification_num,quantity,create_user){
+	async createborrowrecord(uuid,borrower){
 // 		Array.from(arguments).forEach(val =>{
 // 			if(val.length === 0) throw new Error('missing field')
 // 		})
-		let sql = 'INSERT INTO book_stocks (title,author,uuid,isbn_num,classification_num,create_user,create_time) VALUES '
-		for(let i = 0; i < quantity; i++){
-			sql += `("${title}","${author}","select uuid()","${isbn_num}","${classification_num}","${create_user}","utc_time"),`
-		}
-		sql = sql.substr(0,sql.length-1) + ';'
+		let starttime = new Date().toUTCString()
+		let deadline = new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000)
+		let sql = `INSERT INTO borrow_records (book_uuid,borrower,start_time,deadline) \
+							 VALUES ("${uuid}","${borrower}","${starttime}","${deadline}");`
 		console.log(sql)
 		await this.db.run(sql)
 		return true

@@ -10,17 +10,17 @@ class LibrarianAccounts {
 		return (async() => {
 			this.db = await sqlite.open(dbName)
 			// we need this table to store the user accounts
-			const sql = 'CREATE TABLE IF NOT EXISTS librarians\
+			let sql = 'CREATE TABLE IF NOT EXISTS librarians\
 				(id INTEGER PRIMARY KEY AUTOINCREMENT, user TEXT, pass TEXT, email TEXT);'
 			await this.db.run(sql)
 			
 			try{
-				const pass = await bcrypt.hash('p455w0rd', saltRounds)
-				const sql2 = `DELETE FROM librarians where user in ("librarian1","librarian2");\
-											INSERT INTO librarians (user,pass,email) VALUES \
+				let pass = await bcrypt.hash('p455w0rd', saltRounds)
+				let sql2 = `INSERT INTO librarians (user,pass,email) VALUES \
 											 ("librarian1","${pass}","fangh13@coventry.ac.uk") \
 											,("librarian2","${pass}","fangh13@coventry.ac.uk");`
-				await this.db.run(sql2)
+				let initresult = await this.db.run(sql2)
+				console.log(sql2 + initresult)
 			}catch(err){
 				console.log(`add init data error, ${err}`)
 			}

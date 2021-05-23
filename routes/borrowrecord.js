@@ -2,21 +2,21 @@
 import Router from 'koa-router'
 import bodyParser from 'koa-body'
 
-const borrowrecordRouter = new Router()
-borrowrecordRouter.use(bodyParser({multipart:true}))
+const borrowrecordRouter = new Router({ prefix: '/borrowrecord' })
+// borrowrecordRouter.use(bodyParser({multipart:true}))
 
 import { BorrowRecords } from '../modules/borrowrecords.js'
 
 const dbName = 'website.db'
 
 /**
- * The secure home page.
+ * Student's borrow record list.
  *
- * @name Home Page
- * @route {GET} /
+ * @name Borrow Record List
+ * @route {GET} /borrowrecord
  */
 
-borrowrecordRouter.get('/borrowrecord', async ctx =>{
+borrowrecordRouter.get('/', async ctx =>{
 	console.log(ctx.hbs.usertype)
 
 			const item = await new BorrowRecords(dbName)
@@ -28,6 +28,22 @@ borrowrecordRouter.get('/borrowrecord', async ctx =>{
 				await ctx.render('error',ctx.hbs)
 			}
 	
+})
+
+/**
+ * Student borrow book
+ * 
+ * @name Borrow Book
+ * @route {POST} /borrowrecord
+ */
+borrowrecordRouter.post('/', async ctx =>{
+	const borrowrecord = await new BorrowRecords(dbName)
+	try{
+		let data = await borrowrecord.createborrowrecord(ctx.request.body.uuid,ctx.session.user)
+		ctx.redirect('/borrowrecord')
+	}catch(err){
+		throw err
+	}
 })
 
 

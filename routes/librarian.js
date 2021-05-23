@@ -3,7 +3,7 @@ import Router from 'koa-router'
 import bodyParser from 'koa-body'
 
 const librarianRouter = new Router()
-librarianRouter.use(bodyParser({multipart:true}))
+// librarianRouter.use(bodyParser({multipart:true}))
 
 import { LibrarianAccounts } from '../modules/librarianaccounts.js'
 

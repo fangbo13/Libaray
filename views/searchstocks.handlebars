@@ -7,7 +7,7 @@
 		<meta http-equiv="X_UA_Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<title>Book borrow record for student</title>
+		<title>Search result for student</title>
 		
 		<meta name="author" content="Fangh13">
 		
@@ -21,8 +21,8 @@
 					Library Loans System
 				</h3>
 				<div style=margin-left:5px;margin-top:20px>
-						<form class="form-inline" action="/bookstocks/availablebookstocks" method="get">
-							<input class="form-control mr-sm-2" type="text" name="searchitem">
+						<form class="form-inline">
+							<input class="form-control mr-sm-2" type="text">
 							<button class="btn btn-primary my-2 my-sm-0" type="submit">
 								Search
 							</button>
@@ -35,15 +35,21 @@
 								Book Title
 							</th>
 							<th>
-								DeadLine
+								Author
 							</th>
+							<th>Stocks</th>
+							<th>Available</th>
+							<th><input type="button" value="button"></th>
 						</tr>
 					</thead>
 					<tbody>
 						{{#each this}}
 						<tr>
 							<td>{{title}}</td>
-							<td>{{deadline}}</td>
+							<td>{{author}}</td>
+							<td>{{stocks}}</td>
+							<td>{{available}}
+							<td><input type="button" href="/borrowrecord" method="post"></td>
 						</tr>	
 						{{/each}}
 					</tbody>

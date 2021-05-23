@@ -9,7 +9,7 @@ import { borrowrecordRouter } from './borrowrecord.js'
 
 const apiRouter = new Router()
 
-const nestedRoutes = [publicRouter, secureRouter, bookRouter,librarianRouter,borrowrecordRouter]
+const nestedRoutes = [secureRouter, bookRouter,librarianRouter,borrowrecordRouter,publicRouter]
 for (const router of nestedRoutes) apiRouter.use(router.routes(), router.allowedMethods())
 
 export { apiRouter }

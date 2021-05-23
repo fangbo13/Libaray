@@ -4,7 +4,7 @@ class Books{
 	constructor(dbName = ':memory:'){
 		return (async() => {
 			this.db = await sqlite.open(dbName)
-			const sql = 'CREATE TABLE IF NOT EXISTS book_stocks\
+			let sql = 'CREATE TABLE IF NOT EXISTS book_stocks\
 						(`id` Integer Primary KEY AUTOINCREMENT,\
 						 `title` VARCHAR(256) NOT NULL,\
 							`author` VARCHAR(128) NOT NULL,\
@@ -32,16 +32,8 @@ class Books{
 	 *	}
 	 */
 	async bookstockslist(){
-		//test
-// 		let book = [{
-// 			"title":"0",
-// 			"author":"1",
-// 			"stocks":"2"
-// 		}]
-// 		return book;
-		
-		let sql = `SELECT * FROM book_stocks`;
-		const data = await this.db.all(sql)
+		let sql = `SELECT id,title,author,count(1) as stocks FROM book_stocks Group by isbn_num`;
+		let data = await this.db.all(sql)
 // 		console.log(data)
 		return data
 	}
@@ -55,12 +47,12 @@ class Books{
 	 * 
 	 */ 
 	async createbookstock(title,author,isbn_num,classification_num,quantity,create_user){
-// 		Array.from(arguments).forEach(val =>{
-// 			if(val.length === 0) throw new Error('missing field')
-// 		})
-		let sql = 'INSERT INTO book_stocks (title,author,uuid,isbn_num,classification_num,create_user,create_time) VALUES '
+		let datetime = new Date().toUTCString()
+		let sql = 'INSERT INTO book_stocks (title,author,isbn_num,uuid,classification_num,create_user,create_time) VALUES '
+		console.log(quantity)
 		for(let i = 0; i < quantity; i++){
-			sql += `("${title}","${author}","select uuid()","${isbn_num}","${classification_num}","${create_user}","utc_time"),`
+			console.log(quantity)
+			sql += `("${title}","${author}","${isbn_num}","uuid","${classification_num}","${create_user}","${datetime}"),`
 		}
 		sql = sql.substr(0,sql.length-1) + ';'
 		console.log(sql)
@@ -68,20 +60,19 @@ class Books{
 		return true
 	}
 	
-		async close() {
+		
+	async searchbookstocks(searchitem){
+		let sql = `SELECT s.title,s.author,count(1) as available,(SELECT count(1) FROM book_stocks where isbn_num = s.isbn_num) as stocks FROM book_stocks s where (s.title like '%${searchitem}%' OR s.author like '%${searchitem}%') AND s.uuid not in (SELECT book_uuid as uuid FROM borrow_records) GROUP BY s.isbn_num`
+		console.log(sql)
+		let result = await this.db.all(sql)
+		console.log(result)
+		return result
+	}
+
+	async close() {
 		await this.db.close()
 	}
-	
-		async recordlist(){
-				//test
-		let book = [{
-			"title":"0",
-			"deadline":"1",
-			"stocks":"2"
-		}]
-		return book
-	}
-	
+
 }
 
 
