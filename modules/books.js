@@ -19,6 +19,7 @@ class Books{
 			return this
 		})()
 	}
+
 	
 	/**
 	 * query the book stock list
@@ -51,8 +52,7 @@ class Books{
 		let sql = 'INSERT INTO book_stocks (title,author,isbn_num,uuid,classification_num,create_user,create_time) VALUES '
 		console.log(quantity)
 		for(let i = 0; i < quantity; i++){
-			console.log(quantity)
-			sql += `("${title}","${author}","${isbn_num}","uuid","${classification_num}","${create_user}","${datetime}"),`
+			sql += `("${title}","${author}","${isbn_num}",hex(randomblob(16)),"${classification_num}","${create_user}","${datetime}"),`
 		}
 		sql = sql.substr(0,sql.length-1) + ';'
 		console.log(sql)
@@ -62,7 +62,7 @@ class Books{
 	
 		
 	async searchbookstocks(searchitem){
-		let sql = `SELECT s.title,s.author,count(1) as available,(SELECT count(1) FROM book_stocks where isbn_num = s.isbn_num) as stocks FROM book_stocks s where (s.title like '%${searchitem}%' OR s.author like '%${searchitem}%') AND s.uuid not in (SELECT book_uuid as uuid FROM borrow_records) GROUP BY s.isbn_num`
+		let sql = `SELECT s.title,s.author,s.isbn_num,count(1) as available,(SELECT count(1) FROM book_stocks where isbn_num = s.isbn_num) as stocks FROM book_stocks s where (s.title like '%${searchitem}%' OR s.author like '%${searchitem}%') AND s.uuid not in (SELECT book_uuid as uuid FROM borrow_records) GROUP BY s.isbn_num`
 		console.log(sql)
 		let result = await this.db.all(sql)
 		console.log(result)
@@ -73,6 +73,7 @@ class Books{
 		await this.db.close()
 	}
 
+	
 }
 
 

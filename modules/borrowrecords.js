@@ -4,28 +4,21 @@ class BorrowRecords{
 	constructor(dbName = ':memory:'){
 		return (async() => {
 			this.db = await sqlite.open(dbName)
-			const sql = 'CREATE TABLE IF NOT EXISTS borrow_records\
+			let sql = 'CREATE TABLE IF NOT EXISTS borrow_records\
 						(`id` Integer Primary KEY AUTOINCREMENT,\
 						 `book_uuid` VARCHAR(256) NOT NULL,\
 							`borrower` VARCHAR(128) NOT NULL,\
 							`start_time` DATE NOT NULL,\
 							`deadline` DATE NOT NULL);'
-			const dbbuild = await this.db.run(sql)
+			let dbbuild = await this.db.run(sql)
 // 			console.log(sql + dbbuild)
 			return this
 		})()
 	}
 	
-	async recordlist(){
-				//test
-		let book = [{
-			"title":"0",
-			"deadline":"1",
-			"stocks":"2"
-		}]
-		return book
-		let sql = `SELECT s.title,r.deadline FROM brrow_records r, book_stocks s \
-							where r.borrower = "${user}" \
+	async recordlist(user){
+		let sql = `SELECT s.title,s.author,s.isbn_num,r.borrower,r.deadline FROM borrow_records r, book_stocks s \
+							where r.borrower = '${user}' \
 							and   r.book_uuid = s.uuid;`
 		console.log(sql)
 
@@ -41,16 +34,21 @@ class BorrowRecords{
 	 * @returns {Boolean} returns true if the new bookstocks has been added
 	 * 
 	 */ 
-	async createborrowrecord(uuid,borrower){
+	async createborrowrecord(isbn_num,borrower){
 // 		Array.from(arguments).forEach(val =>{
 // 			if(val.length === 0) throw new Error('missing field')
 // 		})
+		let sqlavailabe = `SELECT s.uuid FROM book_stocks s WHERE isbn_num = '${isbn_num}' AND NOT EXISTS (SELECT * FROM borrow_records where book_uuid = s.uuid);`
+		console.log(`sqlavailabe=${sqlavailabe}`)
+		let available = await this.db.get(sqlavailabe)
+		console.log(`available=${available}`)
+		
 		let starttime = new Date().toUTCString()
 		let deadline = new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000)
-		let sql = `INSERT INTO borrow_records (book_uuid,borrower,start_time,deadline) \
-							 VALUES ("${uuid}","${borrower}","${starttime}","${deadline}");`
-		console.log(sql)
-		await this.db.run(sql)
+		let sqlcreaterecord = `INSERT INTO borrow_records (book_uuid,borrower,start_time,deadline) VALUES\
+												  ('${available.uuid}','${borrower}','${starttime}','${deadline}');`
+		console.log(sqlcreaterecord)
+		await this.db.run(sqlcreaterecord)
 		return true
 	}
 	

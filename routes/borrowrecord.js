@@ -21,7 +21,7 @@ borrowrecordRouter.get('/', async ctx =>{
 
 			const item = await new BorrowRecords(dbName)
 			try{
-				let data = await item.recordlist()
+				let data = await item.recordlist(ctx.session.user)
 				await ctx.render('borrowrecord', data)
 			}catch(err){
 				throw err
@@ -39,7 +39,7 @@ borrowrecordRouter.get('/', async ctx =>{
 borrowrecordRouter.post('/', async ctx =>{
 	const borrowrecord = await new BorrowRecords(dbName)
 	try{
-		let data = await borrowrecord.createborrowrecord(ctx.request.body.uuid,ctx.session.user)
+		let data = await borrowrecord.createborrowrecord(ctx.request.body.isbn_num,ctx.session.user)
 		ctx.redirect('/borrowrecord')
 	}catch(err){
 		throw err

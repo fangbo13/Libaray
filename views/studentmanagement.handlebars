@@ -7,7 +7,7 @@
 		<meta http-equiv="X_UA_Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<title>Search result for student</title>
+		<title>Librarian search borrow record for student</title>
 		
 		<meta name="author" content="Fangh13">
 		
@@ -23,8 +23,8 @@
 					Library Loans System
 				</h3>
 				<div style=margin-left:5px;margin-top:20px>
-						<form class="form-inline" action="/bookstocks/availableboookstocks" method="get">
-							<input class="form-control mr-sm-2" type="text">
+						<form class="form-inline" action="/librarian/studentmanagement" method="get">
+							<input class="form-control mr-sm-2" type="text" name="borrower" placeholder="Input student name to search borrow record">
 							<button class="btn btn-primary my-2 my-sm-0" type="submit">
 								Search
 							</button>
@@ -40,9 +40,8 @@
 								Author
 							</th>
 							<th>ISBN_13 Number</th>
-							<th>Stocks</th>
-							<th>Available</th>
-							<th>Operation</th>
+							<th>User</th>
+							<th>DeadLine</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -51,9 +50,9 @@
 							<td>{{title}}</td>
 							<td>{{author}}</td>
 							<td>{{isbn_num}}</td>
-							<td name="stocks" value="stocks">{{stocks}}</td>
-							<td>{{available}}</td>
-							<td><input type="button" id="borrowbutton" onclick="borrow(this)" value="borrow"></td>
+							<td>{{borrower}}</td>
+							<td>{{deadline}}</td>
+							<td><input type="button" id="return" onclick="returnbook(this)" value="return book"></td>
 						</tr>	
 						{{/each}}
 					</tbody>
@@ -62,7 +61,7 @@
 		</div>
 	</div>
 		<script type="text/javascript">
-			function borrow($this){
+			function returnbook($this){
 				var row = $($this).parents("tr");
 				console.log(row.children("td").get(0).innerHTML);
 				console.log(row.children("td").get(1).innerHTML);
@@ -70,7 +69,8 @@
 				console.log(row.children("td").get(3).innerHTML);
 				
 				var isbn_num = row.children("td").get(2).innerHTML;
-				$.post("/borrowrecord",{ isbn_num:isbn_num });
+				var borrower = row.children("td").get(3).innerHTML
+				$.post("/returnbook",{ isbn_num:isbn_num,borrower:borrower });
 				
 				
 			}

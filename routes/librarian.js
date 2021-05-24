@@ -6,7 +6,7 @@ const librarianRouter = new Router()
 // librarianRouter.use(bodyParser({multipart:true}))
 
 import { LibrarianAccounts } from '../modules/librarianaccounts.js'
-
+import { BorrowRecords } from '../modules/borrowrecords.js'
 const dbName = 'website.db'
 
 
@@ -32,6 +32,12 @@ librarianRouter.post('/librarianlogin', async ctx => {
 	} finally {
 		account.close()
 	}
+})
+
+librarianRouter.get('/librarian/studentmanagement', async ctx => {
+	const borrowrecords = await new BorrowRecords(dbName)
+	let data = await borrowrecords.recordlist(ctx.hbs.borrower)
+	return ctx.render('studentmanagement',data)
 })
 
 

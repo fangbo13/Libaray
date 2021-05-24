@@ -79,7 +79,7 @@ bookRouter.post('/submitstock', async ctx =>{
 			ctx.request.body.isbnnum,
 			ctx.request.body.classificationnum,
 			ctx.request.body.quantity,
-		  "create_user")
+		  ctx.session.user)
 		await ctx.redirect('/bookstocks')
 	}catch(err){
 		throw err
