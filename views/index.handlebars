@@ -5,28 +5,35 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Home Page</title>
-		<meta name="description" content="form to add new books">
-		<meta name="author" content="Mark Tyers">
+		<meta name="description" content="Home Page">
+		<meta name="author" content="Fangh13">
 		<link href="{{host}}/style.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
 		<header>
-			<h1>Home</h1>
-			{{#if authorised}}
+			<h1>Librarian Loans System</h1>
+<!-- 			{{#if authorised}}
 				<a href="/logout">Log out</a>
 			{{else}}
 				<a href="/login">Student log in</a>
 			  <a href="/librarianlogin">Librarian log in</a>
-			{{/if}}
+			{{/if}} -->
 		</header>
-		{{#if msg}}
- 			<p class="msg">{{msg}}</p>
-		{{/if}}
-	<main>
-		<p>This is the home page. Users can see it without logging in.</p>
-		{{#if authorised}}
-			<p><a href="/secure">secure page</a></p>
-		{{/if}}
-	</main>
+		<div class="homepage-container">
+			<section class="img-display vertical-center">
+				<img src="{{host}}/avatars/library.png" alt="">
+				<img src="{{host}}/avatars/books1.png" alt="">
+				<img src="{{host}}/avatars/seat.png" alt="">
+				<img src="{{host}}/avatars/computer.png" alt="">
+			</section>
+			<section class="login type-center">
+				<a href="/login"><button type="button" class="btn btn-success" style=margin-top:10px>
+					Student
+				</button></a>
+				<a href="/librarianlogin"><button type="button" class="btn btn-success" style=margin-top:10px>
+					Librarian
+				</button></a>
+			</section>
+		</div>
 	</body>
 </html>
