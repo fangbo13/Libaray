@@ -42,11 +42,14 @@
 							<th>ISBN_13 Number</th>
 							<th>User</th>
 							<th>DeadLine</th>
+							<th>Operation</th>
 						</tr>
 					</thead>
 					<tbody>
 						{{#each this}}
-						<tr>
+						{{#if deadline}}
+						{{#overdue deadline}}
+						<tr class="table-danger">
 							<td>{{title}}</td>
 							<td>{{author}}</td>
 							<td>{{isbn_num}}</td>
@@ -54,6 +57,18 @@
 							<td>{{deadline}}</td>
 							<td><input type="button" id="return" onclick="returnbook(this)" value="return book"></td>
 						</tr>	
+						{{else}}
+						<tr class="table-success">
+							<td>{{title}}</td>
+							<td>{{author}}</td>
+							<td>{{isbn_num}}</td>
+							<td>{{borrower}}</td>
+							<td>{{deadline}}</td>
+							<td style="display:none;">{{book_uuid}}</td>
+							<td><input type="button" id="return" onclick="returnbook(this)" value="return book"></td>
+						</tr>	
+						{{/overdue}}
+			{{/if}}
 						{{/each}}
 					</tbody>
 				</table>
@@ -68,12 +83,21 @@
 				console.log(row.children("td").get(2).innerHTML);
 				console.log(row.children("td").get(3).innerHTML);
 				
-				var isbn_num = row.children("td").get(2).innerHTML;
+				var uuid = row.children("td").get(5).innerHTML;
 				var borrower = row.children("td").get(3).innerHTML
-				$.post("/returnbook",{ isbn_num:isbn_num,borrower:borrower });
-				
+				$.post("/borrowrecord/returnbook",{ uuid:uuid,borrower:borrower });
 				
 			}
+			
+			handlebars.registerHelper("overdue",function(a,options){
+				var deadline = new Date(Date.parse(a));
+				var currentTime = new Date();
+				if(currentTime > deadline){
+					return options.fn(this);
+				}else{
+					return options.invers(this);
+				}
+			})
 		</script>
 	</body>
 </html>

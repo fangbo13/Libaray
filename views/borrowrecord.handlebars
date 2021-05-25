@@ -34,6 +34,7 @@
 							<th>
 								Book Title
 							</th>
+							<th>Author</th>
 							<th>
 								DeadLine
 							</th>
@@ -41,10 +42,21 @@
 					</thead>
 					<tbody>
 						{{#each this}}
-						<tr>
+						{{#if deadline}}
+						{{#overdue deadline}}
+						<tr class="table-danger">
 							<td>{{title}}</td>
+							<td>{{author}}</td>
 							<td>{{deadline}}</td>
 						</tr>	
+						{{else}}
+						<tr class="table-success">
+							<td>{{title}}</td>
+							<td>{{author}}</td>
+							<td>{{deadline}}</td>
+						</tr>
+						{{/overdue}}
+						{{/if}}
 						{{/each}}
 					</tbody>
 				</table>

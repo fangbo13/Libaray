@@ -17,7 +17,7 @@ class BorrowRecords{
 	}
 	
 	async recordlist(user){
-		let sql = `SELECT s.title,s.author,s.isbn_num,r.borrower,r.deadline FROM borrow_records r, book_stocks s \
+		let sql = `SELECT s.title,s.author,s.isbn_num,r.book_uuid,r.borrower,r.deadline FROM borrow_records r, book_stocks s \
 							where r.borrower = '${user}' \
 							and   r.book_uuid = s.uuid;`
 		console.log(sql)
@@ -54,6 +54,12 @@ class BorrowRecords{
 	
 		async close() {
 		await this.db.close()
+	}
+	
+	async deleteborrowrecord(uuid,borrower){
+		let sqldelete = `DELETE FROM borrow_records WHERE book_uuid = '${uuid}' AND borrower = '${borrower}';`
+		await this.db.run(sqldelete)
+		return true
 	}
 	
 }

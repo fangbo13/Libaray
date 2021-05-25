@@ -46,5 +46,16 @@ borrowrecordRouter.post('/', async ctx =>{
 	}
 })
 
+borrowrecordRouter.post('/returnbook', async ctx =>{
+	const borrowrecord = await new BorrowRecords(dbName)
+	try{
+		let data = await borrowrecord.deleteborrowrecord(
+			ctx.request.body.uuid,
+			ctx.request.body.borrower)
+		ctx.redirect(`/librarian/studentmanagement?borrower=${ctx.request.body.borrower}`)
+	}catch(err){
+		throw err
+	}
+})
 
 export { borrowrecordRouter }
