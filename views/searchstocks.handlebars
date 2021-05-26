@@ -14,14 +14,14 @@
 		<script src="{{host}}/jquery.min.js"></script>
 		
 		<link href="{{host}}/bootstrap.min.css" rel="stylesheet">
+				<link href="{{host}}/style.css" rel="stylesheet">
+
 	</head>
 	<body>
-		<div class="container-fluid" style=margin-top:20px>
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					Library Loans System
-				</h3>
+		<header>
+			<h1>Library Loans System - Search Book</h1>
+			<a href="/logout">Log out</a>
+		</header>
 				<div style=margin-left:5px;margin-top:20px>
 						<form class="form-inline" action="/bookstocks/availableboookstocks" method="get">
 							<input class="form-control mr-sm-2" type="text">
@@ -58,9 +58,6 @@
 						{{/each}}
 					</tbody>
 				</table>
-			</div>
-		</div>
-	</div>
 		<script type="text/javascript">
 			function borrow($this){
 				var row = $($this).parents("tr");
