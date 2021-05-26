@@ -20,20 +20,29 @@
 			{{/if}}
 		</header>
 		<div class="homepage-container">
-			<section class="img-display vertical-center">
-				<img src="{{host}}/avatars/library.png" alt="">
-				<img src="{{host}}/avatars/books1.png" alt="">
-				<img src="{{host}}/avatars/seat.png" alt="">
-				<img src="{{host}}/avatars/computer.png" alt="">
+			<section class="librarian box">
+				<a href="/librarianlogin">
+				<img class="computer" src="{{host}}/avatars/computer.png" alt="">
+				</a>
+				<div>
+					<br/>I am librarian
+				</div>
+				</section>
+			<section class="student box">
+				<a href="/login">
+					<img class="books1" src="{{host}}/avatars/books1.png" alt=""></a>
+			<div>			<br/>I am student
+				</div>
+			
 			</section>
-			<section class="login type-center">
+<!-- 			<section class="login type-center">
 				<a href="/login"><button type="button" class="btn btn-success" style=margin-top:10px>
 					Student
 				</button></a>
 				<a href="/librarianlogin"><button type="button" class="btn btn-success" style=margin-top:10px>
 					Librarian
 				</button></a>
-			</section>
+			</section> -->
 		</div>
 	</body>
 </html>
