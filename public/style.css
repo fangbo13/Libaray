@@ -70,17 +70,21 @@ p, legend {
 
 main {
 	width: 100%;
-	margin-left: 3vw;
+/* 	margin-left: 3vw; */
 	/* background-color: pink; */
 	
 }
 
 main form{
-	margin-top:100px;
+	margin-top:7%;
 	margin-left:35%;
 	margin-right:35%;
 	padding:2%;
 	background-color:#ccc;
+}
+
+main form p{
+	margin-top:10px;
 }
 
 article {
@@ -166,11 +170,13 @@ input[type="submit"], .custom-file-upload {
   display: inline-block;
 	font-size: 1rem;
 	border-radius: .25rem; 
+/* 	float:right;
+	margin-right:10px; */
 }
 
 input[type="button"] {
-	background-color: ##0275d8;
-	border: 2px solid ##0275d8;
+	background-color: #0275d8;
+	border: 2px solid #0275d8;
 	color: white;
 	padding:0.5rem 1rem;
 	text-align:center;
@@ -178,6 +184,7 @@ input[type="button"] {
 	display: inline-block;
 	font-size: 1rem;
 	border-radius: .25rem;
+/* 	float:right; */
 }
 
 header > a {
@@ -266,7 +273,7 @@ td {
 
 td:last-child {
 	width: 10vw;
-	text-align: right;
+	text-align: left;
 }
 
 /*===================
@@ -324,4 +331,8 @@ td:last-child {
  	-moz-transition:background .8s;
  	-o-transition:background .8s;
  	transition:background .8s;
+}
+
+.container-fluid{
+	background-color:
 }

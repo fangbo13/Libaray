@@ -12,14 +12,19 @@
 		<meta name="author" content="Fangh13">
 		
 		<link href="{{host}}/bootstrap.min.css" rel="stylesheet">
+		<link href="{{host}}/style.css" rel="stylesheet">
+
 	</head>
 	<body>
+		<header>
+			<h1>Librarian Loans System - Book Stocks</h1>
+			<a href="/logout">
+				Log out
+			</a>
+		</header>
 		<div class="container-fluid" style=margin-top:20px>
 		<div class="row">
 			<div class="col-md-12">
-				<h3 class="text-left">
-					Library Loans System
-				</h3>
 				<div style="margin-left:5px;margin-top:20px">
 					<form class="form-inline" action="/librarian/studentmanagement" method="get">
 						<input class="form-control mr-sm-2" type="text" name="borrower" placeholder="Input student name">
@@ -54,22 +59,6 @@
 							<td>{{stocks}}</td>
 						</tr>	
 						{{/each}}
-						
-						<!---<tr>
-							<td>
-							  0
-							</td>
-							<td>
-								Book0
-							</td>
-							<td>
-								Author0
-							</td>
-							<td>
-								0
-							</td>
-						</tr>
- --->
 					</tbody>
 				</table>
 			</div>
