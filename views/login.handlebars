@@ -11,10 +11,8 @@
 	</head>
 	<body>
 		<header>
-		<h1>Log In</h1>
-		<a href="/register">Register</a>
-					<a href="/librarianlogin">Librarian log in</a>
-
+		<h1>Student Login</h1>
+		<a href="/librarianlogin">Librarian login</a>
 		</header>
 		{{#if msg}}
  			<p class="msg">{{msg}}</p>
@@ -22,7 +20,7 @@
 		<main>
 		<form action="/login" method="post">
 			<p>
-				<label for="user">Username</label><br />
+				<label for="user">Username</label>
 				<input type="text" name="user" placeholder="your username" value="{{body.user}}" autofocus>
 			</p>
 			<p>
@@ -30,9 +28,12 @@
 				<input type="password" name="pass" placeholder="your password" value="{{body.pass}}">
 			</p>
 			<input type="hidden" name="referrer" value="{{referrer}}">
-			<p><input type="submit" value="Log in"></p>
+			<p><input type="submit" value="Log in">
+				<a href="/Register">
+					<input type="button" value="Register">
+				</a>
+			</p>
 		</form>
-		<p><a href="/">Home page</a></p>
 		</main>
 	</body>
 </html>

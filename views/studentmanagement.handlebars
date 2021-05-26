@@ -14,20 +14,25 @@
 		<script src="{{host}}/jquery.min.js"></script>
 		
 		<link href="{{host}}/bootstrap.min.css" rel="stylesheet">
+		<link href="{{host}}/style.css" rel="stylesheet">
 	</head>
 	<body>
+		<header>
+			<h1>
+				Librarian Loans System
+			</h1>
+			<a href="/logout">Log out</a>
+		</header>
 		<div class="container-fluid" style=margin-top:20px>
 		<div class="row">
 			<div class="col-md-12">
-				<h3 class="text-left">
-					Library Loans System
-				</h3>
 				<div style=margin-left:5px;margin-top:20px>
 						<form class="form-inline" action="/librarian/studentmanagement" method="get">
 							<input class="form-control mr-sm-2" type="text" name="borrower" placeholder="Input student name to search borrow record">
 							<button class="btn btn-primary my-2 my-sm-0" type="submit">
 								Search
 							</button>
+							<a href="/bookstocks"><input class="btn btn-primary my-2 my-sm-0" type="button" value="Back to stock page" style="margin-left:5px;"></a>
 					</form>
 					</div>
 				<table class="table" id="searchstocktable" style=margin-top:20px>
@@ -65,7 +70,7 @@
 							<td>{{borrower}}</td>
 							<td>{{deadline}}</td>
 							<td style="display:none;">{{book_uuid}}</td>
-							<td><input type="button" id="return" onclick="returnbook(this)" value="return book"></td>
+							<td><input type="submit" id="return" onclick="returnbook(this)" value="return book"></td>
 						</tr>	
 						{{/overdue}}
 			{{/if}}
@@ -84,20 +89,13 @@
 				console.log(row.children("td").get(3).innerHTML);
 				
 				var uuid = row.children("td").get(5).innerHTML;
-				var borrower = row.children("td").get(3).innerHTML
-				$.post("/borrowrecord/returnbook",{ uuid:uuid,borrower:borrower });
+				var borrower = row.children("td").get(3).innerHTML;
+				$.post("/borrowrecord/returnbook",{ uuid:uuid,borrower:borrower },
+							function(data){
+					window.location.href = `/librarian/studentmanagement?borrower=${borrower}`;
+				});
 				
 			}
-			
-			handlebars.registerHelper("overdue",function(a,options){
-				var deadline = new Date(Date.parse(a));
-				var currentTime = new Date();
-				if(currentTime > deadline){
-					return options.fn(this);
-				}else{
-					return options.invers(this);
-				}
-			})
 		</script>
 	</body>
 </html>

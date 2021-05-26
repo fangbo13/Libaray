@@ -33,7 +33,7 @@ h1 {
 	padding: 2.6vw;
 	float: left;
 	font-size: 3vw;
-	margin-left: 6vw;
+	margin-left: 0.5vw;
 }
 
 h2 {
@@ -53,6 +53,7 @@ header > a {
 	margin-right: 3vw;
 	float: right;
 	font-size: 1.3vw;
+	
 }
 
 header > img {
@@ -71,6 +72,15 @@ main {
 	width: 100%;
 	margin-left: 3vw;
 	/* background-color: pink; */
+	
+}
+
+main form{
+	margin-top:100px;
+	margin-left:35%;
+	margin-right:35%;
+	padding:2%;
+	background-color:#ccc;
 }
 
 article {
@@ -100,6 +110,10 @@ section {
 	margin-top: 1vw;
 	padding: 1vw;
 	border-radius: 1vw;
+}
+
+section > a{
+		text-decoration: none;
 }
 
 section > p {
@@ -142,16 +156,40 @@ input[type="file"] {
 	display: none;
 }
 
-input[type="submit"], header > a, .custom-file-upload {
-  background-color: grey;
-  border: 2px solid grey;
+input[type="submit"], .custom-file-upload {
+  background-color: #5cb85c;
+  border: 2px solid #5cb85c;
   color: white;
-	padding: 0.4vw 0.8vw;
+	padding: 0.5rem 1rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-	font-size: 1.5vw;
-	/* border-radius: 0.6vw; */
+	font-size: 1rem;
+	border-radius: .25rem; 
+}
+
+input[type="button"] {
+	background-color: ##0275d8;
+	border: 2px solid ##0275d8;
+	color: white;
+	padding:0.5rem 1rem;
+	text-align:center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1rem;
+	border-radius: .25rem;
+}
+
+header > a {
+	background-color:#6a9dd8;
+	border: 2px solid #6a9dd8;
+	color: white;
+	padding: 0.5prm 1rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1rem;
+	border-radius: .25rem;
 }
 
 input[type="submit"]:hover, header > a:hover, .custom-file-upload:hover {
