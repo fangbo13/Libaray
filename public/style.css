@@ -17,23 +17,24 @@ html,body {
 }
 
 header {
-	background-color: #ccc; 
- 	border-bottom: 5px solid grey; 
+/* 	background-color: #61ccff;  */
+	background-image:linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+/*  	border-bottom: 5px solid #58c7e8;  */
 	height: 8vw;
 }
 
 
 h1, h2, h3 {
 	margin: 0;
-	padding: 0
-	color: #555;
+	padding: 0;
+	color: white;
 }
 
 h1 {
-	padding: 2.6vw;
+	padding: 2vw;
 	float: left;
-	font-size: 3vw;
 	margin-left: 0.5vw;
+	font:italic 4vw Georgia, serif;
 }
 
 h2 {
@@ -80,7 +81,13 @@ main form{
 	margin-left:35%;
 	margin-right:35%;
 	padding:2%;
-	background-color:#ccc;
+	background-color:#FFF;
+	box-shadow: rgba(187,187,187,1) 0 0px 20px -1px;
+	-webkit-box-shadow: rgba(187,187,187,1) 0 0px 20px -1px;
+	font: 1.5vw Arial, Helvetica, sans-serif;
+	color:#666;
+	border-radius:10px;
+	-webkit-border-radius:10px;
 }
 
 main form p{
@@ -205,12 +212,23 @@ input[type="submit"]:hover, header > a:hover, .custom-file-upload:hover {
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select {
+	color: #555;
+	border: 1px solid #e5e5e5;
+	background:#fbfbfb;
+	-webkit-box-shadow inset 1px 1px 2px rgba(200,200,200,0.2);
+	box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+	
 	font-size: 1.5vw;
 	width: 25vw;
-	border: 1px solid #CCC;
+/* 	border: 1px solid #CCC; */
 	padding: 0.5vw;
 	/* margin-bottom: 1vw; */
 	/* border-radius: 0.6vw; */
+}
+
+lable{
+	display:block;
+	margin:0px 0px 5px;
 }
 
 textarea {
@@ -258,49 +276,66 @@ dd {
 table {
 	/* border: 1px solid grey; */
 	border-collapse: collapse;
+	text-align:center;
 }
 
 tr:nth-child(odd) {
-	background: #DDD;
+	background: #fff;
+}
+
+tr:nth-child(odd){
+	background: #F5FAFA;
 }
 
 td {
-	/* border: 1px solid grey; */
+	border: 1px solid #cad9ea
+		color: #666;
 	padding: 0.5vw;
 	font-size: 1.5vw;
 	width: 25vw;
 }
 
-td:last-child {
-	width: 10vw;
-	text-align: left;
+table thead th{
+	background-color: #CCE8EB;
+	width: 25vw;
+	text-align: center;
 }
 
 /*===================
  *  Home Page Style
   ===================*/
 .homepage-container{
-	width:800px;
- 	height:500px;
-	margin-top:100px;
- 	margin-left:30%;
+	margin-top:8%;
+ 	margin-left:25%;
 }
 
 .homepage-container section{
 	float:left;
-	width:2vw;
+	font:italic 2vw Georgia, serif;
+ 	left:40px;
+	margin-right:5%;
+	text-align: center;
+	color: white;
 }
 
 .homepage-container .img-display{
-	width:340px;
- 	font-size: 0;
+	width:70%;
+ 	font-size: 1vw;
  	left:40px;
 }
 
 .homepage-container .img-display img{
-	width:120px;
-	margin-right:50px;
-	margin-bottom:20px;
+	width:20%;
+	margin-right:15%;
+	padding: 5%;
+}
+
+.homepage-container .librarian{
+	background-image:linear-gradient(to right, #f6d365 0%, #fda085 100%);
+}
+
+.homepage-container .student{
+	background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
 }
 
 .homepage-container .login{
