@@ -11,12 +11,15 @@
 		<meta name="author" content="Fangh13">
 		
 		<link href="{{host}}/bootstrap.min.css" rel="stylesheet">
-		
+		<link href="{{host}}/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="container-fluid">
-			<div class="row">
-				<form action="/bookstocks/submitstock" enctype='multipart/form-data' method="post">
+		<header>
+			<h1>Librarian Loans System - Add Stocks</h1>
+			<a href="/logout">Log out</a>
+		</header>
+		<main>
+				<form action="/bookstocks/submitstock" enctype='multipart/form-data' method="post" style="margin-top:3%">
 <!-- 					<div class="form-group"> -->
 						<label for="title">Title</label>
 						<input type="text" class="form-control" name="title">
@@ -37,11 +40,13 @@
 						<label for="quantity">Quantity</label>
 						<input type="text" class="form-control" name="quantity">
 <!-- 					</div> -->
-					<button type="submit" class="btn btn-primary" value="Create">
-						Submit
-					</button>
+					<p>
+					<input type="submit" class="btn btn-primary" value="Submit" >
+						<a href="/bookstocks">
+						<input type="button" class="btn btn-primary" value="cancel">
+					</a>
+					</p>
 				</form>
-			</div>
-		</div>
+		</main>
 	</body>
 </html>
