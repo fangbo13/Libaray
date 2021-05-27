@@ -15,7 +15,9 @@
 		<a href="/librarianlogin">Librarian login</a>
 		</header>
 		{{#if msg}}
- 			<p class="msg">{{msg}}</p>
+		<script>
+			alert(`{{msg}}`)
+			</script>
 		{{/if}}
 		<main>
 		<form action="/login" method="post">

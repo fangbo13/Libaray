@@ -21,18 +21,27 @@
 			<h1>
 				Librarian Loans System
 			</h1>
+			
 			<a href="/logout">Log out</a>
+			<a>{{user}}</a>
 		</header>
+		{{#if msg}}
+		<script>
+			alert(`{{msg}}`)
+			</script>
+		{{/if}}
 		<div class="container-fluid" style=margin-top:20px>
 		<div class="row">
+										<a href="/bookstocks" style="margin-left:15px"><input class="btn btn-primary my-2 my-sm-0" type="button" value="Stock list" style="margin-left:5px;"></a>
+
 			<div class="col-md-12">
 				<div style=margin-left:5px;margin-top:20px>
 						<form class="form-inline" action="/librarian/studentmanagement" method="get">
 							<input class="form-control mr-sm-2" type="text" name="borrower" placeholder="Input student name to search borrow record">
-							<button class="btn btn-primary my-2 my-sm-0" type="submit">
-								Search
-							</button>
-							<a href="/bookstocks"><input class="btn btn-primary my-2 my-sm-0" type="button" value="Back to stock page" style="margin-left:5px;"></a>
+							<input type="submit" value="search">
+												<a href="/borrowrecord/borrowbook" style="margin-left:5px;"><input type="button" value="borrow"></a>
+
+<!-- 					<a style="margin-left:1vw"><input type="button" value="borrow"></a> -->
 					</form>
 					</div>
 				<table class="table" id="searchstocktable" style=margin-top:20px>
@@ -51,7 +60,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						{{#each this}}
+						{{#each this.data}}
 						{{#if deadline}}
 						{{#overdue deadline}}
 						<tr class="table-danger">
@@ -91,9 +100,10 @@
 				
 				var uuid = row.children("td").get(5).innerHTML;
 				var borrower = row.children("td").get(3).innerHTML;
-				$.post("/borrowrecord/returnbook",{ uuid:uuid,borrower:borrower },
+				var book_title = row.children("td").get(0).innerHTML;
+				$.post("/borrowrecord/returnbook",{ book_uuid:uuid,borrower:borrower },
 							function(data){
-					window.location.href = `/librarian/studentmanagement?borrower=${borrower}`;
+					window.location.href = `/librarian/studentmanagement?borrower=${borrower}&msg=return book ${book_title} success`;
 				});
 				
 			}

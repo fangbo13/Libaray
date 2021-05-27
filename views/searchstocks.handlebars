@@ -20,9 +20,12 @@
 	<body>
 		<header>
 			<h1>Library Loans System - Search Book</h1>
+			
 			<a href="/logout">Log out</a>
+			<a>{{user}}</a>
 		</header>
 				<div style=margin-left:5px;margin-top:20px>
+						<a href="/borrowrecord"><input class="btn btn-primary my-2 my-sm-0" type="button" value="Borrow Record"></a>
 						<form class="form-inline" action="/bookstocks/availablebookstocks" method="get">
 							<input class="form-control mr-sm-2" type="text" name="searchitem">
 							<button class="btn btn-primary my-2 my-sm-0" type="submit">
@@ -42,7 +45,7 @@
 							<th>ISBN_13 Number</th>
 							<th>Stocks</th>
 							<th>Available</th>
-							<th>Operation</th>
+<!-- 							<th>Operation</th> -->
 						</tr>
 					</thead>
 					<tbody>
@@ -53,7 +56,7 @@
 							<td>{{isbn_num}}</td>
 							<td name="stocks" value="stocks">{{stocks}}</td>
 							<td>{{available}}</td>
-							<td><input type="button" id="borrowbutton" onclick="borrow(this)" value="borrow"></td>
+<!-- 							<td><input type="button" id="borrowbutton" onclick="borrow(this)" value="borrow"></td> -->
 						</tr>	
 						{{/each}}
 					</tbody>

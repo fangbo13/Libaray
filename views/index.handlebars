@@ -12,12 +12,11 @@
 	<body>
 		<header>
 			<h1>Librarian Loans System</h1>
-    	{{#if authorised}}
-				<a href="/logout">Log out</a>
-			{{else}}
-				<a href="/login">Student log in</a>
-			  <a href="/librarianlogin">Librarian log in</a>
-			{{/if}}
+			{{#if msg}}
+		<script>
+			alert(`{{msg}}`)
+			</script>
+		{{/if}}
 		</header>
 		<div class="homepage-container">
 			<section class="librarian box">
