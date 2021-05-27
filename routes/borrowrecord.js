@@ -22,10 +22,12 @@ borrowrecordRouter.get('/', async ctx =>{
 			const item = await new BorrowRecords(dbName)
 			try{
 				let data = await item.recordlist(ctx.session.user)
-				await ctx.render('borrowrecord', data)
+				ctx.hbs.data = data
+				console.log(ctx.hbs)
+				await ctx.render('borrowrecord', ctx.hbs)
 			}catch(err){
-				throw err
-				await ctx.render('error',ctx.hbs)
+				ctx.hbs.msg=err
+				await ctx.render('borrowrecord',ctx.hbs)
 			}
 	
 })

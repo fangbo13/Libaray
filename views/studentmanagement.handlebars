@@ -60,7 +60,8 @@
 							<td>{{isbn_num}}</td>
 							<td>{{borrower}}</td>
 							<td>{{deadline}}</td>
-							<td><input type="button" id="return" onclick="returnbook(this)" value="return book"></td>
+							<td style="display:none">{{book_uuid}}</td>
+							<td><input type="submit" id="return" onclick="returnbook(this)" value="return book"></td>
 						</tr>	
 						{{else}}
 						<tr class="table-success">

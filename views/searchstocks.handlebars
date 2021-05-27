@@ -23,8 +23,8 @@
 			<a href="/logout">Log out</a>
 		</header>
 				<div style=margin-left:5px;margin-top:20px>
-						<form class="form-inline" action="/bookstocks/availableboookstocks" method="get">
-							<input class="form-control mr-sm-2" type="text">
+						<form class="form-inline" action="/bookstocks/availablebookstocks" method="get">
+							<input class="form-control mr-sm-2" type="text" name="searchitem">
 							<button class="btn btn-primary my-2 my-sm-0" type="submit">
 								Search
 							</button>
@@ -65,9 +65,12 @@
 				console.log(row.children("td").get(1).innerHTML);
 				console.log(row.children("td").get(2).innerHTML);
 				console.log(row.children("td").get(3).innerHTML);
-				
+				document.getElementById("searchstocktable").disabled=true;
 				var isbn_num = row.children("td").get(2).innerHTML;
-				$.post("/borrowrecord",{ isbn_num:isbn_num });
+				$.post("/borrowrecord",{ isbn_num:isbn_num },
+							function(data){
+					window.location.href = `/borrowrecord?msg=borrow book success`;
+				});
 				
 				
 			}
