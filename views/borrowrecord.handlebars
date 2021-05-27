@@ -20,6 +20,11 @@
 			<h1>Library Loans System - Borrow Reocrds</h1>
 			<a href="/logout">Log out</a>
 		</header>
+		{{#if msg}}
+		<script>
+			alert(`{{msg}}`)
+			</script>
+		{{/if}}
 				<div style=margin-left:5px;margin-top:20px>
 						<form class="form-inline" action="/bookstocks/availablebookstocks" method="get">
 							<input class="form-control mr-sm-2" type="text" name="searchitem">
@@ -41,7 +46,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						{{#each this}}
+						{{#each this.data}}
 						{{#if deadline}}
 						{{#overdue deadline}}
 						<tr class="table-danger">

@@ -8,7 +8,8 @@ import koaBody from 'koa-body'
 import { apiRouter } from './routes/routes.js'
 
 import handlebars  from 'handlebars' 
-handlebars.registerHelper("overdue", function(a,options){
+handlebars.registerHelper({
+	"overdue" : function(a,options){
 				var deadline = new Date(Date.parse(a));
 				var currentTime = new Date();
 				if(currentTime > deadline){
@@ -16,6 +17,7 @@ handlebars.registerHelper("overdue", function(a,options){
 				}else{
 					return options.inverse(this);
 				}
+	}
 })
 const app = new Koa()
 app.keys = ['darkSecret']
