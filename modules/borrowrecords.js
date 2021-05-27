@@ -34,19 +34,26 @@ class BorrowRecords{
 	 * @returns {Boolean} returns true if the new bookstocks has been added
 	 * 
 	 */ 
-	async createborrowrecord(isbn_num,borrower){
+	async createborrowrecord(uuid,borrower){
 // 		Array.from(arguments).forEach(val =>{
 // 			if(val.length === 0) throw new Error('missing field')
 // 		})
-		let sqlavailabe = `SELECT s.uuid FROM book_stocks s WHERE isbn_num = '${isbn_num}' AND NOT EXISTS (SELECT * FROM borrow_records where book_uuid = s.uuid);`
+		let sqlitem = `SELECT count(uuid) as records FROM book_stocks WHERE uuid='${uuid}';`
+		console.log(`sqlavailabe=${sqlitem}`)
+		let item = await this.db.get(sqlitem)
+		console.log(`available=${item.records}`)
+		if(item.records === 0) throw new Error(`book is not exist`)
+		
+		let sqlavailabe = `SELECT count(book_uuid) as records FROM borrow_records WHERE book_uuid='${uuid}';`
 		console.log(`sqlavailabe=${sqlavailabe}`)
 		let available = await this.db.get(sqlavailabe)
-		console.log(`available=${available}`)
-		
-		let starttime = new Date().toUTCString()
-		let deadline = new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000)
+		console.log(`available=${available.records}`)
+		if(available.records !== 0) throw new Error(`book is already borrowed`)
+
+		let starttime = new Date().toLocaleDateString()
+		let deadline = new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000).toLocaleDateString()
 		let sqlcreaterecord = `INSERT INTO borrow_records (book_uuid,borrower,start_time,deadline) VALUES\
-												  ('${available.uuid}','${borrower}','${starttime}','${deadline}');`
+												  ('${uuid}','${borrower}','${starttime}','${deadline}');`
 		console.log(sqlcreaterecord)
 		await this.db.run(sqlcreaterecord)
 		return true

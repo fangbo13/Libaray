@@ -17,7 +17,13 @@
 		<header>
 			<h1>Librarian Loans System - Add Stocks</h1>
 			<a href="/logout">Log out</a>
+			<a>{{user}}</a>
 		</header>
+		{{#if msg}}
+		<script>
+			alert(`{{msg}}`)
+			</script>
+		{{/if}}
 		<main>
 				<form action="/bookstocks/submitstock" enctype='multipart/form-data' method="post" style="margin-top:3%">
 <!-- 					<div class="form-group"> -->

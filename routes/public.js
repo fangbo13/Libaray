@@ -88,6 +88,7 @@ publicRouter.post('/login', async ctx => {
 		ctx.session.authorised = true
 		ctx.session.usertype = 'student'
 		ctx.session.user = body.user
+		ctx.hbs.user = body.user
 		const referrer = body.referrer || '/borrowrecord'
 		return ctx.redirect(`${referrer}`)
 	//	return ctx.redirect(`${referrer}?msg=you are now logged in...`)

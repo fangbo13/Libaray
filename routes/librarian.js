@@ -23,6 +23,7 @@ librarianRouter.post('/librarianlogin', async ctx => {
 		ctx.session.authorised = true
 		ctx.session.usertype = 'librarian'
 		ctx.session.user = body.user
+		ctx.hbs.user = body.user
 		const referrer = body.referrer || '/bookstocks'
 		return ctx.redirect(`${referrer}`)
 	//	return ctx.redirect(`${referrer}?msg=you are now logged in...`)
@@ -37,7 +38,8 @@ librarianRouter.post('/librarianlogin', async ctx => {
 librarianRouter.get('/librarian/studentmanagement', async ctx => {
 	const borrowrecords = await new BorrowRecords(dbName)
 	let data = await borrowrecords.recordlist(ctx.hbs.borrower)
-	return ctx.render('studentmanagement',data)
+	ctx.hbs.data = data
+	return ctx.render('studentmanagement',ctx.hbs)
 })
 
 

@@ -32,6 +32,10 @@ borrowrecordRouter.get('/', async ctx =>{
 	
 })
 
+borrowrecordRouter.get('/borrowbook', async ctx =>{
+	await ctx.render('borrowbook', ctx.hbs)
+})
+
 /**
  * Student borrow book
  * 
@@ -41,10 +45,10 @@ borrowrecordRouter.get('/', async ctx =>{
 borrowrecordRouter.post('/', async ctx =>{
 	const borrowrecord = await new BorrowRecords(dbName)
 	try{
-		let data = await borrowrecord.createborrowrecord(ctx.request.body.isbn_num,ctx.session.user)
-		ctx.redirect('/borrowrecord')
+		let data = await borrowrecord.createborrowrecord(ctx.request.body.book_uuid,ctx.request.body.borrower)
+		ctx.redirect(`/librarian/studentmanagement?borrower=${ctx.request.body.borrower}&msg=Borrow book success`)
 	}catch(err){
-		throw err
+		ctx.redirect(`/borrowrecord/borrowbook?msg=${err}`)
 	}
 })
 
@@ -52,11 +56,12 @@ borrowrecordRouter.post('/returnbook', async ctx =>{
 	const borrowrecord = await new BorrowRecords(dbName)
 	try{
 		let data = await borrowrecord.deleteborrowrecord(
-			ctx.request.body.uuid,
+			ctx.request.body.book_uuid,
 			ctx.request.body.borrower)
 		ctx.redirect(`/librarian/studentmanagement?borrower=${ctx.request.body.borrower}`)
 	}catch(err){
-		throw err
+		ctx.hbs.msg = err
+		ctx.redirect(`/librarian/studentmanagement?borrower=${ctx.request.body.borrower}`)
 	}
 })
 

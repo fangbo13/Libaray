@@ -48,7 +48,7 @@ class Books{
 	 * 
 	 */ 
 	async createbookstock(title,author,isbn_num,classification_num,quantity,create_user){
-		let datetime = new Date().toUTCString()
+		let datetime = new Date().toLocaleDateString()
 		let sql = 'INSERT INTO book_stocks (title,author,isbn_num,uuid,classification_num,create_user,create_time) VALUES '
 		console.log(quantity)
 		for(let i = 0; i < quantity; i++){

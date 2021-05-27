@@ -18,11 +18,13 @@
 	<body>
 		<header>
 			<h1>Library Loans System - Borrow Reocrds</h1>
+			
 			<a href="/logout">Log out</a>
+			<a>{{user}}</a>
 		</header>
 		{{#if msg}}
-		<script>
-			alert(`{{msg}}`)
+			<script>
+				alert(`{{msg}}`)
 			</script>
 		{{/if}}
 				<div style=margin-left:5px;margin-top:20px>
