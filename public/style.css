@@ -324,10 +324,10 @@ table thead th{
  	left:40px;
 }
 
-.homepage-container .img-display img{
-	width:20%;
-	margin-right:15%;
-	padding: 5%;
+.homepage-container section img{
+	width:20vw;
+	margin-right:25%;
+	padding: 8%;
 }
 
 .homepage-container .librarian{
