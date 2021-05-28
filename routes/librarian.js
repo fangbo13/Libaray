@@ -42,5 +42,8 @@ librarianRouter.get('/librarian/studentmanagement', async ctx => {
 	return ctx.render('studentmanagement',ctx.hbs)
 })
 
+librarianRouter.get('/librarian/searchuser', async ctx => {
+	return ctx.render('searchuser')
+})
 
 export { librarianRouter }
