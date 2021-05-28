@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Librarian add stocks</title>
+		
+		<meta name="author" content="Fangh13">
+		
+		<link href="{{host}}/bootstrap.min.css" rel="stylesheet">
+		<link href="{{host}}/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1>Librarian Loans System - Add Stocks</h1>
+			<a href="/logout">Log out</a>
+			<a>{{user}}</a>
+		</header>
+		{{#if msg}}
+			<script>
+				alert(`{{msg}}`)
+			</script>
+		{{/if}}
+		<main>
+				<form action="/librarian/studentmanagement" enctype='multipart/form-data' method="get" style="margin-top:3%">
+						<label for="borrower">User name</label>
+						<input type="text" class="form-control" name="borrower">
+					<p>
+					<input type="submit" class="btn btn-primary" value="Submit" >
+						<a href="/bookstocks">
+						<input type="button" class="btn btn-primary" value="cancel">
+					</a>
+					</p>
+				</form>
+		</main>
+	</body>
+</html>
