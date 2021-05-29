@@ -82,7 +82,7 @@ bookRouter.post('/submitstock', async ctx =>{
 		  ctx.session.user)
 		await ctx.redirect('/bookstocks')
 	}catch(err){
-		throw err
+		return ctx.redirect(`/bookstocks/addstocks?msg=${err}`)
 	}
 })
 

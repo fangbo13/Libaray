@@ -15,14 +15,17 @@ class Accounts {
 			await this.db.run(sql)
 			
 			try{
-					const sql1 = `DELETE FROM users where user in ("student1","student2");`;
+					const sql1 = `DELETE FROM users where user in ('student1','student2');`
 				await this.db.run(sql1)
 				
-				const pass = bcrypt.hash('p455w0rd', saltRounds)
+				const pass = await bcrypt.hash('p455w0rd', saltRounds)
 					const sql2 = `INSERT INTO users (user,pass,email) VALUES\
-											 ("student1","${pass}","fangh13@coventry.ac.uk")\
-											,("student2","${pass}","fangh13@coventry.ac.uk")`;
+											 ('student1','${pass}','fangh13@coventry.ac.uk')\
+											,('student2','${pass}','fangh13@coventry.ac.uk');`
 				await this.db.run(sql2)
+				
+				
+				
 			}catch(err){
 				console.log(`add init student error,${err}`)
 			}

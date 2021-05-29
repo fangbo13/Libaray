@@ -48,6 +48,9 @@ class Books{
 	 * 
 	 */ 
 	async createbookstock(title,author,isbn_num,classification_num,quantity,create_user){
+		if(quantity < 1){
+			throw new Error('Ivalid quantity of book')
+		}
 		let datetime = new Date().toLocaleDateString()
 		let sql = 'INSERT INTO book_stocks (title,author,isbn_num,uuid,classification_num,create_user,create_time) VALUES '
 		console.log(quantity)
