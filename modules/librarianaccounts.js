@@ -29,27 +29,6 @@ class LibrarianAccounts {
 		})()
 	}
 
-	/**
-	 * registers a new user
-	 * @param {String} user the chosen username
-	 * @param {String} pass the chosen password
-	 * @returns {Boolean} returns true if the new user has been added
-	 */
-	async register(user, pass, email) {
-		Array.from(arguments).forEach( val => {
-			if(val.length === 0) throw new Error('missing field')
-		})
-		let sql = `SELECT COUNT(id) as records FROM users WHERE user="${user}";`
-		const data = await this.db.get(sql)
-		if(data.records !== 0) throw new Error(`username "${user}" already in use`)
-		sql = `SELECT COUNT(id) as records FROM users WHERE email="${email}";`
-		const emails = await this.db.get(sql)
-		if(emails.records !== 0) throw new Error(`email address "${email}" is already in use`)
-		pass = await bcrypt.hash(pass, saltRounds)
-		sql = `INSERT INTO users(user, pass, email) VALUES("${user}", "${pass}", "${email}")`
-		await this.db.run(sql)
-		return true
-	}
 
 	/**
 	 * checks to see if a set of login credentials are valid

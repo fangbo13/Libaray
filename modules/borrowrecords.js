@@ -39,10 +39,12 @@ class BorrowRecords{
 // 			if(val.length === 0) throw new Error('missing field')
 // 		})
 		let sqlitem = `SELECT count(uuid) as records FROM book_stocks WHERE uuid='${uuid}';`
-		console.log(`sqlavailabe=${sqlitem}`)
 		let item = await this.db.get(sqlitem)
-		console.log(`available=${item.records}`)
 		if(item.records === 0) throw new Error(`book is not exist`)
+		
+		let sqluser = `SELECT count(user) as records FROM users WHERE user='${borrower}';`
+		let user = await this.db.get(sqluser)
+		if(user.records === 0) throw new Error(`user is not exist`)
 		
 		let sqlavailabe = `SELECT count(book_uuid) as records FROM borrow_records WHERE book_uuid='${uuid}';`
 		console.log(`sqlavailabe=${sqlavailabe}`)
