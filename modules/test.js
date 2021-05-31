@@ -13,7 +13,7 @@ class TEST {
 			const sql = 'CREATE TABLE IF NOT EXISTS librarians\
 				(id INTEGER PRIMARY KEY AUTOINCREMENT, user TEXT, pass TEXT, email TEXT);'
 			await this.db.run(sql)
-			
+
 			try{
 				const pass = await bcrypt.hash('p455w0rd', saltRounds)
 				const sql2 = `DELETE FROM librarians where user in ("librarian1","librarian2");\
@@ -21,10 +21,10 @@ class TEST {
 											 ("librarian1","${pass}","fangh13@coventry.ac.uk") \
 											,("librarian2","${pass}","fangh13@coventry.ac.uk");`
 				await this.db.run(sql2)
-			}catch(err){
+			}catch(err) {
 				console.log(`add init data error, ${err}`)
 			}
-			
+
 			return this
 		})()
 	}

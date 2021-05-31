@@ -4,19 +4,19 @@ import serve from 'koa-static'
 import views from 'koa-views'
 import session from 'koa-session'
 import koaBody from 'koa-body'
-	
+
 import { apiRouter } from './routes/routes.js'
 
-import handlebars  from 'handlebars' 
+import handlebars from 'handlebars'
 handlebars.registerHelper({
-	"overdue" : function(a,options){
-				var deadline = new Date(Date.parse(a));
-				var currentTime = new Date();
-				if(currentTime > deadline){
-					return options.fn(this);
-				}else{
-					return options.inverse(this);
-				}
+	'overdue': function(a,options) {
+		const deadline = new Date(Date.parse(a))
+		const currentTime = new Date()
+		if(currentTime > deadline) {
+			return options.fn(this)
+		}else{
+			return options.inverse(this)
+		}
 	}
 })
 const app = new Koa()
@@ -30,7 +30,7 @@ app.use(serve('public'))
 app.use(session(app))
 app.use(views('views', { extension: 'handlebars' }, {map: { handlebars: 'handlebars' }}))
 
-app.use(koaBody({multipart:true}))
+app.use(koaBody({multipart: true}))
 
 app.use( async(ctx, next) => {
 	console.log(`${ctx.method} ${ctx.path}`)

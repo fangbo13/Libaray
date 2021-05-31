@@ -6,7 +6,15 @@ test('CREATEBOOKSTOCK    : Quantity should bigger than 1', async test => {
 	test.plan(1)
 	const book = await new Books()
 	try {
-		await book.createbookstock('unittestbook', 'unittestauthor', 'unittestisbnnum', 'unittestclassificationnum', '0','librarian1')
+		await book.createbookstock(
+			{
+				title: 'unittestbook',
+			  author: 'unittestauthor',
+			  isbnnum: 'unittestisbnnum',
+			  classificationnum: 'unittestclassificationnum',
+			  quantity: '0',
+		    user: 'librarian1'
+			})
 		await book.deletebookstock('unittestisbnnum')
 		test.fail('error not thrown')
 	} catch(err) {
@@ -20,7 +28,15 @@ test('CREATEBOOKSTOCK    : Quantity should smaller than 10', async test => {
 	test.plan(1)
 	const book = await new Books()
 	try {
-		await book.createbookstock('unittestbook', 'unittestauthor', 'unittestisbnnum', 'unittestclassificationnum', '100','librarian1')
+		await book.createbookstock(
+			{
+				title: 'unittestbook',
+			  author: 'unittestauthor',
+			  isbnnum: 'unittestisbnnum',
+			  classificationnum: 'unittestclassificationnum',
+			  quantity: '100',
+		    user: 'librarian1'
+			})
 		await book.deletebookstock('unittestisbnnum')
 		test.fail('error not thrown')
 	} catch(err) {

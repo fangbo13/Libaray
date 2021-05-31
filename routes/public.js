@@ -111,7 +111,7 @@ publicRouter.get('/logout', async ctx => {
 // console.log(ctx.request.body.author)
 // console.log(ctx.request.body.isbnnum)
 // console.log(ctx.request.body.classificationnum)
-// console.log(ctx.request.body.quantity)	
+// console.log(ctx.request.body.quantity)
 // 	let books = await new Books(dbName)
 //  	console.log(ctx.request.body)
 // 	try{
