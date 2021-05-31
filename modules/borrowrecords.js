@@ -11,6 +11,17 @@ class BorrowRecords{
 							`start_time` DATE NOT NULL,\
 							`deadline` DATE NOT NULL);'
 			let dbbuild = await this.db.run(sql)
+			
+			let sql1 = 'CREATE TABLE IF NOT EXISTS book_stocks\
+						(`id` Integer Primary KEY AUTOINCREMENT,\
+						 `title` VARCHAR(256) NOT NULL,\
+							`author` VARCHAR(128) NOT NULL,\
+							`uuid` VARCHAR(128) NOT NULL,\
+							`isbn_num` VARCHAR(128) NOT NULL,\
+							`classification_num` VARCHAR(128) NOT NULL,\
+							`create_user` VARCHAR(128) NULL,\
+							`create_time` DATE NULL);'
+			await this.db.run(sql1)
 // 			console.log(sql + dbbuild)
 			return this
 		})()
@@ -53,7 +64,7 @@ class BorrowRecords{
 		if(available.records !== 0) throw new Error(`book is already borrowed`)
 
 		let starttime = new Date().toLocaleDateString()
-		let deadline = new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000).toLocaleDateString()
+		let deadline = new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString()
 		let sqlcreaterecord = `INSERT INTO borrow_records (book_uuid,borrower,start_time,deadline) VALUES\
 												  ('${uuid}','${borrower}','${starttime}','${deadline}');`
 		console.log(sqlcreaterecord)

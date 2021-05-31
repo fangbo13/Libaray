@@ -48,8 +48,8 @@ class Books{
 	 * 
 	 */ 
 	async createbookstock(title,author,isbn_num,classification_num,quantity,create_user){
-		if(quantity < 1){
-			throw new Error('Ivalid quantity of book')
+		if(quantity < 1 || quantity > 10){
+			throw new Error('Quantity should between 1 and 10')
 		}
 		let datetime = new Date().toLocaleDateString()
 		let sql = 'INSERT INTO book_stocks (title,author,isbn_num,uuid,classification_num,create_user,create_time) VALUES '
@@ -63,9 +63,27 @@ class Books{
 		return true
 	}
 	
+	async deletebookstock(isbn_num){
+		let sqlborrowed = `SELECT COUNT(1) AS count FROM book_stocks s JOIN borrow_records b on s.uuid = b.book_uuid WHERE isbn_num = '${isbn_num}';` 
+		let borrowed = await this.db.get(sqlborrowed)
+		if(borrowed.count > 0){
+			throw new Error('There are books borrowed')
+		}
+		let sql = `DELETE FROM book_stocks where isbn_num = '${isbn_num}';`
+		await this.db.run(sql)
+	}
+	
 		
 	async searchbookstocks(searchitem){
 		let sql = `SELECT s.title,s.author,s.isbn_num,count(1) as available,(SELECT count(1) FROM book_stocks where isbn_num = s.isbn_num) as stocks FROM book_stocks s where (s.title like '%${searchitem}%' OR s.author like '%${searchitem}%') AND s.uuid not in (SELECT book_uuid as uuid FROM borrow_records) GROUP BY s.isbn_num`
+		console.log(sql)
+		let result = await this.db.all(sql)
+		console.log(result)
+		return result
+	}
+	
+	async bookstockslist(isbn_num){
+		let sql = `SELECT * FROM book_stocks s where isbn_num = '${isbn_num}'`
 		console.log(sql)
 		let result = await this.db.all(sql)
 		console.log(result)
