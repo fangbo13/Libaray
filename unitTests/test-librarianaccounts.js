@@ -6,10 +6,10 @@ test('LOGIN    : invalid username', async test => {
 	test.plan(1)
 	const account = await new LibrarianAccounts()
 	try {
-		await account.login('librarian1111', 'password')
+		await account.login('unittest_librarian', 'password')
 		test.fail('error not thrown')
 	} catch(err) {
-		test.is(err.message, 'username "roej" not found', 'incorrect error message')
+		test.is(err.message, 'username "unittest_librarian" not found', 'incorrect error message')
 	} finally {
 		account.close()
 	}
