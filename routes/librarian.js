@@ -37,13 +37,11 @@ librarianRouter.post('/librarianlogin', async ctx => {
 
 librarianRouter.get('/librarian/studentmanagement', async ctx => {
 	const borrowrecords = await new BorrowRecords(dbName)
-	let data = await borrowrecords.recordlist(ctx.hbs.borrower)
+	const data = await borrowrecords.recordlist(ctx.hbs.borrower)
 	ctx.hbs.data = data
 	return ctx.render('studentmanagement',ctx.hbs)
 })
 
-librarianRouter.get('/librarian/searchuser', async ctx => {
-	return ctx.render('searchuser')
-})
+librarianRouter.get('/librarian/searchuser', ctx => ctx.render('searchuser'))
 
 export { librarianRouter }

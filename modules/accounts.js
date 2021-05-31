@@ -13,23 +13,22 @@ class Accounts {
 			const sql = 'CREATE TABLE IF NOT EXISTS users\
 				(id INTEGER PRIMARY KEY AUTOINCREMENT, user TEXT, pass TEXT, email TEXT);'
 			await this.db.run(sql)
-			
+
 			try{
-					const sql1 = `DELETE FROM users where user in ('student1','student2');`
+				const sql1 = 'DELETE FROM users where user in (\'student1\',\'student2\');'
 				await this.db.run(sql1)
-				
+
 				const pass = await bcrypt.hash('p455w0rd', saltRounds)
-					const sql2 = `INSERT INTO users (user,pass,email) VALUES\
+				const sql2 = `INSERT INTO users (user,pass,email) VALUES\
 											 ('student1','${pass}','fangh13@coventry.ac.uk')\
 											,('student2','${pass}','fangh13@coventry.ac.uk');`
 				await this.db.run(sql2)
-				
-				
-				
-			}catch(err){
+
+
+			}catch(err) {
 				console.log(`add init student error,${err}`)
 			}
-			
+
 			return this
 		})()
 	}
