@@ -82,7 +82,7 @@ class Books{
 		return result
 	}
 	
-	async bookstockslist(isbn_num){
+	async bookstockslistbyisbn(isbn_num){
 		let sql = `SELECT * FROM book_stocks s where isbn_num = '${isbn_num}'`
 		console.log(sql)
 		let result = await this.db.all(sql)

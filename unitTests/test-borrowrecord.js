@@ -28,7 +28,7 @@ test('createborrowrecord    : user is not exist', async test => {
 	var books = await new Books()
 	try {
 		await books.createbookstock('unittestbook', 'unittestauthor', 'unittestisbnnum', 'unittestclassificationnum', '1','librarian1')
-		var book = await books.bookstockslist('unittestisbnnum');
+		var book = await books.bookstockslistbyisbn('unittestisbnnum');
 		await borrowrecords.createborrowrecord(book[0].uuid, 'unittesterrorstudent1')
 		await books.deletebookstock('unittestisbnnum')
 		test.fail('error not thrown')
@@ -48,7 +48,7 @@ test('createborrowrecord    : book is already borrowed', async test => {
 	var books = await new Books()
 	try {
 		await books.createbookstock('unittestbook', 'unittestauthor', 'unittestisbnnum', 'unittestclassificationnum', '1','librarian1')
-		var book = await books.bookstockslist('unittestisbnnum');
+		var book = await books.bookstockslistbyisbn('unittestisbnnum');
 		await borrowrecords.createborrowrecord(book[0].uuid, 'student1')
 		await borrowrecords.createborrowrecord(book[0].uuid, 'student1')
 		await borrowrecords.deleteborrowrecord(book[0].uuid, 'student1')
