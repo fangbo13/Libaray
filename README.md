@@ -1,46 +1,93 @@
 
-# Assignment Code
+# Home Page
 
-This is the template code that you will need to use as a starting point for your coursework.
+The home page allows you to choose your login type.
 
-You should make sure you are accessing Codio using a standards-compliant web browser such as **Google Chrome** or **Chromium**.
+If you are librarian,you can click **I am librarian** to go to the librarian login page.
 
-## Running Your Server
+If you are student,you can click **I am student** to go to the student login page
 
-All the core packages have already been installed so all you need to do to get your server running is to open the **terminal** from the **Tools** menu (if it is not already open) and run the following command:
+## Login Page
 
-```shell
-$ node index.js
-```
+### Librarian Login Page
 
-This will start your web server. To view your website click on the dropdown list labelled **Live Site** at the top of the Codio window and choose the **New browser tab** option. This will open your website in a new tab.
+You should input your username and password to login.
 
-To make life easier you can split your editor window both horizontally and/or vertically so you can see both the code and the terminal. Use the **View > Panels** and **View > Layout** menus.
-
-## Setting up a Git Repository
-
-As part of the assignment you are expected to make regular commits to your git repository. Follow this step by step guide:
-
-### Local Config Settings
-
-Before you make any commits you need to update the [local config settings](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup). Start by using the Terminal (or Git Bash on Windows) navigate inside the project. Once you are in this directory run the following commands, substituting you name as it appears on your ID badge and your university email address (without the `uni.` domain prefix).
+There are two built-in account:
 
 ```bash
-git config user.name 'John Doe'
-git config user.email 'doej@coventry.ac.uk'
+librarian1
+p455w0rd
 ```
 
-### Create a New Remote Repository
+```bash
+librarian2
+p455w0rd
+```
 
-1. Log onto the [University GitHub server](https://github.coventry.ac.uk) using your University username and password.
-2. Your assignment brief will give you the _organisation url_, this will take you to the module page on GitHub.
-3. Create a new repository using the green **New** button:
-    1. The name of the repository should be your university username, eg. `doej` and should include the suffix of either `-sem1`, `-sem2` or `-sem3` depending on which semester you are taking the assignment in, eg. `doej-sem1`.
-    2. The description should be the topic you were assigned (eg. **Customer Relationship Manager**).
-    3. The repository should be **private**.
-4. Now follow the instructions git provides under the heading **create a new repository on the command line**.
-    1. Don't run the first `echo` command as this will delete these instructions!
+### Student Login Page
 
-## Working With SQLite
+You should input your username and password to login.
 
-The SQLite3 commandline tool is already installed and should be used to configure your database.
+There are two built-in account:
+
+```bash
+student1
+p455w0rd
+```
+
+```bash
+student2
+p455w0rd
+```
+
+You can also click the **Register** button to register a new student account
+
+## Register Page
+
+We need username,password and email information to create an account for you.
+
+Make sure your username is unique and email is in correct format.
+
+### Book Stock Page
+
+When librarian login success,you can see the book stock page.
+
+There will be a table show you which books are in stock and their quantity.
+
+There are two buttons for you to do some operation:
+
+1.Manage user
+2.Add stock
+
+### Manage User Page
+
+When you click **Manage user** button in book stock page,you will enter a user search page to input student name.
+
+Submit it and you can enter the manage user page.
+
+This page shows you which books are borrowed by this student.If a borrow record is overdue,the background of this record will be read.
+
+Librarian can click the **Return book** button to return borrow record for student.
+
+Librarian can also click the **borrow** button to borrow books for student
+
+## Borrow Book Page
+
+Librarian input student name and UUID of book to borrow book for student.
+
+Make sure the student name and UUID is exist and the book is not borrowed.
+
+## Borrow Records Page
+
+After students login, they will enter the borrow records page.
+
+This page shows the borrow records of the student.
+
+If the borrow record is overdue,its background will be red.
+
+## Search books
+
+Student can input the book title or author name to search books.
+
+This page shows the book title,author,stock and availabe of books.
