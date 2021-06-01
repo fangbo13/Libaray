@@ -1,12 +1,9 @@
 
 import Router from 'koa-router'
-import bodyParser from 'koa-body'
 
 const bookRouter = new Router({ prefix: '/bookstocks' })
-// bookRouter.use(bodyParser({multipart:true}))
 
 import { Books } from '../modules/books.js'
-import { BorrowRecords } from '../modules/borrowrecords.js'
 
 const dbName = 'website.db'
 
@@ -81,7 +78,7 @@ bookRouter.post('/submitstock', async ctx => {
 			  quantity: ctx.request.body.quantity,
 		    user: ctx.session.user
 			}
-			)
+		)
 		await ctx.redirect('/bookstocks')
 	}catch(err) {
 		return ctx.redirect(`/bookstocks/addstocks?msg=${err}`)

@@ -13,7 +13,7 @@ class Books {
 							`classification_num` VARCHAR(128) NOT NULL,\
 							`create_user` VARCHAR(128) NULL,\
 							`create_time` DATE NULL);'
-			const dbbuild = await this.db.run(sql)
+			await this.db.run(sql)
 			// 			console.log(dbbuild)
 
 			return this
@@ -48,45 +48,64 @@ class Books {
 	 *
 	 */
 	async createbookstock(stock) {
-		if(stock.quantity < 1 || stock.quantity > 10) {
+		const maximum = 10
+		const minimum = 1
+		if(stock.quantity < minimum || stock.quantity > maximum) {
 			throw new Error('Quantity should between 1 and 10')
 		}
 		const datetime = new Date().toLocaleDateString()
-		let sql = 'INSERT INTO book_stocks (title,author,isbn_num,uuid,classification_num,create_user,create_time) VALUES '
-// 		console.log(stock.quantity)
+		let sql = 'INSERT INTO book_stocks \
+							(title,author,isbn_num,uuid,\
+               classification_num,create_user,create_time) \
+              VALUES '
 		for(let i = 0; i < stock.quantity; i++) {
-			sql += `("${stock.title}","${stock.author}","${stock.isbnnum}",hex(randomblob(16)),"${stock.classificationnum}","${stock.createuser}","${datetime}"),`
+			sql += `("${stock.title}","${stock.author}","${stock.isbnnum}",\
+						  hex(randomblob(16)),"${stock.classificationnum}",\
+              "${stock.createuser}","${datetime}"),`
 		}
 		sql = `${sql.substr(0,sql.length-1) };`
-// 		console.log(sql)
 		await this.db.run(sql)
 		return true
 	}
 
 	async deletebookstock(isbnnum) {
-		const sqlborrowed = `SELECT COUNT(1) AS count FROM book_stocks s JOIN borrow_records b on s.uuid = b.book_uuid WHERE isbn_num = '${isbnnum}';`
+		const sqlborrowed = `SELECT COUNT(1) AS count \
+												 FROM book_stocks s \
+												 JOIN borrow_records b \
+												 on s.uuid = b.book_uuid \
+												 WHERE isbn_num = '${isbnnum}';`
 		const borrowed = await this.db.get(sqlborrowed)
 		if(borrowed.count > 0) {
 			throw new Error('There are books borrowed')
 		}
-		const sql = `DELETE FROM book_stocks where isbn_num = '${isbnnum}';`
+		const sql = `DELETE FROM book_stocks \
+                 WHERE isbn_num = '${isbnnum}';`
 		await this.db.run(sql)
 	}
 
 
 	async searchbookstocks(searchitem) {
-		const sql = `SELECT s.title,s.author,s.isbn_num,count(1) as available,(SELECT count(1) FROM book_stocks where isbn_num = s.isbn_num) as stocks FROM book_stocks s where (s.title like '%${searchitem}%' OR s.author like '%${searchitem}%') AND s.uuid not in (SELECT book_uuid as uuid FROM borrow_records) GROUP BY s.isbn_num`
-// 		console.log(sql)
+		const sql = `SELECT s.title,s.author,s.isbn_num,\
+								 count(1) as available,\
+								 (SELECT count(1) FROM book_stocks where isbn_num = s.isbn_num) as stocks \
+								 FROM book_stocks s \
+								 where (s.title like '%${searchitem}%' \
+								 OR s.author like '%${searchitem}%') \
+								 AND s.uuid not in \
+								 (SELECT book_uuid as uuid \
+								 FROM borrow_records) \
+								 GROUP BY s.isbn_num`
+		// 		console.log(sql)
 		const result = await this.db.all(sql)
-// 		console.log(result)
+		// 		console.log(result)
 		return result
 	}
 
 	async bookstockslistbyisbn(isbnnum) {
 		const sql = `SELECT * FROM book_stocks s where isbn_num = '${isbnnum}'`
-// 		console.log(sql)
+		// 		console.log(sql)
 		const result = await this.db.all(sql)
-// 		console.log(result)
+		// 		console.log(result)
 		return result
 	}
 

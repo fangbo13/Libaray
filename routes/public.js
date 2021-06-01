@@ -1,13 +1,9 @@
 
 import Router from 'koa-router'
-import bodyParser from 'koa-body'
 
 const publicRouter = new Router()
-// publicRouter.use(bodyParser({multipart:true}))
 
 import { Accounts } from '../modules/accounts.js'
-import { LibrarianAccounts } from '../modules/librarianaccounts.js'
-import { Books } from '../modules/books.js'
 const dbName = 'website.db'
 
 /**
