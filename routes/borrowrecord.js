@@ -1,9 +1,7 @@
 
 import Router from 'koa-router'
-import bodyParser from 'koa-body'
 
 const borrowrecordRouter = new Router({ prefix: '/borrowrecord' })
-// borrowrecordRouter.use(bodyParser({multipart:true}))
 
 import { BorrowRecords } from '../modules/borrowrecords.js'
 
@@ -45,7 +43,7 @@ borrowrecordRouter.get('/borrowbook', async ctx => {
 borrowrecordRouter.post('/', async ctx => {
 	const borrowrecord = await new BorrowRecords(dbName)
 	try{
-		const data = await borrowrecord.createborrowrecord(ctx.request.body.book_uuid,ctx.request.body.borrower)
+		await borrowrecord.createborrowrecord(ctx.request.body.book_uuid,ctx.request.body.borrower)
 		ctx.redirect(`/librarian/studentmanagement?borrower=${ctx.request.body.borrower}&msg=Borrow book success`)
 	}catch(err) {
 		ctx.redirect(`/borrowrecord/borrowbook?msg=${err}`)
@@ -55,7 +53,7 @@ borrowrecordRouter.post('/', async ctx => {
 borrowrecordRouter.post('/returnbook', async ctx => {
 	const borrowrecord = await new BorrowRecords(dbName)
 	try{
-		const data = await borrowrecord.deleteborrowrecord(
+		await borrowrecord.deleteborrowrecord(
 			ctx.request.body.book_uuid,
 			ctx.request.body.borrower)
 		ctx.redirect(`/librarian/studentmanagement?borrower=${ctx.request.body.borrower}`)

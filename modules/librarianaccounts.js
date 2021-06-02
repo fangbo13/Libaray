@@ -19,8 +19,8 @@ class LibrarianAccounts {
 				const sql2 = `INSERT INTO librarians (user,pass,email) VALUES \
 											 ("librarian1","${pass}","fangh13@coventry.ac.uk") \
 											,("librarian2","${pass}","fangh13@coventry.ac.uk");`
-				const initresult = await this.db.run(sql2)
-// 				console.log(sql2 + initresult)
+				await this.db.run(sql2)
+				// 				console.log(sql2 + initresult)
 			}catch(err) {
 				console.log(`add init data error, ${err}`)
 			}
