@@ -61,7 +61,7 @@ class Books {
 		for(let i = 0; i < stock.quantity; i++) {
 			sql += `("${stock.title}","${stock.author}","${stock.isbnnum}",\
 						  hex(randomblob(16)),"${stock.classificationnum}",\
-              "${stock.createuser}","${datetime}"),`
+              "${stock.user}","${datetime}"),`
 		}
 		sql = `${sql.substr(0,sql.length-1) };`
 		await this.db.run(sql)
