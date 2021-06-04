@@ -53,7 +53,7 @@ class Books {
 		if(stock.quantity < minimum || stock.quantity > maximum) {
 			throw new Error('Quantity should between 1 and 10')
 		}
-		const datetime = new Date().toLocaleDateString()
+		const datetime = new Date()
 		let sql = 'INSERT INTO book_stocks \
 							(title,author,isbn_num,uuid,\
                classification_num,create_user,create_time) \
