@@ -1,4 +1,5 @@
 import sqlite from 'sqlite-async'
+import dayjs from 'dayjs'
 
 class BorrowRecords {
 	constructor(dbName = ':memory:') {
@@ -50,9 +51,11 @@ class BorrowRecords {
 												 FROM borrow_records WHERE book_uuid='${uuid}';`
 		const available = await this.db.get(sqlavailabe)
 		if(available.records !== 0) throw new Error('book is already borrowed')
-		const starttime = new Date().toLocaleDateString()
-		const monthtime = 2592000000
-		const deadline = new Date(new Date().getTime() + monthtime).toLocaleDateString()
+		const starttime = dayjs().format('DD/MM/YYYY')
+		const onemonth = 30
+		const deadline = dayjs().add(onemonth,'day').format('DD/MM/YYYY')
+		//const deadline = dayjs().subtract(30,'day').format('DD/MM/YYYY')
+
 		const sqlcreaterecord = `INSERT INTO borrow_records \
 												  (book_uuid,borrower,start_time,deadline) VALUES\
 												  ('${uuid}','${borrower}','${starttime}','${deadline}');`

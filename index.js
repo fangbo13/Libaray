@@ -4,15 +4,17 @@ import serve from 'koa-static'
 import views from 'koa-views'
 import session from 'koa-session'
 import koaBody from 'koa-body'
+import dayjs from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat.js'
+
 
 import { apiRouter } from './routes/routes.js'
 
 import handlebars from 'handlebars'
 handlebars.registerHelper({
 	'overdue': function(a,options) {
-		const deadline = new Date(Date.parse(a))
-		const currentTime = new Date()
-		if(currentTime > deadline) {
+		dayjs.extend(customParseFormat)
+		if(dayjs().isAfter(dayjs(a,'DD/MM/YYYY'))) {
 			return options.fn(this)
 		}else{
 			return options.inverse(this)
