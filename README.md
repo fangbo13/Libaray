@@ -1,6 +1,4 @@
 
-# please not to link for my repository on GitHub.
-
 # Library Loans
 
 The University library allows staff and students to locate and borrow books for pre-determined periods of time.
