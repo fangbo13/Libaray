@@ -131,6 +131,7 @@ Make sure your username is unique and email is in correct format.
 When librarian login success,you can see the book stock page.
 
 There will be a table show you which books are in stock and their quantity.
+
 There are two buttons for you to do some operation:
 
 1.Manage user
